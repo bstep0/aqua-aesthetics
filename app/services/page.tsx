@@ -39,6 +39,21 @@ export default function ServicesPage() {
       image: "/images/pool2.jpg",
     },
     {
+      id: "outdoor-living",
+      title: "Outdoor Living",
+      description: "Enhance your backyard with custom outdoor living solutions.",
+      features: [
+        "Patio Design and Installation",
+        "Outdoor Kitchens",
+        "Fire Pits and Fireplaces",
+        "Pergolas and Shade Structures",
+        "Landscape Design and Installation",
+        "Lighting Design",
+        "Irrigation Systems",
+      ],
+      image: "/images/pool5.jpg",
+    },
+    {
       id: "maintenance",
       title: "Regular Maintenance",
       description: "Regular maintenance programs to ensure your pool remains in pristine condition year-round.",
@@ -112,43 +127,20 @@ export default function ServicesPage() {
           </section>
         ))}
       </div>
+      <section className="mt-20 rounded-2xl bg-cyan-50/50 p-8 md:p-12">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">
+            Not Sure What You Need?
+          </h2>
 
-      <section className="mt-20 rounded-lg p-8 md:p-12">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">Not Sure What You Need?</h2>
-            <p className="mb-6 text-lg text-gray-700">
-              Our experts can help you determine the best services for your pool based on its condition, your goals, and
-              your budget. Contact us for a free consultation and personalized recommendation.
-            </p>
-            <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-              <Link href="/contact">Schedule a Consultation</Link>
-            </Button>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card>
-              <CardHeader>
-                <CardTitle>Maintenance Plans</CardTitle>
-                <CardDescription>Regular service packages</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Choose from weekly or bi-weekly maintenance plans to keep your pool in sparkling condition.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>One-Time Services</CardTitle>
-                <CardDescription>As-needed assistance</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  From green pool cleanup, equipment repair, or filter cleans, we offer many one-time services to address specific needs.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <p className="mb-6 text-lg leading-relaxed text-gray-700">
+            Our experts can help you determine the best services for your pool based on its condition, your goals, and
+            your budget. Contact us for a free consultation and personalized recommendation.
+          </p>
+
+          <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
+            <Link href="/contact">Schedule a Consultation</Link>
+          </Button>
         </div>
       </section>
     </div>

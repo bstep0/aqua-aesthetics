@@ -47,13 +47,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services#service" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Pool Equipment Service & Repairs
+                <Link href="/services#outdoor-living" className="text-gray-600 transition-colors hover:text-cyan-600">
+                  Outdoor Living
                 </Link>
               </li>
               <li>
                 <Link href="/services#maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
                   Regular Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#service" className="text-gray-600 transition-colors hover:text-cyan-600">
+                  Pool Equipment Service & Repairs
                 </Link>
               </li>
             </ul>
