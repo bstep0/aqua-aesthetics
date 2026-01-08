@@ -26,7 +26,7 @@ export default function ContactPage() {
             Our team is ready to answer your questions and schedule your whatever pool service you may need. Quick, friendly, and professional.
           </p>
           <a href="tel:2149415996" className="text-lg font-medium text-gray-900 hover:text-cyan-600 mb-4">
-            (214) 941-5996
+            (214) 971-5996
           </a>
         </div>
 
