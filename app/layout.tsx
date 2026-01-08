@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Aqua Aesthetics | Premium Pool Services",
   description: "Professional pool construction, remodeling, service and maintenance by Aqua Aesthetics.",
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
