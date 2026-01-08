@@ -26,14 +26,15 @@ export default function GalleryPage() {
       ],
     },
     {
-      id: "service",
-      title: "Services & Repairs",
-      description: "Keep your pool in tip-top shape by keeping your equipment pad clean and up to date",
+      id: "outdoor-living",
+      title: "Outdoor Living",
+      description: "Enhance your outdoor space with a beautiful patio, landscaping, or hardscaping",
       projects: [
-        { id: 1, title: "New Pool Equipment", location: "Richardson, TX", image: "/images/pool3.jpg" },
-        { id: 2, title: "New Plumbing", location: "Carrollton, TX", image: "/images/pool5.jpg" },
+        { id: 1, title: "Patio Oasis", location: "Frisco, TX", image: "/images/pool1.jpg" },
+        { id: 2, title: "Backyard Retreat", location: "Plano, TX", image: "/images/pool2.jpg" },
+        { id: 3, title: "Garden Paradise", location: "McKinney, TX", image: "/images/pool3.jpg" },
       ],
-    },
+    }
   ]
 
   return (
@@ -42,7 +43,7 @@ export default function GalleryPage() {
         <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Our Portfolio</h1>
         <p className="mx-auto max-w-2xl text-lg text-gray-600">
           Browse our galleries of stunning pool projects completed around the DFW metroplex. From new construction to
-          remodels and repairs, discover the possibilities for your own backyard.
+          remodels to outdoor living, discover the possibilities for your own backyard.
         </p>
       </div>
 

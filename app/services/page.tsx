@@ -11,14 +11,14 @@ export default function ServicesPage() {
       title: "New Pool Construction",
       description: "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
       features: [
-        "Personalized design consultation",
-        "3D renderings and virtual walkthroughs",
-        "Permit acquisition and processing",
-        "Excavation and pool shell construction",
-        "Plumbing and electrical installation",
-        "Interior finishing and coping",
-        "Deck construction and landscaping",
-        "Final inspection and pool startup",
+        "Personalized Design Consultation",
+        "3D Renderings",
+        "Permit Acquisition and Processing",
+        "Excavation and Pool Shell Construction",
+        "Plumbing and Electrical Installation",
+        "Coping, Tiling, and Plastering",
+        "Deck Construction and Landscaping",
+        "Final Inspection and Pool Startup",
       ],
       image: "/images/pool5.jpg",
     },
@@ -27,14 +27,14 @@ export default function ServicesPage() {
       title: "Pool Remodeling",
       description: "Breathe new life into your existing pool with our expert renovation services.",
       features: [
-        "Pool resurfacing and refinishing",
-        "Tile replacement and upgrades",
-        "Coping and deck renovation",
-        "Equipment upgrades and modernization",
-        "Energy-efficient system installation",
-        "Water feature additions",
-        "Lighting enhancements",
-        "Safety feature installation",
+        "Pool Resurfacing",
+        "Tile Replacement and Upgrades",
+        "Coping and Deck Renovation",
+        "Equipment Upgrades",
+        "Energy-Efficient Equipment Installation",
+        "Water Feature Additions",
+        "Lighting Enhancements",
+        "Safety Feature Installation",
       ],
       image: "/images/pool2.jpg",
     },
@@ -43,13 +43,13 @@ export default function ServicesPage() {
       title: "Regular Maintenance",
       description: "Regular maintenance programs to ensure your pool remains in pristine condition year-round.",
       features: [
-        "Weekly or bi-weekly service options",
-        "Customized maintenance schedules",
-        "Chemical supply and management",
-        "Seasonal opening and closing services",
-        "Equipment performance monitoring",
-        "Preventative maintenance",
-        "Detailed service reports",
+        "Weekly or Bi-Weekly Service Options",
+        "Filter Cleaning",
+        "Preventative Maintenance",
+        "Detailed Service Reports",
+        "Chemical Balancing",
+        "Equipment Inspection",
+        "Algae Prevention and Treatment",
       ],
       image: "/images/pool3.jpg",
     },
@@ -58,14 +58,13 @@ export default function ServicesPage() {
       title: "Repairs",
       description: "Expert diagnosis and repair of all pool-related issues to minimize downtime.",
       features: [
-        "Leak detection and repair",
-        "Pump and motor replacement",
-        "Heater repair and replacement",
-        "Filter system troubleshooting",
-        "Plumbing repairs",
-        "Electrical system diagnosis",
-        "Automation system repair",
-        "Structural repairs",
+        "Leak Detection and Repair",
+        "Pump Repair and Replacement",
+        "Heater Repair and Replacement",
+        "Filter Repair and Replacement",
+        "Plumbing Repairs",
+        "Electrical System Diagnosis",
+        "Automation System Repairs",
       ],
       image: "/images/pool4.jpg",
     },
@@ -90,7 +89,7 @@ export default function ServicesPage() {
               <div className={`flex flex-col justify-center ${index % 2 !== 0 && "lg:order-2"}`}>
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">{service.title}</h2>
                 <p className="mb-6 text-lg text-gray-600">{service.description}</p>
-                <div className="mb-8 grid gap-3 sm:grid-cols-2">
+                <div className="mb-8 grid gap-y-6 gap-x-6 sm:grid-cols-2">
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-start">
                       <CheckCircle2 className="mr-2 h-5 w-5 flex-shrink-0 text-cyan-600" />
@@ -114,7 +113,7 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      <section className="mt-20 rounded-lg bg-cyan-50 p-8 md:p-12">
+      <section className="mt-20 rounded-lg p-8 md:p-12">
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">Not Sure What You Need?</h2>
@@ -134,7 +133,7 @@ export default function ServicesPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Choose from weekly, bi-weekly, or monthly maintenance plans to keep your pool in perfect condition.
+                  Choose from weekly or bi-weekly maintenance plans to keep your pool in sparkling condition.
                 </p>
               </CardContent>
             </Card>
@@ -145,7 +144,7 @@ export default function ServicesPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  From green pool cleanup to equipment repair, we offer one-time services to address specific needs.
+                  From green pool cleanup, equipment repair, or filter cleans, we offer many one-time services to address specific needs.
                 </p>
               </CardContent>
             </Card>

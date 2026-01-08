@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2">
               <Droplets className="h-6 w-6 text-cyan-600" />
-              <span className="text-xl font-bold text-gray-900">Aqua Aesthetics</span>
+              <span className="text-xl text-gray-900">aqua aesthetics</span>
             </Link>
             <p className="mt-4 text-gray-600">
               Premium pool construction, remodeling, repairs and maintenance services in DFW. Transforming backyards
@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services#maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Weekly Maintenance
+                  Regular Maintenance
                 </Link>
               </li>
             </ul>
@@ -94,7 +94,7 @@ export default function Footer() {
                   href="mailto:info@aquaaesthetics.com"
                   className="text-gray-600 transition-colors hover:text-cyan-600"
                 >
-                  pools@aquaaesthetics.com
+                  pools@aapoolstx.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -110,7 +110,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-200 pt-8">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} Aqua Aesthetics. All rights reserved.</p>
+            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} AAPoolsTX. All rights reserved.</p>
           </div>
         </div>
       </div>

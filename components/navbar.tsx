@@ -12,11 +12,11 @@ export default function Navbar() {
   const pathname = usePathname()
 
   const routes = [
-    { name: "Home", path: "/" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Services", path: "/services" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "home", path: "/" },
+    { name: "gallery", path: "/gallery" },
+    { name: "services", path: "/services" },
+    { name: "about", path: "/about" },
+    { name: "contact", path: "/contact" },
   ]
 
   const isActive = (path: string) => {
@@ -48,9 +48,6 @@ export default function Navbar() {
               {route.name}
             </Link>
           ))}
-          <Button asChild className="ml-4 bg-cyan-600 hover:bg-cyan-700">
-            <Link href="/contact">Get a Quote</Link>
-          </Button>
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
