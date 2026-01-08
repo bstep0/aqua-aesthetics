@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services#maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Regular Maintenance
+                  Weekly Maintenance
                 </Link>
               </li>
             </ul>
@@ -109,16 +109,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-200 pt-8">
-          <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <p className="text-sm text-gray-600">© {new Date().getFullYear()} Aqua Aesthetics. All rights reserved.</p>
-            <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-600 transition-colors hover:text-cyan-600">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm text-gray-600 transition-colors hover:text-cyan-600">
-                Terms of Service
-              </Link>
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} Aqua Aesthetics. All rights reserved.</p>
           </div>
         </div>
       </div>
