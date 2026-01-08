@@ -99,7 +99,7 @@ export default function Footer() {
                   href="mailto:info@aquaaesthetics.com"
                   className="text-gray-600 transition-colors hover:text-cyan-600"
                 >
-                  pools@aapoolstx.com
+                  contact@AquaAestheticsPools.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-200 pt-8">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} AAPoolsTX. All rights reserved.</p>
+            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} Aqua Aesthetics Pools. All rights reserved.</p>
           </div>
         </div>
       </div>

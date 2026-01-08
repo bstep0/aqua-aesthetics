@@ -38,7 +38,7 @@ export default function ContactPage() {
             Prefer to write? Send us an email and we’ll get back to you as soon as possible. Include your project details so we can provide the most accurate guidance.
           </p>
           <a href="mailto:pools@aquaaesthetics.com" className="text-lg font-medium text-gray-900 hover:text-cyan-600">
-            pools@aapoolstx.com
+            contact@AquaAestheticsPools.com
           </a>
         </div>
       </div>
