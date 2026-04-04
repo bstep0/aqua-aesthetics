@@ -100,7 +100,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 text-cyan-600" />
                 <a href="tel:+15615551234" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  (214) 971-5996
+                  (214) 971 - 5996
                 </a>
               </li>
               <li></li>
