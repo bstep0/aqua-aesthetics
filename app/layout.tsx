@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     template: "%s | Aqua Aesthetics Pools",
   },
   description:
-    "Pool builders serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth & Flower Mound. Custom pool construction, remodeling & repairs. Free quote today.",
+    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
   openGraph: {
     type: "website",
     siteName: "Aqua Aesthetics Pools",
     title: "Pool Builders in Dallas & DFW | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth & Flower Mound. Custom pool construction, remodeling & repairs. Free quote today.",
+      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
     images: [
       {
         url: "/images/pool6.jpg",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pool Builders in Dallas & DFW | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth & Flower Mound. Custom pool construction, remodeling & repairs. Free quote today.",
+      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
     images: ["/images/pool6.jpg"],
   },
 }
