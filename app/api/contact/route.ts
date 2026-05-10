@@ -23,8 +23,8 @@ export async function POST(request: Request) {
   const serviceLabel = SERVICE_LABELS[service] ?? service ?? "Not specified"
 
   const { error } = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "bstepanek00@gmail.com",
+    from: "contact@aquaaestheticspools.com",
+    to: "contact@aquaaestheticspools.com",
     replyTo: email,
     subject: `New quote request from ${name} — ${serviceLabel}`,
     html: `
