@@ -11,8 +11,12 @@ import Analytics from "./analytics" // 👈 we’ll create this next
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Aqua Aesthetics | Premium Pool Services",
-  description: "Professional pool construction, remodeling, service and maintenance by Aqua Aesthetics.",
+  title: {
+    default: "Pool Construction & Remodeling in DFW | Aqua Aesthetics Pools",
+    template: "%s | Aqua Aesthetics Pools",
+  },
+  description:
+    "Aqua Aesthetics Pools offers expert pool construction, remodeling, maintenance, and repair services throughout Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound. Get a free quote today.",
 }
 
 export default function RootLayout({

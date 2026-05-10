@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Droplets, Mail, Phone } from "lucide-react"
+import { Droplets, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -15,49 +15,33 @@ export default function Footer() {
               Premium pool construction, remodeling, repairs and maintenance services in DFW. Transforming backyards
               into luxurious retreats since 1995.
             </p>
-            {/*
-            <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-gray-500 transition-colors hover:text-cyan-600">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="text-gray-500 transition-colors hover:text-cyan-600">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a href="#" className="text-gray-500 transition-colors hover:text-cyan-600">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-            </div>
-            */}
           </div>
 
           <div>
             <h3 className="mb-4 text-lg font-semibold text-gray-900">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services#new-construction" className="text-gray-600 transition-colors hover:text-cyan-600">
+                <Link href="/services/new-pool-construction" className="text-gray-600 transition-colors hover:text-cyan-600">
                   New Pool Construction
                 </Link>
               </li>
               <li>
-                <Link href="/services#remodels" className="text-gray-600 transition-colors hover:text-cyan-600">
+                <Link href="/services/pool-remodeling" className="text-gray-600 transition-colors hover:text-cyan-600">
                   Pool Remodeling
                 </Link>
               </li>
               <li>
-                <Link href="/services#outdoor-living" className="text-gray-600 transition-colors hover:text-cyan-600">
+                <Link href="/services/outdoor-living" className="text-gray-600 transition-colors hover:text-cyan-600">
                   Outdoor Living
                 </Link>
               </li>
               <li>
-                <Link href="/services#maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
+                <Link href="/services/pool-maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
                   Regular Maintenance
                 </Link>
               </li>
               <li>
-                <Link href="/services#service" className="text-gray-600 transition-colors hover:text-cyan-600">
+                <Link href="/services/pool-repairs" className="text-gray-600 transition-colors hover:text-cyan-600">
                   Pool Equipment Service & Repairs
                 </Link>
               </li>
@@ -89,9 +73,17 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold text-gray-900">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
+                <MapPin className="mr-2 h-5 w-5 flex-shrink-0 text-cyan-600" />
+                <address className="not-italic text-gray-600">
+                  Serving Dallas, Frisco, Plano,<br />
+                  Southlake, Colleyville,<br />
+                  Fort Worth &amp; Flower Mound, TX
+                </address>
+              </li>
+              <li className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 text-cyan-600" />
                 <a
-                  href="mailto:info@aquaaesthetics.com"
+                  href="mailto:pools@aquaaesthetics.com"
                   className="text-gray-600 transition-colors hover:text-cyan-600"
                 >
                   contact@AquaAestheticsPools.com
@@ -99,11 +91,10 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Phone className="mr-2 h-5 w-5 text-cyan-600" />
-                <a href="tel:+15615551234" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  (214) 971 - 5996
+                <a href="tel:+12149715996" className="text-gray-600 transition-colors hover:text-cyan-600">
+                  (214) 971-5996
                 </a>
               </li>
-              <li></li>
             </ul>
           </div>
         </div>
