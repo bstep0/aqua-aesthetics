@@ -7,7 +7,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Pool Builders in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville & Flower Mound | Aqua Aesthetics Pools",
   description:
-    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville & Flower Mound. Custom pool construction, remodeling & repairs. Get a free quote today.",
+    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
 }
 
 const localBusinessJsonLd = {
@@ -176,17 +176,35 @@ export default function Home() {
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Why Choose Aqua Aesthetics?
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {[
-                  "30+ years of industry experience",
-                  "Custom designs tailored to your space",
-                  "Premium materials and equipment",
-                  "Small, local business offering a more personal experience",
-                  "Transparent pricing with no hidden fees",
+                  {
+                    heading: "You work directly with the owner",
+                    detail: "Not passed between salespeople and subcontractors. One team, one point of contact, start to finish.",
+                  },
+                  {
+                    heading: "30+ years building in DFW",
+                    detail: "We know local soil conditions, HOA requirements, and city permitting — so your project doesn't hit unexpected delays.",
+                  },
+                  {
+                    heading: "No hidden costs, ever",
+                    detail: "Your quote is your price. We flag any scope changes before they happen, not after.",
+                  },
+                  {
+                    heading: "We build pools we'd swim in",
+                    detail: "Only materials and equipment we'd put in our own backyards. No corners cut to win a bid.",
+                  },
+                  {
+                    heading: "Still here when you need us",
+                    detail: "Service, repairs, and remodels years after your build. We're invested in your pool long-term.",
+                  },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle2 className="mr-3 h-6 w-6 flex-shrink-0 text-cyan-600" />
-                    <p className="text-lg text-gray-700">{item}</p>
+                    <CheckCircle2 className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-cyan-600" />
+                    <div>
+                      <p className="text-lg font-semibold text-gray-900">{item.heading}</p>
+                      <p className="text-gray-600">{item.detail}</p>
+                    </div>
                   </div>
                 ))}
               </div>
