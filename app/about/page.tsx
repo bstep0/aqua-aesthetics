@@ -35,14 +35,14 @@ export default function AboutPage() {
 
           <div className="space-y-5 text-lg leading-relaxed text-gray-700">
             <p>
-              Aqua Aesthetics Pools was founded in 1995 by Larry Wieland, a lifelong North Texan with a passion for
+              Aqua Aesthetics Pools was founded in 2026 by Larry Wieland, having a passion for
               craftsmanship and a belief that every backyard has the potential to become something extraordinary. What
               started as a small pool service operation has grown into a full-service pool construction, remodeling, and
               maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort
               Worth, and Flower Mound.
             </p>
             <p>
-              Over three decades in the DFW market have given us a deep understanding of what North Texas homeowners
+              Over three decades in the poool industry have given us a deep understanding of what North Texas homeowners
               need from their pools — designs that handle the summer heat, construction methods that account for the
               region's clay-heavy soils, and maintenance programs that keep water pristine through long swimming
               seasons. We've built our reputation one project at a time, and most of our new clients come through
