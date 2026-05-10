@@ -5,9 +5,9 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Pool Builders in Dallas, Fort Worth, Frisco, Plano, Southlake & Colleyville, Flower Mound | Aqua Aesthetics Pools",
+  title: "Pool Builders in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville & Flower Mound | Aqua Aesthetics Pools",
   description:
-    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, & Flower Mound. Custom pool construction, remodeling & repairs. Get a free quote today.",
+    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville & Flower Mound. Custom pool construction, remodeling & repairs. Get a free quote today.",
 }
 
 const localBusinessJsonLd = {
@@ -18,7 +18,7 @@ const localBusinessJsonLd = {
   telephone: "+12149715996",
   email: "contact@aquaaestheticspools.com",
   description:
-    "Expert pool builders offering construction, remodeling, repairs, and maintenance in Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
+    "Expert pool builders offering construction, remodeling, repairs, and maintenance in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound.",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
