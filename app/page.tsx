@@ -171,7 +171,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4">
                 {[
-                  "25+ years of industry experience",
+                  "30+ years of industry experience",
                   "Custom designs tailored to your space",
                   "Premium materials and equipment",
                   "Small, local business offering a more personal experience",

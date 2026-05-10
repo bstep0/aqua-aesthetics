@@ -1,14 +1,20 @@
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "About Us — 30+ Years of Pool Excellence in DFW",
+  description:
+    "Learn about Aqua Aesthetics Pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across Dallas, Frisco, Southlake, and the Metroplex.",
+}
 
 export default function AboutPage() {
   const team = [
     {
       name: "Larry Wieland",
       role: "Owner",
-      bio: "With over 30 years in the pool industry, Larry founded Aqua Aesthetics with a vision to create extraordinary outdoor living spaces.",
-      // Headshot-style placeholder (portrait 3:4)
+      bio: "With over 30 years in the pool industry, Larry founded Aqua Aesthetics with a vision to create extraordinary outdoor living spaces. His hands-on approach and commitment to quality have made Aqua Aesthetics one of the most trusted pool companies in the DFW Metroplex.",
       image: "/placeholder.svg?height=600&width=450",
     },
   ]
@@ -17,22 +23,30 @@ export default function AboutPage() {
     <div className="container py-12 md:py-16">
       <div className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">About Aqua Aesthetics</h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">Creating beautiful, functional pool environments in DFW since 2025.</p>
+        <p className="mx-auto max-w-2xl text-lg text-gray-600">
+          Creating beautiful, functional pool environments in DFW since 1995.
+        </p>
       </div>
 
-      {/* Our Story (formatted like Mission) */}
+      {/* Our Story */}
       <section className="mb-24 rounded-2xl md:p-12">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900">Our Story</h2>
 
           <div className="space-y-5 text-lg leading-relaxed text-gray-700">
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Aqua Aesthetics Pools was founded in 1995 by Larry Wieland, a lifelong North Texan with a passion for
+              craftsmanship and a belief that every backyard has the potential to become something extraordinary. What
+              started as a small pool service operation has grown into a full-service pool construction, remodeling, and
+              maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort
+              Worth, and Flower Mound.
             </p>
             <p>
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu.
+              Over three decades in the DFW market have given us a deep understanding of what North Texas homeowners
+              need from their pools — designs that handle the summer heat, construction methods that account for the
+              region's clay-heavy soils, and maintenance programs that keep water pristine through long swimming
+              seasons. We've built our reputation one project at a time, and most of our new clients come through
+              referrals from neighbors and friends who've experienced our work firsthand.
             </p>
           </div>
         </div>
@@ -49,7 +63,6 @@ export default function AboutPage() {
             enjoy for years to come.
           </p>
 
-          {/* Quick highlights */}
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-lg border border-cyan-500/30 bg-white/70 px-4 py-3 text-lg text-gray-700">
               <span className="font-semibold text-gray-900">Design-led</span> from concept to completion.
@@ -80,7 +93,6 @@ export default function AboutPage() {
               key={index}
               className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
             >
-              {/* Headshot-sized image area */}
               <div className="p-6 sm:p-8">
                 <div className="flex flex-col items-center gap-8 md:flex-row md:items-center">
                   <div className="relative h-[360px] w-[270px] shrink-0 overflow-hidden rounded-xl">
@@ -96,9 +108,6 @@ export default function AboutPage() {
                     <h3 className="mb-1 text-2xl font-bold text-gray-900">{member.name}</h3>
                     <p className="mb-4 text-cyan-600">{member.role}</p>
                     <p className="text-lg leading-relaxed text-gray-700">{member.bio}</p>
-
-                    <div className="mt-6 flex flex-wrap gap-3">
-                    </div>
                   </div>
                 </div>
               </div>
@@ -122,7 +131,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative hidden overflow-hidden rounded-xl md:block">
-            <Image src="/images/pool6.jpg" alt="Beautiful pool design" fill className="object-cover" />
+            <Image src="/images/pool6.jpg" alt="Custom pool built by Aqua Aesthetics Pools in DFW" fill className="object-cover" />
           </div>
         </div>
       </section>

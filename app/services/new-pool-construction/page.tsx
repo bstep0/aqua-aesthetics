@@ -87,7 +87,7 @@ export default function NewPoolConstructionPage() {
               <div className="space-y-5 text-lg text-gray-700">
                 <p>
                   When you choose Aqua Aesthetics Pools for new pool construction in DFW, you're partnering with a team
-                  that has spent over 25 years perfecting the art of custom pool design and installation. From sleek
+                  that has spent over 30 years perfecting the art of custom pool design and installation. From sleek
                   modern lap pools in Plano to resort-style pools with waterfalls and fire features in Southlake, we
                   handle every detail from the first design sketch to the day you take your first swim.
                 </p>
