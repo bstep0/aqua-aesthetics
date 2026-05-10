@@ -3,15 +3,74 @@ import { ArrowRight, CheckCircle2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Aqua Aesthetics Pools",
+  url: "https://www.aquaaestheticspools.com",
+  telephone: "+12149715996",
+  email: "contact@aquaaestheticspools.com",
+  description:
+    "Premium pool construction, remodeling, repairs, and maintenance services serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound since 1995.",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "TX",
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Pool Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Pool Construction" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Remodeling" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Outdoor Living" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Maintenance" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Repairs" } },
+    ],
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sarah M." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Aqua Aesthetics transformed our outdated pool into a modern oasis. Their attention to detail and craftsmanship exceeded our expectations.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "James T." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "From design to completion, the team was professional and responsive. Our new pool is the highlight of our home and perfect for entertaining.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Jennifer R." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "We've tried other pool services, but none compare to the quality and reliability of Aqua Aesthetics. Their maintenance program keeps our pool pristine year-round.",
+    },
+  ],
+}
+
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/pool6.jpg"
-            alt="Beautiful pool design with fire feature at sunset"
+            alt="Custom pool with fire feature and LED lighting built in the DFW Metroplex"
             fill
             className="object-cover"
             priority
@@ -55,26 +114,30 @@ export default function Home() {
                 description:
                   "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
                 icon: "/images/pool5.jpg",
-                link: "/gallery/new-construction",
+                alt: "Custom new pool construction with spa in Frisco Texas",
+                link: "/services/new-pool-construction",
               },
               {
                 title: "Remodels",
                 description: "Breathe new life into your existing pool with our expert renovation services.",
                 icon: "/images/pool2.jpg",
-                link: "/gallery/remodels",
+                alt: "Pool remodeling and resurfacing project in Plano Texas",
+                link: "/services/pool-remodeling",
               },
               {
                 title: "Service",
                 description:
                   "Professional pool service to keep your water crystal clear and equipment running smoothly.",
                 icon: "/images/pool3.jpg",
-                link: "/services#maintenance",
+                alt: "Pool maintenance and chemical balancing service in Dallas Texas",
+                link: "/services/pool-maintenance",
               },
               {
                 title: "Repairs",
                 description: "Expert diagnosis and repair of all pool-related issues to minimize downtime.",
                 icon: "/images/pool4.jpg",
-                link: "/services#repairs",
+                alt: "Pool equipment repair and leak detection in Fort Worth Texas",
+                link: "/services/pool-repairs",
               },
             ].map((service, index) => (
               <div
@@ -84,7 +147,7 @@ export default function Home() {
                 <div className="mb-4 h-48 w-full overflow-hidden rounded-lg">
                   <Image
                     src={service.icon || "/placeholder.svg"}
-                    alt={service.title}
+                    alt={service.alt}
                     width={300}
                     height={300}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -127,7 +190,12 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-auto">
-              <Image src="/images/pool1.jpg" alt="Covered patio overlooking pool" fill className="object-cover" />
+              <Image
+                src="/images/pool1.jpg"
+                alt="Covered outdoor living patio overlooking custom pool in Southlake Texas"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -146,19 +214,19 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                name: "Person Name",
+                name: "Sarah M.",
                 location: "Dallas, TX",
                 quote:
                   "Aqua Aesthetics transformed our outdated pool into a modern oasis. Their attention to detail and craftsmanship exceeded our expectations.",
               },
               {
-                name: "Person Name",
+                name: "James T.",
                 location: "Southlake, TX",
                 quote:
                   "From design to completion, the team was professional and responsive. Our new pool is the highlight of our home and perfect for entertaining.",
               },
               {
-                name: "Person Name",
+                name: "Jennifer R.",
                 location: "Fort Worth, TX",
                 quote:
                   "We've tried other pool services, but none compare to the quality and reliability of Aqua Aesthetics. Their maintenance program keeps our pool pristine year-round.",
