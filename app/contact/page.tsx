@@ -21,11 +21,21 @@ export default function ContactPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setFormState("submitting")
-    // Simulate submission — wire up to your email/CRM service here
-    setTimeout(() => setFormState("success"), 1000)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error("Send failed")
+      setFormState("success")
+    } catch {
+      setFormState("idle")
+      alert("Something went wrong — please call or email us directly.")
+    }
   }
 
   return (
