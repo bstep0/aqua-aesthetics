@@ -1,7 +1,14 @@
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { CheckCircle2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Pool Builders in Dallas & DFW | Aqua Aesthetics Pools",
+  description:
+    "Pool builders serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth & Flower Mound. Custom pool construction, remodeling & repairs. Free quote today.",
+}
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -11,7 +18,7 @@ const localBusinessJsonLd = {
   telephone: "+12149715996",
   email: "contact@aquaaestheticspools.com",
   description:
-    "Premium pool construction, remodeling, repairs, and maintenance services serving Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound since 1995.",
+    "Expert pool builders offering construction, remodeling, repairs, and maintenance in Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
