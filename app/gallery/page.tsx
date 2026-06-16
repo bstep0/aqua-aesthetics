@@ -2,87 +2,36 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-const projects = [
+// No `id` field here — ids are generated automatically below, so you
+// never have to pick (or accidentally repeat) a number by hand, and
+// the same image/file can be reused across as many entries as you like.
+const rawProjects = [
   // New Construction
-  {
-    id: 1,
-    title: "Modern Infinity Pool",
-    location: "Dallas, TX",
-    category: "New Construction",
-    image: "/images/pool6.jpg",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    id: 2,
-    title: "Family Resort Style",
-    location: "Plano, TX",
-    category: "New Construction",
-    image: "/images/pool2.jpg",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    id: 3,
-    title: "Tropical Paradise",
-    location: "Fort Worth, TX",
-    category: "New Construction",
-    image: "/images/pool3.jpg",
-    aspect: "aspect-square",
-  },
+  { category: "New Construction", image: "/images/pool6.jpg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/outdoor3.jpg", aspect: "aspect-[4/3]" },
+  { category: "New Construction", image: "/images/pool3.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool7.jpg", aspect: "aspect-[4/3]" },
+  { category: "New Construction", image: "/images/pool8.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool9.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool10.jpg", aspect: "aspect-[4/3]" },
+  { category: "New Construction", image: "/images/pool11.jpeg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/pool12.jpg", aspect: "aspect-[5/4]" },
+  { category: "New Construction", image: "/images/pool13.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool14.jpg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/pool15.jpg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/pool16.jpg", aspect: "aspect-square" },
   // Remodels
-  {
-    id: 4,
-    title: "Classic to Contemporary",
-    location: "Frisco, TX",
-    category: "Remodels",
-    image: "/images/pool5.jpg",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    id: 5,
-    title: "Expanded Deck & Spa",
-    location: "Allen, TX",
-    category: "Remodels",
-    image: "/images/pool1.jpg",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    id: 6,
-    title: "Added Water Features",
-    location: "McKinney, TX",
-    category: "Remodels",
-    image: "/images/pool4.jpg",
-    aspect: "aspect-square",
-  },
+  { category: "Remodels", image: "/images/remodel1.jpg", aspect: "aspect-[4/3]" },
   // Outdoor Living
-  {
-    id: 7,
-    title: "Patio Oasis",
-    location: "Frisco, TX",
-    category: "Outdoor Living",
-    image: "/images/pool1.jpg",
-    aspect: "aspect-square",
-  },
-  {
-    id: 8,
-    title: "Backyard Retreat",
-    location: "Southlake, TX",
-    category: "Outdoor Living",
-    image: "/images/pool2.jpg",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    id: 9,
-    title: "Garden Paradise",
-    location: "Colleyville, TX",
-    category: "Outdoor Living",
-    image: "/images/pool3.jpg",
-    aspect: "aspect-[4/3]",
-  },
+  { category: "Outdoor Living", image: "/images/outdoor1.jpg", aspect: "aspect-square" },
+  { category: "Outdoor Living", image: "/images/outdoor2.jpg", aspect: "aspect-[4/3]" },
+  { category: "Outdoor Living", image: "/images/outdoor3.jpg", aspect: "aspect-[4/3]" },
 ]
+
+const projects = rawProjects.map((project, index) => ({ id: index, ...project }))
 
 const filters = ["All", "New Construction", "Remodels", "Outdoor Living"]
 
@@ -124,13 +73,13 @@ export default function GalleryPage() {
       <div className="gap-4 [column-count:2] md:[column-count:3]">
         {filtered.map((project) => (
           <div
-            key={`${project.id}-${activeFilter}`}
+            key={project.id}
             className="group mb-4 break-inside-avoid overflow-hidden rounded-xl"
           >
             <div className={`relative w-full ${project.aspect} overflow-hidden`}>
               <Image
                 src={project.image || "/placeholder.svg"}
-                alt={`${project.title} — ${project.category} project in ${project.location}`}
+                alt={`${project.category} project`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -139,11 +88,6 @@ export default function GalleryPage() {
                 <span className="mb-1.5 w-fit rounded-full bg-cyan-600 px-2.5 py-0.5 text-xs font-semibold text-white">
                   {project.category}
                 </span>
-                <h3 className="text-base font-semibold text-white">{project.title}</h3>
-                <p className="mt-0.5 flex items-center gap-1 text-sm text-white/80">
-                  <MapPin className="h-3 w-3 flex-shrink-0" />
-                  {project.location}
-                </p>
               </div>
             </div>
           </div>

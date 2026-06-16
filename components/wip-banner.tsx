@@ -19,9 +19,9 @@ export default function WipBanner() {
   if (!visible) return null
 
   return (
-    <div className="relative z-50 bg-cyan-700 px-4 py-2.5 text-center text-sm text-white">
+    <div className="relative z-50 bg-cyan-700 px-4 py-2.5 text-center text-md text-white">
       <p className="pr-8">
-        🏗️ Our website is still getting its finish coat — good thing we&apos;re better at building pools than building websites{" "}
+        Our website is still getting its finish coat — good thing we&apos;re better at building pools than building websites{" "}
         <span className="italic">(for now)</span>.
       </p>
       <button

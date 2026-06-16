@@ -225,8 +225,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+{/*
+      
       <section className="bg-white py-20">
         <div className="container">
           <div className="mb-12 text-center">
@@ -275,7 +275,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+    {/* Testimonials Section */}
+    
       {/* CTA Section */}
       <section className="bg-cyan-700 py-16 text-white">
         <div className="container text-center">
