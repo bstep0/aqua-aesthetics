@@ -104,7 +104,7 @@ export default function ContactPage() {
               <CheckCircle2 className="mb-4 h-16 w-16 text-cyan-600" />
               <h2 className="mb-3 text-2xl font-bold text-gray-900">Message Sent!</h2>
               <p className="max-w-sm text-gray-600">
-                Thanks for reaching out. We'll be in touch within one business day.
+                Thanks for reaching out. We'll be in touch soon!
               </p>
               <Button
                 className="mt-8 bg-cyan-600 hover:bg-cyan-700"
