@@ -58,7 +58,7 @@ export default function OutdoorLivingPage() {
       <section className="relative h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/outdoor3.jpg"
+            src="/images/outdoor6.jpg"
             alt="Custom outdoor living space with covered patio and pool in Southlake Texas"
             fill
             className="object-cover"

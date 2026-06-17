@@ -120,7 +120,7 @@ export default function Home() {
                 title: "New Construction",
                 description:
                   "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
-                icon: "/images/pool5.jpg",
+                icon: "/images/pool18.jpg",
                 alt: "Custom new pool construction with spa in Frisco Texas",
                 link: "/services/new-pool-construction",
               },
