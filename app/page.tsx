@@ -216,7 +216,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-auto">
               <Image
-                src="/images/pool1.jpg"
+                src="/images/pool4.jpg"
                 alt="Covered outdoor living patio overlooking custom pool in Southlake Texas"
                 fill
                 className="object-cover"
