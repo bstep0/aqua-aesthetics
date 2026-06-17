@@ -13,20 +13,20 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    default: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     template: "%s | Aqua Aesthetics Pools",
   },
   description:
-    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
+    "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
   openGraph: {
     type: "website",
     siteName: "Aqua Aesthetics Pools",
-    title: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    title: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
+      "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
     images: [
       {
-        url: "/images/pool6.jpg",
+        url: "/images/pool18.jpg",
         width: 1200,
         height: 630,
         alt: "Custom pool with fire feature built by Aqua Aesthetics Pools in DFW",
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    title: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
-    images: ["/images/pool6.jpg"],
+      "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
+    images: ["/images/pool18.jpg"],
   },
 }
 
