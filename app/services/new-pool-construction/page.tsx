@@ -58,7 +58,7 @@ export default function NewPoolConstructionPage() {
       <section className="relative h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pool5.jpg"
+            src="/images/pool13.jpg"
             alt="Custom new pool construction with waterfall and spa in Frisco Texas"
             fill
             className="object-cover"

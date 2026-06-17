@@ -127,7 +127,7 @@ export default function Home() {
               {
                 title: "Remodels",
                 description: "Breathe new life into your existing pool with our expert renovation services.",
-                icon: "/images/pool2.jpg",
+                icon: "/images/remodel1.jpg",
                 alt: "Pool remodeling and resurfacing project in Plano Texas",
                 link: "/services/pool-remodeling",
               },
@@ -135,7 +135,7 @@ export default function Home() {
                 title: "Service",
                 description:
                   "Professional pool service to keep your water crystal clear and equipment running smoothly.",
-                icon: "/images/pool3.jpg",
+                icon: "/images/pool16.jpg",
                 alt: "Pool maintenance and chemical balancing service in Dallas Texas",
                 link: "/services/pool-maintenance",
               },

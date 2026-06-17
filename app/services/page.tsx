@@ -95,7 +95,7 @@ export default function ServicesPage() {
         "Deck Construction and Landscaping",
         "Final Inspection and Pool Startup",
       ],
-      image: "/images/pool5.jpg",
+      image: "/images/pool15.jpg",
       imageAlt: "Custom new pool construction with spa in Frisco Texas",
     },
     {
@@ -113,7 +113,7 @@ export default function ServicesPage() {
         "Lighting Enhancements",
         "Safety Feature Installation",
       ],
-      image: "/images/pool2.jpg",
+      image: "/images/remodel1.jpg",
       imageAlt: "Pool remodeling and resurfacing project in Plano Texas",
     },
     {
@@ -130,7 +130,7 @@ export default function ServicesPage() {
         "Lighting Design",
         "Irrigation Systems",
       ],
-      image: "/images/pool5.jpg",
+      image: "/images/outdoor3.jpg",
       imageAlt: "Custom outdoor living space with pergola and fire pit in Southlake Texas",
     },
     {
@@ -141,13 +141,13 @@ export default function ServicesPage() {
       features: [
         "Weekly or Bi-Weekly Service Options",
         "Chemical Balancing",
-        "Detailed Service Reports",
+        //"Detailed Service Reports",
         "Equipment Inspection",
         "Algae Prevention and Treatment",
         "Filter Cleaning",
         "Preventative Maintenance",
       ],
-      image: "/images/pool3.jpg",
+      image: "/images/pool16.jpg",
       imageAlt: "Pool maintenance and chemical balancing service in Dallas Texas",
     },
     {
@@ -164,7 +164,7 @@ export default function ServicesPage() {
         "Electrical System Diagnosis",
         "Automation System Repairs",
       ],
-      image: "/images/pool4.jpg",
+      image: "/images/pool3.jpg",
       imageAlt: "Pool equipment repair and leak detection in Fort Worth Texas",
     },
   ]

@@ -58,7 +58,7 @@ export default function PoolMaintenancePage() {
       <section className="relative h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pool3.jpg"
+            src="/images/pool12.jpg"
             alt="Sparkling clean pool maintained by professionals in Dallas Texas"
             fill
             className="object-cover"
@@ -118,7 +118,7 @@ export default function PoolMaintenancePage() {
                   "Skimmer & Basket Emptying",
                   "Brushing Walls and Floor",
                   "Equipment Inspection",
-                  "Detailed Digital Service Reports",
+                  //"Detailed Digital Service Reports",
                   "Preventative Maintenance Checks",
                 ].map((item) => (
                   <li key={item} className="flex items-start">

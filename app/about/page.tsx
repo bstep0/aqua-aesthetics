@@ -6,7 +6,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "About Us — 30+ Years of Pool Excellence in DFW",
   description:
-    "Learn about Aqua Aesthetics Pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across Dallas, Frisco, Southlake, and the Metroplex.",
+    "Learn about Aqua Aesthetics Pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across the entire DFW metroplex, including Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
 }
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
     {
       name: "Brendon Stepanek",
       role: "Project Manager",
-      bio: "Brendon brings a wealth of experience in pool construction and remodeling, ensuring every project runs smoothly from start to finish. His attention to detail and dedication to client satisfaction make him an invaluable part of our team.",
+      bio: "Brendon brings a wealth of experience in pool construction and pool service, ensuring every project runs smoothly from start to finish. His attention to detail and dedication to client satisfaction make him an invaluable part of our team.",
       image: "/placeholder.svg?height=600&width=450",
     }
   ]
@@ -48,7 +48,7 @@ export default function AboutPage() {
               Worth, and Flower Mound.
             </p>
             <p>
-              Over three decades in the poool industry have given us a deep understanding of what North Texas homeowners
+              Over three decades in the pool industry has given us a deep understanding of what North Texas homeowners
               need from their pools — designs that handle the summer heat, construction methods that account for the
               region's clay-heavy soils, and maintenance programs that keep water pristine through long swimming
               seasons. We've built our reputation one project at a time, and most of our new clients come through

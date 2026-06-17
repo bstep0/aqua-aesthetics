@@ -58,7 +58,7 @@ export default function PoolRemodelingPage() {
       <section className="relative h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pool2.jpg"
+            src="/images/remodel1.jpg"
             alt="Pool remodeling and resurfacing project completed in Plano Texas"
             fill
             className="object-cover"
@@ -119,7 +119,7 @@ export default function PoolRemodelingPage() {
                   "LED Lighting Enhancements",
                   "Safety Feature Installation",
                   "Automation & Smart Controls",
-                  "Aesthetic Redesign Consultation",
+                  "Cosmetic Redesign Consultation",
                 ].map((item) => (
                   <li key={item} className="flex items-start">
                     <CheckCircle2 className="mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-600" />
@@ -157,7 +157,7 @@ export default function PoolRemodelingPage() {
                     Can I add a spa or water feature during a remodel?
                   </h4>
                   <p className="text-gray-700">
-                    Absolutely. A pool remodel is an ideal time to add a spa, sheer descents, bubblers, grottos, or
+                    Absolutely! A pool remodel is an ideal time to add a spa, sheer descents, bubblers, grottos, or
                     other water features. Adding these during an existing renovation is almost always more
                     cost-effective than installing them separately later.
                   </p>

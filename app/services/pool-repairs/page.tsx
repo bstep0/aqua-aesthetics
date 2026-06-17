@@ -134,8 +134,8 @@ export default function PoolRepairsPage() {
                     How do I know if my pool has a leak?
                   </h4>
                   <p className="text-gray-700">
-                    The most common signs are water loss beyond normal evaporation (more than ¼ inch per day), wet
-                    spots in the yard, unusually high water bills, or needing to add makeup water frequently. Cracks in
+                    The most common signs are water loss beyond normal evaporation (more than 1 inch per day), wet
+                    spots in the yard, unusually high water bills, or needing to add water frequently. Cracks in
                     the shell, loose fittings, or equipment pad water accumulation are also red flags. If you suspect a
                     leak, call us—early detection prevents much costlier repairs.
                   </p>
