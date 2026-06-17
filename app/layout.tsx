@@ -13,17 +13,17 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Pool Builders in DFW | Aqua Aesthetics Pools",
+    default: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     template: "%s | Aqua Aesthetics Pools",
   },
   description:
-    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
+    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
   openGraph: {
     type: "website",
     siteName: "Aqua Aesthetics Pools",
-    title: "Pool Builders in Dallas & DFW | Aqua Aesthetics Pools",
+    title: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
+      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
     images: [
       {
         url: "/images/pool6.jpg",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pool Builders in Dallas & DFW | Aqua Aesthetics Pools",
+    title: "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     description:
-      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
+      "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
     images: ["/images/pool6.jpg"],
   },
 }
