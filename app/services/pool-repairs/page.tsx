@@ -58,7 +58,7 @@ export default function PoolRepairsPage() {
       <section className="relative h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/pool4.jpg"
+            src="/images/repair1.jpg"
             alt="Pool equipment repair and replacement in Fort Worth Texas"
             fill
             className="object-cover"

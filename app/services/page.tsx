@@ -164,7 +164,7 @@ export default function ServicesPage() {
         "Electrical System Diagnosis",
         "Automation System Repairs",
       ],
-      image: "/images/pool3.jpg",
+      image: "/images/repair1.jpg",
       imageAlt: "Pool equipment repair and leak detection in Fort Worth Texas",
     },
   ]

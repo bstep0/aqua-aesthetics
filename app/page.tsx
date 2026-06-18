@@ -142,7 +142,7 @@ export default function Home() {
               {
                 title: "Repairs",
                 description: "Expert diagnosis and repair of all pool-related issues to minimize downtime.",
-                icon: "/images/pool4.jpg",
+                icon: "/images/repair1.jpg",
                 alt: "Pool equipment repair and leak detection in Fort Worth Texas",
                 link: "/services/pool-repairs",
               },

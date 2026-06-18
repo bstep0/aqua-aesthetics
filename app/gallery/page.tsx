@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import { ca } from "date-fns/locale"
 
 const rawProjects = [
   // New Construction
@@ -14,7 +15,7 @@ const rawProjects = [
   { category: "New Construction", image: "/images/pool8.jpg", aspect: "aspect-square" },
   { category: "New Construction", image: "/images/pool9.jpg", aspect: "aspect-square" },
   { category: "New Construction", image: "/images/pool10.jpg", aspect: "aspect-[4/3]" },
-  { category: "New Construction", image: "/images/pool11.jpeg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/pool11.jpeg", aspect: "aspect-square" },
   { category: "New Construction", image: "/images/pool12.jpg", aspect: "aspect-[5/4]" },
   { category: "New Construction", image: "/images/pool13.jpg", aspect: "aspect-square" },
   { category: "New Construction", image: "/images/pool14.jpg", aspect: "aspect-[4/5]" },
@@ -22,9 +23,16 @@ const rawProjects = [
   { category: "New Construction", image: "/images/pool16.jpg", aspect: "aspect-square" },
   { category: "New Construction", image: "/images/pool17.jpg", aspect: "aspect-[5/4]" },
   { category: "New Construction", image: "/images/pool18.jpg", aspect: "aspect-[4/3]" },
+  { category: "New Construction", image: "/images/pool19.jpg", aspect: "aspect-[4/5]" },
+  { category: "New Construction", image: "/images/pool20.jpg", aspect: "aspect-[5/4]" },
+  { category: "New Construction", image: "/images/pool21.jpg", aspect: "aspect-[4/3]" },
+  { category: "New Construction", image: "/images/pool22.jpg", aspect: "aspect-[5/4]" },
+  { category: "New Construction", image: "/images/pool23.jpg", aspect: "aspect-square" },
   // Remodels
   { category: "Remodels", image: "/images/remodel1.jpg", aspect: "aspect-[4/3]" },
-  { category: "Remodels", image: "/images/remodel2.jpg", aspect: "aspect-[5/4]" },
+  { category: "Remodels", image: "/images/remodel2.jpg", aspect: "aspect-square" },
+  { category: "Remodels", image: "/images/remodel3.jpg", aspect: "aspect-[5/4]" },
+  { category: "Remodels", image: "/images/remodel4.jpg", aspect: "aspect-[4/3]" },
   // Outdoor Living
   { category: "Outdoor Living", image: "/images/outdoor1.jpg", aspect: "aspect-square" },
   { category: "Outdoor Living", image: "/images/outdoor2.jpg", aspect: "aspect-[4/3]" },
@@ -34,6 +42,8 @@ const rawProjects = [
   { category: "Outdoor Living", image: "/images/outdoor5.jpg", aspect: "aspect-[4/5]" },
   { category: "Outdoor Living", image: "/images/outdoor6.jpg", aspect: "aspect-[4/3]" },
   { category: "Outdoor Living", image: "/images/outdoor7.jpg", aspect: "aspect-[4/5]" },
+  { category: "Outdoor Living", image: "/images/outdoor8.jpg", aspect: "aspect-square" },
+  { category: "Outdoor Living", image: "/images/outdoor9.jpg", aspect: "aspect-[5/4]" }
 ]
 
 const projects = rawProjects.map((project, index) => ({ id: index, ...project }))
