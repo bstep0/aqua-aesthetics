@@ -28,11 +28,16 @@ const rawProjects = [
   { category: "New Construction", image: "/images/pool21.jpg", aspect: "aspect-[4/3]" },
   { category: "New Construction", image: "/images/pool22.jpg", aspect: "aspect-[5/4]" },
   { category: "New Construction", image: "/images/pool23.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool24.jpg", aspect: "aspect-square" },
+  { category: "New Construction", image: "/images/pool25.jpg", aspect: "aspect-[5/4]" },
+  { category: "New Construction", image: "/images/pool26.jpg", aspect: "aspect-[4/5]" },
   // Remodels
   { category: "Remodels", image: "/images/remodel1.jpg", aspect: "aspect-[4/3]" },
   { category: "Remodels", image: "/images/remodel2.jpg", aspect: "aspect-square" },
   { category: "Remodels", image: "/images/remodel3.jpg", aspect: "aspect-[5/4]" },
   { category: "Remodels", image: "/images/remodel4.jpg", aspect: "aspect-[4/3]" },
+  { category: "Remodels", image: "/images/remodel5.jpg", aspect: "aspect-[4/5]" },
+  { category: "Remodels", image: "/images/remodel6.jpg", aspect: "aspect-[5/4]" },
   // Outdoor Living
   { category: "Outdoor Living", image: "/images/outdoor1.jpg", aspect: "aspect-square" },
   { category: "Outdoor Living", image: "/images/outdoor2.jpg", aspect: "aspect-[4/3]" },
@@ -43,7 +48,8 @@ const rawProjects = [
   { category: "Outdoor Living", image: "/images/outdoor6.jpg", aspect: "aspect-[4/3]" },
   { category: "Outdoor Living", image: "/images/outdoor7.jpg", aspect: "aspect-[4/5]" },
   { category: "Outdoor Living", image: "/images/outdoor8.jpg", aspect: "aspect-square" },
-  { category: "Outdoor Living", image: "/images/outdoor9.jpg", aspect: "aspect-[5/4]" }
+  { category: "Outdoor Living", image: "/images/outdoor9.jpg", aspect: "aspect-[5/4]" },
+  { category: "Outdoor Living", image: "/images/outdoor10.jpg", aspect: "aspect-square" },
 ]
 
 const projects = rawProjects.map((project, index) => ({ id: index, ...project }))
