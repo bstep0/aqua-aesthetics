@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
     images: [
       {
-        url: "/images/pool18.jpg",
+        url: "https://www.aquaaestheticspools.com/images/pool18.jpg",
         width: 1200,
         height: 630,
         alt: "Custom pool with fire feature built by Aqua Aesthetics Pools in DFW",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
     description:
       "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
-    images: ["/images/pool18.jpg"],
+    images: ["https://www.aquaaestheticspools.com/images/pool18.jpg"],
   },
 }
 

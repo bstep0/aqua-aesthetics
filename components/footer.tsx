@@ -83,7 +83,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 text-cyan-600" />
                 <a
-                  href="mailto:pools@aquaaesthetics.com"
+                  href="mailto:contact@aquaaestheticspools.com"
                   className="text-gray-600 transition-colors hover:text-cyan-600"
                 >
                   contact@AquaAestheticsPools.com

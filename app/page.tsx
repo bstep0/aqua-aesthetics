@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
   name: "Aqua Aesthetics Pools",
   url: "https://www.aquaaestheticspools.com",
   telephone: "+12149715996",
@@ -26,8 +26,15 @@ const localBusinessJsonLd = {
     addressCountry: "US",
   },
   areaServed: [
-    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford",
+    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "Mckinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
   ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "17:00"
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Pool Services",
@@ -39,29 +46,6 @@ const localBusinessJsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Repairs" } },
     ],
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sarah M." },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Aqua Aesthetics transformed our outdated pool into a modern oasis. Their attention to detail and craftsmanship exceeded our expectations.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "James T." },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "From design to completion, the team was professional and responsive. Our new pool is the highlight of our home and perfect for entertaining.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Jennifer R." },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "We've tried other pool services, but none compare to the quality and reliability of Aqua Aesthetics. Their maintenance program keeps our pool pristine year-round.",
-    },
-  ],
 }
 
 export default function Home() {
