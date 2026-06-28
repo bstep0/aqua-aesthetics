@@ -50,7 +50,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:+12149715996"
-            className="text-base font-semibold text-cyan-600 hover:text-cyan-700 transition-colors"
+            className="hidden md:block text-base font-semibold text-cyan-700 hover:text-cyan-800 transition-colors pl-6 border-l border-gray-400"
             aria-label="Call Aqua Aesthetics Pools"
           >
             (214) 971-5996
