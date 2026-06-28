@@ -48,6 +48,13 @@ export default function Navbar() {
               {route.name}
             </Link>
           ))}
+          <a
+            href="tel:+12149715996"
+            className="text-base font-semibold text-cyan-600 hover:text-cyan-700 transition-colors"
+            aria-label="Call Aqua Aesthetics Pools"
+          >
+            (214) 971-5996
+          </a>
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>

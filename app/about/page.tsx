@@ -41,7 +41,7 @@ export default function AboutPage() {
 
           <div className="space-y-5 text-lg leading-relaxed text-gray-700">
             <p>
-              Aqua Aesthetics was founded in 2026 by Larry Wieland, having a passion for
+              Aqua Aesthetics was founded in 2026 by Larry Wieland, with a passion for
               craftsmanship and a belief that every backyard has the potential to become something extraordinary. What
               started as a small pool service operation has grown into a full-service pool construction, remodeling, and
               maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort

@@ -19,12 +19,14 @@ const localBusinessJsonLd = {
   email: "contact@aquaaestheticspools.com",
   description:
     "Expert pool builders offering construction, remodeling, repairs, and maintenance in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound.",
-  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     addressRegion: "TX",
     addressCountry: "US",
+    addressLocality: "Frisco",
+    postalCode: "75034",
   },
+  image: "https://www.aquaaestheticspools.com/icon.svg",
   areaServed: [
     "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "Mckinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
   ],
