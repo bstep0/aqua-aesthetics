@@ -28,7 +28,7 @@ const localBusinessJsonLd = {
   },
   image: "https://www.aquaaestheticspools.com/icon.svg",
   areaServed: [
-    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "Mckinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
+    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "McKinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
   ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
