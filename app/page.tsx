@@ -30,6 +30,9 @@ const localBusinessJsonLd = {
   areaServed: [
     "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "McKinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
   ],
+  sameAs: [
+    "https://share.google/yyhmW0NSpBeLPA5TP"
+  ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
@@ -48,7 +51,7 @@ const localBusinessJsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Repairs" } },
     ],
   },
-}
+};
 
 export default function Home() {
   return (
