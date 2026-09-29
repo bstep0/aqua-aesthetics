@@ -1,108 +1,70 @@
 import Link from "next/link"
-import { Droplets, Mail, Phone, MapPin } from "lucide-react"
+import { SITE, SERVICES } from "@/lib/site"
+import { AREAS } from "@/lib/areas"
+import { Marquee } from "@/components/site/ui"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
-      <div className="container py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <Link href="/" className="flex items-center space-x-2">
-              <Droplets className="h-6 w-6 text-cyan-600" />
-              <span className="text-xl text-gray-900">aqua aesthetics</span>
-            </Link>
-            <p className="mt-4 text-gray-600">
-              Premium pool construction, remodeling, repairs and maintenance services in DFW. Transforming backyards
-              into luxurious retreats since 1995.
+    <footer className="bg-navy text-ivory">
+      <div aria-hidden="true" className="aa-ribbon flex h-[58px] items-center overflow-hidden bg-sun">
+        <Marquee
+          items={["Free consultations", SITE.phone, "Mon–Fri 8am–5pm", "Owner-led", "Based in McKinney, TX", "Serving all of DFW"]}
+          className="gap-9 pr-9 text-base font-extrabold uppercase tracking-[0.14em] text-navy md:text-lg"
+          sepClass=""
+        />
+      </div>
+      <div className="container py-14">
+        <div className="grid gap-10 text-[15px] leading-8 text-ivory/75 md:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <p className="font-display text-3xl leading-tight text-ivory">aqua aesthetics</p>
+            <p className="mt-3 max-w-xs leading-relaxed">
+              Family-owned pool builders based in McKinney, TX and serving the Dallas–Fort Worth Metroplex since 1995. Construction, remodeling, repairs and maintenance.
             </p>
           </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900">Services</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/services/new-pool-construction" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  New Pool Construction
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/pool-remodeling" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Pool Remodeling
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/outdoor-living" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Outdoor Living
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/pool-maintenance" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Regular Maintenance
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/pool-repairs" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Pool Equipment Service & Repairs
-                </Link>
-              </li>
+          <div className="lg:col-span-3">
+            <h3 className="mb-2 font-bold text-ivory">Services</h3>
+            <ul>
+              {SERVICES.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href} className="hover:text-sun">
+                    {s.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900">Company</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Our Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  Contact Us
-                </Link>
-              </li>
+          <div className="lg:col-span-2">
+            <h3 className="mb-2 font-bold text-ivory">Company</h3>
+            <ul>
+              <li><Link href="/gallery" className="hover:text-sun">Our Work</Link></li>
+              <li><Link href="/design" className="hover:text-sun">Design your pool</Link></li>
+              <li><Link href="/service-areas" className="hover:text-sun">Service Areas</Link></li>
+              <li><Link href="/about" className="hover:text-sun">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-sun">Contact</Link></li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-900">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="mr-2 h-5 w-5 flex-shrink-0 text-cyan-600" />
-                <address className="not-italic text-gray-600">
-                  Serving Dallas, Frisco, Plano,<br />
-                  Southlake, Colleyville,<br />
-                  Fort Worth &amp; Flower Mound, TX
-                </address>
-              </li>
-              <li className="flex items-start">
-                <Mail className="mr-2 h-5 w-5 text-cyan-600" />
-                <a
-                  href="mailto:contact@aquaaestheticspools.com"
-                  className="text-gray-600 transition-colors hover:text-cyan-600"
-                >
-                  contact@AquaAestheticsPools.com
-                </a>
-              </li>
-              <li className="flex items-start">
-                <Phone className="mr-2 h-5 w-5 text-cyan-600" />
-                <a href="tel:+12149715996" className="text-gray-600 transition-colors hover:text-cyan-600">
-                  (214) 971-5996
-                </a>
-              </li>
+          <div className="lg:col-span-3">
+            <h3 className="mb-2 font-bold text-ivory">Contact</h3>
+            <ul>
+              <li><a href={SITE.phoneHref} className="font-bold text-sun">{SITE.phone}</a></li>
+              <li><a href={`mailto:${SITE.email}`} className="hover:text-sun">{SITE.email}</a></li>
+              <li>{SITE.hours}</li>
+              <li>{SITE.base}</li>
             </ul>
           </div>
         </div>
-
-        <div className="mt-12 border-t border-gray-200 pt-8">
-          <div className="flex flex-col items-center justify-center">
-            <p className="text-center text-sm text-gray-600">© {new Date().getFullYear()} Aqua Aesthetics Pools. All rights reserved.</p>
-          </div>
+        <div className="mt-12 flex flex-col gap-2 border-t border-ivory/15 pt-6 text-sm text-ivory/60 md:flex-row md:justify-between">
+          <span>© {new Date().getFullYear()} Aqua Aesthetics Pools. All rights reserved.</span>
+          <nav aria-label="Service areas" className="flex flex-wrap gap-x-3 gap-y-1">
+            {AREAS.slice(0, 12).map((a) => (
+              <Link key={a.slug} href={`/service-areas/${a.slug}`} className="hover:text-sun">
+                {a.city}
+              </Link>
+            ))}
+            <Link href="/service-areas" className="font-semibold text-ivory hover:text-sun">
+              All areas →
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

@@ -66,6 +66,18 @@ const config = {
           900: "#164e63",
           950: "#083344",
         },
+        navy: { DEFAULT: "#0B1B2B", 2: "#12283D" },
+        ivory: "#F6F3EE",
+        sand: "#EFE7DA",
+        sun: { DEFAULT: "#E8A04C", light: "#FBE1B0", dark: "#A0621C" },
+        teal: { DEFAULT: "#0B7285", dark: "#085A69" },
+        aqua: "#5CC8D9",
+        ink: "#0E2A33",
+        slate: { DEFAULT: "#4A5F69", 2: "#3B4E57" },
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

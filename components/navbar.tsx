@@ -1,101 +1,118 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState, type ReactNode } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, X, Droplets } from "lucide-react"
+import { Menu, Phone, X } from "lucide-react"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { SITE } from "@/lib/site"
+import Logo from "@/components/site/logo"
 
-export default function Navbar() {
+const ROUTES = [
+  { name: "Services", path: "/services" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Design your pool", path: "/design" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+]
+
+// Pages that open with a full-bleed dark hero: the nav floats over them.
+const OVERLAY = (path: string) => path === "/" || path === "/design" || path.startsWith("/services") || path.startsWith("/service-areas")
+
+export default function Navbar({ banner }: { banner?: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const overlay = OVERLAY(pathname)
 
-  const routes = [
-    { name: "home", path: "/" },
-    { name: "gallery", path: "/gallery" },
-    { name: "services", path: "/services" },
-    { name: "about", path: "/about" },
-    { name: "contact", path: "/contact" },
-  ]
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
-  const isActive = (path: string) => {
-    if (path === "/") {
-      return pathname === "/"
-    }
-    return pathname.startsWith(path)
-  }
+  const isActive = (path: string) => (path === "/" ? pathname === "/" : pathname.startsWith(path))
+  const dark = overlay && !scrolled
+  const solidDark = overlay && scrolled
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
-      <div className="container flex h-20 items-center justify-between px-0 sm:px-4">
-        <div className="flex items-center pl-4 sm:pl-0">
-          <Link href="/" className="flex items-center space-x-2">
-            <Droplets className="h-14 w-14 text-cyan-600 animate-ripple transition-all" />
-            <span className="text-2xl font-md text-gray-900">aqua aesthetics</span>
-          </Link>
-        </div>
+    <header className={`${overlay ? "fixed" : "sticky"} inset-x-0 top-0 z-50`}>
+      {banner}
+      <div
+        className={`transition-colors duration-300 ${
+          dark ? "bg-transparent" : solidDark ? "bg-navy/95 backdrop-blur-md" : "border-b border-navy/10 bg-ivory/95 backdrop-blur-md"
+        }`}
+      >
+        <div className={`container flex h-20 items-center justify-between ${overlay ? "text-ivory" : "text-navy"}`}>
+          <Logo tone={overlay ? "light" : "dark"} />
 
-        <nav className="hidden md:flex md:items-center md:space-x-6">
-          {routes.map((route) => (
-            <Link
-              key={route.path}
-              href={route.path}
-              className={`text-base font-medium transition-colors hover:text-cyan-600 ${
-                isActive(route.path) ? "text-cyan-600" : "text-gray-600"
-              }`}
-            >
-              {route.name}
-            </Link>
-          ))}
-          <a
-            href="tel:+12149715996"
-            className="hidden md:block text-base font-semibold text-cyan-700 hover:text-cyan-800 transition-colors pl-6 border-l border-gray-400"
-            aria-label="Call Aqua Aesthetics Pools"
-          >
-            (214) 971-5996
-          </a>
-        </nav>
-
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                <Droplets className="h-12 w-12 text-cyan-600" />
-                <span className="text-lg font-bold">Aqua Aesthetics</span>
+          <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+            {ROUTES.map((route) => (
+              <Link
+                key={route.path}
+                href={route.path}
+                className={`aa-link-u py-1 text-[15px] ${isActive(route.path) ? "font-bold" : "font-medium"} ${
+                  isActive(route.path) ? (overlay ? "text-sun" : "text-teal") : ""
+                }`}
+              >
+                {route.name}
               </Link>
-              <Button variant="outline" size="icon" onClick={() => setIsOpen(false)}>
-                <X className="h-6 w-6" />
-                <span className="sr-only">Close menu</span>
-              </Button>
-            </div>
-            <nav className="mt-8 flex flex-col space-y-4">
-              {routes.map((route) => (
-                <Link
-                  key={route.path}
-                  href={route.path}
-                  className={`py-2 text-lg font-medium transition-colors hover:text-cyan-600 ${
-                    isActive(route.path) ? "text-cyan-600" : "text-gray-600"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {route.name}
+            ))}
+            <a
+              href={SITE.phoneHref}
+              className={`flex items-center gap-2 border-l pl-7 text-[15px] font-semibold ${overlay ? "border-ivory/25" : "border-navy/15"}`}
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              {SITE.phone}
+            </a>
+            <Link href="/contact" className="rounded-full bg-sun px-5 py-3 text-[15px] font-bold text-navy transition-transform hover:-translate-y-0.5">
+              Free quote
+            </Link>
+          </nav>
+
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <button
+                type="button"
+                aria-label="Open menu"
+                className={`flex h-12 w-12 items-center justify-center rounded-full border lg:hidden ${overlay ? "border-ivory/35" : "border-navy/20"}`}
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[320px] border-none bg-navy p-6 text-ivory sm:w-[400px] [&>button]:hidden">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <div className="flex items-center justify-between">
+                <Logo tone="light" onClick={() => setIsOpen(false)} />
+                <button type="button" aria-label="Close menu" onClick={() => setIsOpen(false)} className="flex h-11 w-11 items-center justify-center rounded-full border border-ivory/30">
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              <nav aria-label="Mobile" className="mt-10 flex flex-col">
+                <Link href="/" onClick={() => setIsOpen(false)} className="border-b border-ivory/15 py-3 font-display text-3xl font-light">
+                  Home
                 </Link>
-              ))}
-              <Button asChild className="mt-2 bg-cyan-600 hover:bg-cyan-700">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Get a Quote
+                {ROUTES.map((route) => (
+                  <Link
+                    key={route.path}
+                    href={route.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`border-b border-ivory/15 py-3 font-display text-3xl font-light ${isActive(route.path) ? "text-sun" : ""}`}
+                  >
+                    {route.name}
+                  </Link>
+                ))}
+                <a href={SITE.phoneHref} className="mt-8 text-xl font-bold text-sun">
+                  {SITE.phone}
+                </a>
+                <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-4 rounded-full bg-sun py-3.5 text-center font-bold text-navy">
+                  Get a free quote
                 </Link>
-              </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )

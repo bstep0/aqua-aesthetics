@@ -19,7 +19,7 @@ export default function WipBanner() {
   if (!visible) return null
 
   return (
-    <div className="relative z-50 bg-cyan-700 px-4 py-2.5 text-center text-md text-white">
+    <div className="relative z-50 bg-sun px-4 py-2.5 text-center text-sm font-semibold text-navy">
       <p className="pr-8">
         Our website is still getting its finish coat — good thing we&apos;re better at building pools than building websites{" "}
         <span className="italic">(for now)</span>.
@@ -27,7 +27,7 @@ export default function WipBanner() {
       <button
         onClick={dismiss}
         aria-label="Dismiss banner"
-        className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 hover:bg-white/20 transition-colors"
+        className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 hover:bg-navy/10 transition-colors"
       >
         <X className="h-4 w-4" />
       </button>

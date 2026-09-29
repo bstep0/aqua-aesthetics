@@ -1,283 +1,222 @@
-import type { Metadata } from "next"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2 } from "lucide-react"
+import { pageMeta, localBusinessJsonLd, BUSINESS_ID } from "@/lib/seo"
+import { AREAS } from "@/lib/areas"
 import Image from "next/image"
 import Link from "next/link"
+import { Phone, PencilLine, ShieldCheck, Wrench } from "lucide-react"
+import { SITE, SERVICES, WHY_US, ALL_CITIES } from "@/lib/site"
+import { CrossingRibbons, CtaBand, Eyebrow, FillLink } from "@/components/site/ui"
+import { Droplet } from "@/components/site/logo"
+import HeroQuoteForm from "@/components/site/hero-quote-form"
+import DesignerFrame from "@/components/designer/designer-frame"
 
-export const metadata: Metadata = {
-  title: "Pool Builders in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville & Flower Mound | Aqua Aesthetics Pools",
+export const metadata = pageMeta({
+  title: "DFW Pool Builder — Custom Pools, Remodels & Repairs | Aqua Aesthetics Pools",
   description:
-    "Pool builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, and repairs. Free quote today.",
-}
+    "Family-owned DFW pool builder based in McKinney, TX. Custom pool construction, remodeling, outdoor living, maintenance and repairs in McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and across the Metroplex. Free quote.",
+  path: "/",
+})
 
-const localBusinessJsonLd = {
+const websiteJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "WebSite",
   name: "Aqua Aesthetics Pools",
   url: "https://www.aquaaestheticspools.com",
-  telephone: "+12149715996",
-  email: "contact@aquaaestheticspools.com",
-  description:
-    "Expert pool builders offering construction, remodeling, repairs, and maintenance in Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound.",
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "TX",
-    addressCountry: "US",
-    addressLocality: "Frisco",
-    postalCode: "75034",
-  },
-  image: "https://www.aquaaestheticspools.com/icon.svg",
-  areaServed: [
-    "Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound", "Denton", "Lewisville", "Carrollton", "Grapevine", "Euless", "Hurst", "Bedford", "McKinney", "Allen", "The Colony", "Little Elm", "Prosper", "Celina", "Highland Village", "Keller",
-  ],
-  sameAs: [
-    "https://share.google/yyhmW0NSpBeLPA5TP"
-  ],
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "08:00",
-    closes: "17:00"
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Pool Services",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Pool Construction" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Remodeling" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Outdoor Living" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Maintenance" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pool Repairs" } },
-    ],
-  },
-};
+  publisher: { "@id": BUSINESS_ID },
+}
+
+const HEADLINE = ["Backyards", "built", "for", "the"]
 
 export default function Home() {
+  const [feature, ...rest] = SERVICES
   return (
     <div className="flex flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
 
-      {/* Hero Section */}
-      <section className="relative h-[80vh] w-full overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/pool6.jpg"
-            alt="Custom pool with fire feature and LED lighting built in the DFW Metroplex"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Transform Your Backyard <br />
-            <span className="text-cyan-300">Into a Paradise</span>
-          </h1>
-          <p className="mb-8 max-w-2xl text-lg text-white/90">
-            Aqua Aesthetics delivers premium pool construction, remodeling, and maintenance services that turn your
-            outdoor space into a luxurious retreat.
-          </p>
-          <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-              <Link href="/contact">Get a Free Quote</Link>
-            </Button>
-            <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-              <Link href="/gallery">View Our Work</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="bg-white py-20">
-        <div className="container">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Services</h2>
-            <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              From concept to completion, we provide comprehensive pool solutions tailored to your needs.
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-navy pb-44 pt-32 text-ivory md:min-h-[800px] md:pt-36">
+        <Image
+          src="/images/pool6.jpg"
+          alt="Custom pool with fire feature and LED lighting built in the DFW Metroplex"
+          fill
+          priority
+          sizes="100vw"
+          className="aa-kenburns object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,20,33,0.93)_0%,rgba(8,20,33,0.72)_40%,rgba(8,20,33,0.2)_72%,rgba(8,20,33,0.35)_100%)]" />
+        <div className="container relative grid items-start gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-7 lg:pt-6">
+            <p className="aa-rise mb-6 text-sm font-bold uppercase tracking-[0.2em] text-aqua">Pool builders · Dallas–Fort Worth · Based in McKinney</p>
+            <h1 className="mb-7 font-display text-5xl font-light leading-[0.98] tracking-[-0.025em] sm:text-7xl lg:text-[92px]">
+              {HEADLINE.map((w, i) => (
+                <span key={w} className="aa-rise mr-[0.25em] inline-block" style={{ animationDelay: `${0.2 + i * 0.1}s` }}>
+                  {w}
+                </span>
+              ))}
+              <span className="aa-rise inline-block" style={{ animationDelay: "0.6s" }}>
+                <em className="aa-glint">golden hour.</em>
+              </span>
+            </h1>
+            <p className="aa-rise mb-10 max-w-[580px] text-lg leading-relaxed text-ivory/85 md:text-[21px]" style={{ animationDelay: "0.8s" }}>
+              Custom pools, remodels, repairs and outdoor living, built by the owner who quotes it. One team, one point of contact, start to finish.
             </p>
+            <div className="aa-rise flex flex-wrap items-center gap-4" style={{ animationDelay: "0.95s" }}>
+              <FillLink href="/gallery" variant="outline-light" arrow>
+                View our work
+              </FillLink>
+              <a href={SITE.phoneHref} className="flex items-center gap-3 px-2 py-3 text-[17px] font-semibold">
+                <span className="relative flex h-11 w-11 items-center justify-center rounded-full bg-aqua/20">
+                  <span className="absolute inset-0 rounded-full border-[1.5px] border-aqua" style={{ animation: "aa-ring 2.6s ease-out infinite" }} aria-hidden="true" />
+                  <Phone className="h-[18px] w-[18px] text-aqua" aria-hidden="true" />
+                </span>
+                {SITE.phone}
+              </a>
+            </div>
           </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "New Construction",
-                description:
-                  "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
-                icon: "/images/pool18.jpg",
-                alt: "Custom new pool construction with spa in Frisco Texas",
-                link: "/services/new-pool-construction",
-              },
-              {
-                title: "Remodels",
-                description: "Breathe new life into your existing pool with our expert renovation services.",
-                icon: "/images/remodel1.jpg",
-                alt: "Pool remodeling and resurfacing project in Plano Texas",
-                link: "/services/pool-remodeling",
-              },
-              {
-                title: "Service",
-                description:
-                  "Professional pool service to keep your water crystal clear and equipment running smoothly.",
-                icon: "/images/pool16.jpg",
-                alt: "Pool maintenance and chemical balancing service in Dallas Texas",
-                link: "/services/pool-maintenance",
-              },
-              {
-                title: "Repairs",
-                description: "Expert diagnosis and repair of all pool-related issues to minimize downtime.",
-                icon: "/images/repair1.jpg",
-                alt: "Pool equipment repair and leak detection in Fort Worth Texas",
-                link: "/services/pool-repairs",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="group rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md"
-              >
-                <div className="mb-4 h-48 w-full overflow-hidden rounded-lg">
-                  <Image
-                    src={service.icon || "/placeholder.svg"}
-                    alt={service.alt}
-                    width={300}
-                    height={300}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mb-2 text-xl font-bold text-gray-900">{service.title}</h3>
-                <p className="mb-4 text-gray-600">{service.description}</p>
-              </div>
-            ))}
+          <div className="aa-rise lg:col-span-4 lg:col-start-9" style={{ animationDelay: "0.7s" }}>
+            <HeroQuoteForm />
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="bg-cyan-50 py-20">
+      <CrossingRibbons tape={["Owner-led", "Your quote is your price", "30+ years in DFW", "Permits handled", "Family-owned"]} ropeItems={ALL_CITIES.slice(0, 12)} />
+
+      {/* Services */}
+      <section className="container pb-28 pt-12">
+        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="flex flex-col gap-5">
+            <Eyebrow icon={<Wrench className="h-6 w-6" />}>What we do</Eyebrow>
+            <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] text-navy md:text-[64px]">
+              From first dig to <em>every summer after.</em>
+            </h2>
+          </div>
+          <Link href="/services" className="aa-link-u self-start pb-1 text-[17px] font-bold text-teal md:self-auto">
+            All services →
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3 md:grid-rows-[350px_350px]">
+          <ServiceCard s={feature} big />
+          {rest.map((s) => (
+            <ServiceCard key={s.href} s={s} />
+          ))}
+        </div>
+      </section>
+
+      {/* Designer */}
+      <section id="designer" className="bg-navy py-24 text-ivory md:py-28">
         <div className="container">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col justify-center">
-              <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Why Choose Aqua Aesthetics?
+          <div className="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <div className="flex flex-col gap-5">
+              <Eyebrow light icon={<PencilLine className="h-6 w-6" />}>
+                Design your backyard
+              </Eyebrow>
+              <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] md:text-[64px]">
+                Dream it up. <em className="text-sun">We&apos;ll build it.</em>
               </h2>
-              <div className="space-y-5">
-                {[
-                  {
-                    heading: "You work directly with the owner",
-                    detail: "Not passed between salespeople and subcontractors. One team, one point of contact, start to finish.",
-                  },
-                  {
-                    heading: "30+ years building in DFW",
-                    detail: "We know local soil conditions, HOA requirements, and city permitting — so your project doesn't hit unexpected delays.",
-                  },
-                  {
-                    heading: "No hidden costs, ever",
-                    detail: "Your quote is your price. We flag any scope changes before they happen, not after.",
-                  },
-                  {
-                    heading: "We build pools we'd swim in",
-                    detail: "Only materials and equipment we'd put in our own backyards. No corners cut to win a bid.",
-                  },
-                  {
-                    heading: "Still here when you need us",
-                    detail: "Service, repairs, and remodels years after your build. We're invested in your pool long-term.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle2 className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-cyan-600" />
-                    <div>
-                      <p className="text-lg font-semibold text-gray-900">{item.heading}</p>
-                      <p className="text-gray-600">{item.detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Button asChild className="bg-cyan-600 hover:bg-cyan-700">
-                  <Link href="/about">About Our Company</Link>
-                </Button>
-              </div>
             </div>
-            <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-auto">
-              <Image
-                src="/images/pool4.jpg"
-                alt="Covered outdoor living patio overlooking custom pool in Southlake Texas"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-{/*
-      
-      <section className="bg-white py-20">
-        <div className="container">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Our Clients Say</h2>
-            <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Don't just take our word for it. Here's what our satisfied customers have to say.
+            <p className="max-w-md text-lg leading-relaxed text-ivory/80">
+              Sketch any pool shape, drag in a spa, fire pit or pergola, then walk around it in 3D. Send it with your quote request.{" "}
+              <Link href="/design" className="aa-link-u font-bold text-sun">
+                Open full screen →
+              </Link>
             </p>
           </div>
+          <DesignerFrame />
+        </div>
+      </section>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: "Sarah M.",
-                location: "Dallas, TX",
-                quote:
-                  "Aqua Aesthetics transformed our outdated pool into a modern oasis. Their attention to detail and craftsmanship exceeded our expectations.",
-              },
-              {
-                name: "James T.",
-                location: "Southlake, TX",
-                quote:
-                  "From design to completion, the team was professional and responsive. Our new pool is the highlight of our home and perfect for entertaining.",
-              },
-              {
-                name: "Jennifer R.",
-                location: "Fort Worth, TX",
-                quote:
-                  "We've tried other pool services, but none compare to the quality and reliability of Aqua Aesthetics. Their maintenance program keeps our pool pristine year-round.",
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="mb-4 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="mb-4 text-gray-700">"{testimonial.quote}"</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.location}</p>
-                </div>
-              </div>
-            ))}
+      {/* Why us */}
+      <section className="container grid items-center gap-16 py-28 lg:grid-cols-12 lg:py-32">
+        <div className="relative lg:col-span-6">
+          <div className="relative h-[420px] overflow-hidden rounded-[28px] md:h-[640px]">
+            <Image
+              src="/images/pool4.jpg"
+              alt="Covered outdoor living patio overlooking custom pool in Southlake Texas"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-10 right-4 flex h-[170px] w-[170px] items-center justify-center rounded-full bg-sun shadow-[0_20px_50px_rgba(11,27,43,0.25)] md:-right-12 md:h-[190px] md:w-[190px]">
+            <svg viewBox="0 0 190 190" className="absolute inset-0 h-full w-full" style={{ animation: "aa-spin 26s linear infinite" }} aria-hidden="true">
+              <defs>
+                <path id="aa-badge" d="M95,95 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0" />
+              </defs>
+              <text fontFamily="var(--font-sans)" fontSize="13" fontWeight="700" letterSpacing="3.2" fill="#0B1B2B">
+                <textPath href="#aa-badge">OWNER-LED · 30+ YEARS · FAMILY-OWNED · </textPath>
+              </text>
+            </svg>
+            <Droplet className="h-11 w-11" stroke="#0B1B2B" />
           </div>
         </div>
-      </section>
-    {/* Testimonials Section */}
-    
-      {/* CTA Section */}
-      <section className="bg-cyan-700 py-16 text-white">
-        <div className="container text-center">
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Ready to Transform Your Pool?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90">
-            Contact us today for a free consultation and quote. Let's create your dream pool together.
-          </p>
-          <Button asChild size="lg" className="bg-white text-cyan-700 hover:bg-gray-100">
-            <Link href="/contact">Get Started Today</Link>
-          </Button>
+        <div className="flex flex-col gap-8 lg:col-span-5 lg:col-start-8">
+          <div className="flex flex-col gap-5">
+            <Eyebrow icon={<ShieldCheck className="h-6 w-6" />}>Why Aqua Aesthetics</Eyebrow>
+            <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] text-navy md:text-[58px]">
+              We build pools <em>we&apos;d swim in.</em>
+            </h2>
+          </div>
+          <ol className="flex flex-col">
+            {WHY_US.map((item, i) => (
+              <li key={item.heading} className="flex gap-5 border-t border-navy/15 py-5 last:border-b">
+                <span className="w-8 shrink-0 font-display text-[22px] text-sun-dark">0{i + 1}</span>
+                <div>
+                  <p className="text-lg font-bold text-navy">{item.heading}</p>
+                  <p className="leading-relaxed text-slate">{item.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <FillLink href="/about" variant="navy" className="self-start">
+            Meet the team
+          </FillLink>
         </div>
       </section>
+
+      {/* Where we build */}
+      <section className="container pb-8">
+        <div className="flex flex-col gap-6 rounded-[32px] bg-white p-8 md:p-12">
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <h2 className="font-display text-3xl font-light leading-[1.05] tracking-[-0.02em] text-navy md:text-5xl">
+              Building pools <em>across Dallas–Fort Worth.</em>
+            </h2>
+            <Link href="/service-areas" className="aa-link-u self-start pb-1 font-bold text-teal md:self-auto">
+              All service areas →
+            </Link>
+          </div>
+          <p className="max-w-3xl text-lg text-slate">
+            Based in McKinney and working throughout the Metroplex — from Collin County to Tarrant County and everywhere in between.
+          </p>
+          <ul className="flex flex-wrap gap-2">
+            {AREAS.map((a) => (
+              <li key={a.slug}>
+                <Link href={`/service-areas/${a.slug}`} className="block rounded-full border border-navy/10 px-4 py-2.5 text-[15px] font-semibold text-navy transition-colors hover:bg-navy hover:text-ivory">
+                  {a.city}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <CtaBand title="Let's plan your" accent="backyard." />
     </div>
+  )
+}
+
+function ServiceCard({ s, big = false }: { s: (typeof SERVICES)[number]; big?: boolean }) {
+  return (
+    <Link
+      href={s.href}
+      className={`aa-card relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-3xl text-ivory ${big ? "md:row-span-2" : ""}`}
+    >
+      <Image src={s.image} alt={s.alt} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,20,33,0.9)_0%,rgba(8,20,33,0)_60%)]" />
+      <div className={`relative flex flex-col gap-2 ${big ? "p-9" : "p-7"}`}>
+        {big && <span className="self-start rounded-full bg-sun px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-navy">Most requested</span>}
+        <h3 className={`font-display font-normal ${big ? "text-4xl" : "text-[28px]"}`}>{s.name}</h3>
+        <p className={`text-ivory/85 ${big ? "text-[17px] leading-relaxed" : "text-[15px]"}`}>{s.blurb}</p>
+      </div>
+    </Link>
   )
 }
