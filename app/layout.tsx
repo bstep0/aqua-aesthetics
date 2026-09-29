@@ -13,13 +13,13 @@ const display = Fraunces({ subsets: ["latin"], axes: ["opsz"], style: ["normal",
 const sans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aquaaestheticspools.com"),
+  metadataBase: new URL("https://aquaaestheticspools.com"),
   title: {
     default: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
     template: "%s | aqua aesthetics pools",
   },
   description:
-    "Family-owned pool builder serving the Dallas–Fort Worth Metroplex from McKinney, TX since 1995. Custom pool construction, remodeling, outdoor living, maintenance and repairs.",
+    "Family-owned DFW pool builder based in McKinney, TX since 1995. Custom pools, remodels, outdoor living, maintenance and repairs.",
   applicationName: "aqua aesthetics pools",
   alternates: { canonical: "/" },
   openGraph: {

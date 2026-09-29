@@ -54,7 +54,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-ivory/15 pt-6 text-sm text-ivory/60 md:flex-row md:justify-between">
-          <span>© {new Date().getFullYear()} aqua aesthetics pools. All rights reserved.</span>
+          <span className="flex flex-wrap gap-x-4 gap-y-1">
+            <span>© {new Date().getFullYear()} aqua aesthetics pools. All rights reserved.</span>
+            <Link href="/privacy" className="hover:text-sun">Privacy</Link>
+            <Link href="/terms" className="hover:text-sun">Terms</Link>
+          </span>
           <nav aria-label="Service areas" className="flex flex-wrap gap-x-3 gap-y-1">
             {AREAS.slice(0, 12).map((a) => (
               <Link key={a.slug} href={`/service-areas/${a.slug}`} className="hover:text-sun">

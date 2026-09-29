@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.aquaaestheticspools.com/sitemap.xml",
+    sitemap: "https://aquaaestheticspools.com/sitemap.xml",
   }
 }

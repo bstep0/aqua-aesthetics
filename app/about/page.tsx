@@ -7,7 +7,7 @@ import CountUp from "@/components/site/count-up"
 export const metadata = pageMeta({
   title: "About us — 30+ years of pool excellence in DFW",
   description:
-    "Learn about aqua aesthetics pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across the entire DFW metroplex, including Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
+    "Meet aqua aesthetics pools, a family-owned, owner-led DFW pool builder with 30+ years building, remodeling and servicing pools.",
   path: "/about",
 })
 

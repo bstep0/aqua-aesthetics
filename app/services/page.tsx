@@ -7,7 +7,7 @@ import { Breadcrumbs, CtaBand, FillLink } from "@/components/site/ui"
 export const metadata = pageMeta({
   title: "Pool services in DFW — construction, remodeling & maintenance",
   description:
-    "Explore all pool services from aqua aesthetics pools: new construction, remodeling, outdoor living, maintenance, and repairs throughout Dallas, Frisco, Plano, Southlake, and the DFW Metroplex.",
+    "New pool construction, remodeling, outdoor living, maintenance and repairs from aqua aesthetics pools, serving McKinney and all of DFW.",
   path: "/services",
 })
 
@@ -23,7 +23,7 @@ const servicesJsonLd = {
         "@type": "Service",
         name: "New pool construction",
         description: "Custom-designed pools built to your specifications with quality materials and craftsmanship throughout the DFW Metroplex.",
-        url: "https://www.aquaaestheticspools.com/services/new-pool-construction",
+        url: "https://aquaaestheticspools.com/services/new-pool-construction",
         provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
@@ -35,7 +35,7 @@ const servicesJsonLd = {
         "@type": "Service",
         name: "Pool remodeling",
         description: "Expert pool renovation services including resurfacing, tile replacement, deck renovation, and equipment upgrades in DFW.",
-        url: "https://www.aquaaestheticspools.com/services/pool-remodeling",
+        url: "https://aquaaestheticspools.com/services/pool-remodeling",
         provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
@@ -47,7 +47,7 @@ const servicesJsonLd = {
         "@type": "Service",
         name: "Outdoor living",
         description: "Custom outdoor living solutions including patios, outdoor kitchens, fire pits, and pergolas in the DFW area.",
-        url: "https://www.aquaaestheticspools.com/services/outdoor-living",
+        url: "https://aquaaestheticspools.com/services/outdoor-living",
         provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
@@ -59,7 +59,7 @@ const servicesJsonLd = {
         "@type": "Service",
         name: "Pool maintenance",
         description: "Weekly and bi-weekly pool maintenance programs to keep your pool pristine year-round across DFW.",
-        url: "https://www.aquaaestheticspools.com/services/pool-maintenance",
+        url: "https://aquaaestheticspools.com/services/pool-maintenance",
         provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
@@ -71,7 +71,7 @@ const servicesJsonLd = {
         "@type": "Service",
         name: "Pool repairs",
         description: "Expert diagnosis and repair of leaks, pumps, heaters, filters, and plumbing throughout the DFW Metroplex.",
-        url: "https://www.aquaaestheticspools.com/services/pool-repairs",
+        url: "https://aquaaestheticspools.com/services/pool-repairs",
         provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
@@ -81,11 +81,11 @@ const servicesJsonLd = {
 
 
 const FEATURES: Record<string, string[]> = {
-  "new-pool-construction": ["Personalized design consultation", "3D Renderings", "Permit acquisition and processing", "Excavation and pool shell construction", "Plumbing and electrical installation", "Coping, tiling, and plastering", "Deck construction and landscaping", "Final inspection and pool startup"],
-  "pool-remodeling": ["Pool resurfacing", "Tile replacement and upgrades", "Coping and deck renovation", "Equipment upgrades", "Energy-Efficient equipment installation", "Water feature additions", "Lighting enhancements", "Safety feature installation"],
-  "outdoor-living": ["Patio design and installation", "Outdoor kitchens", "Fire pits and fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Lighting design", "Irrigation systems"],
-  "pool-maintenance": ["Weekly or bi-weekly service options", "Chemical balancing", "Equipment inspection", "Algae prevention and treatment", "Filter cleaning", "Preventative maintenance"],
-  "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Plumbing repairs", "Electrical system diagnosis", "Automation system repairs"],
+  "new-pool-construction": ["Design consultation at your home", "3D design renderings", "Permits and city inspections", "Excavation and gunite shell", "Waterline tile, coping and plaster", "Decking and landscaping", "Final inspection and startup"],
+  "pool-remodeling": ["Resurfacing in plaster, pebble or quartz", "Waterline tile replacement", "New coping and deck resurfacing", "Variable-speed pumps and efficient equipment", "LED lighting", "New water features and spas", "Safety upgrades"],
+  "outdoor-living": ["Covered patios", "Outdoor kitchens and built-in grills", "Fire pits and stone fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Outdoor lighting", "Smart irrigation"],
+  "pool-maintenance": ["Weekly or bi-weekly visits", "Water testing and chemical balancing", "Algae prevention and treatment", "Filter cleaning and backwashing", "Brushing and basket cleaning", "Equipment check every visit"],
+  "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Underground plumbing repair", "Electrical diagnosis", "Automation and salt system repair"],
 }
 
 export default function ServicesPage() {

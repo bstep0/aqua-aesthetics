@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import { Check, Phone } from "lucide-react"
 import { SITE, CORE_CITIES } from "@/lib/site"
 
@@ -44,10 +45,6 @@ export default function ContactPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!form.phone && !form.email) {
-      setError("Please add a phone number or email so we can reach you.")
-      return
-    }
     setError("")
     setFormState("submitting")
     try {
@@ -87,9 +84,9 @@ export default function ContactPage() {
           </span>
         </a>
         <dl className="grid grid-cols-2 gap-6 text-[15px] leading-relaxed text-ivory/80">
-          <div>
+          <div className="col-span-2">
             <dt className="font-bold text-ivory">Email</dt>
-            <dd className="break-all">
+            <dd className="[overflow-wrap:anywhere]">
               <a href={`mailto:${SITE.email}`} className="hover:text-sun">
                 {SITE.email}
               </a>
@@ -172,11 +169,15 @@ export default function ContactPage() {
                 <input required name="name" autoComplete="name" value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="Jane Smith" className={input} />
               </label>
               <label className="flex flex-col gap-2 font-bold text-navy">
-                Phone
-                <input type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => set("phone", e.target.value)} placeholder="(214) 555-0100" className={input} />
+                <span>
+                  Phone <span className="text-red-700" aria-hidden="true">*</span>
+                </span>
+                <input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => set("phone", e.target.value)} placeholder="(214) 555-0100" className={input} />
               </label>
               <label className="flex flex-col gap-2 font-bold text-navy">
-                Email
+                <span>
+                  Email <span className="font-normal text-slate">(optional)</span>
+                </span>
                 <input type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => set("email", e.target.value)} placeholder="jane@example.com" className={input} />
               </label>
               <label className="flex flex-col gap-2 font-bold text-navy">
@@ -231,7 +232,10 @@ export default function ContactPage() {
             <button type="submit" disabled={formState === "submitting"} className="h-[60px] rounded-full bg-sun text-lg font-bold text-navy transition-transform hover:-translate-y-0.5 disabled:opacity-70">
               {formState === "submitting" ? "Sending…" : "Send my request"}
             </button>
-            <p className="text-center text-sm text-slate">We typically respond within one business day.</p>
+            <p className="text-center text-sm text-slate">
+              We typically respond within one business day. See our{" "}
+              <Link href="/privacy" className="font-semibold text-teal hover:underline">privacy policy</Link>.
+            </p>
           </form>
         )}
       </div>

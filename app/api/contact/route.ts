@@ -30,15 +30,15 @@ export async function POST(request: Request) {
   const body = await request.json()
   const { name, phone, email, service, message, timing, city, design, source } = body
 
-  if (!name || (!email && !phone)) {
-    return NextResponse.json({ error: "Name and a phone number or email are required." }, { status: 400 })
+  if (!name || !phone) {
+    return NextResponse.json({ error: "Name and phone number are required." }, { status: 400 })
   }
 
   const serviceLabel = SERVICE_LABELS[service] ?? service ?? "Not specified"
   const rows: [string, string][] = [
     ["Name", esc(name)],
     ["Email", email ? `<a href="mailto:${esc(email)}">${esc(email)}</a>` : "Not provided"],
-    ["Phone", esc(phone) || "Not provided"],
+    ["Phone", esc(phone)],
     ["Service", esc(serviceLabel)],
   ]
   if (city) rows.push(["City", esc(city)])

@@ -34,6 +34,15 @@
   body {
     @apply bg-ivory text-ink font-sans antialiased;
   }
+  /* Keep anchors and invalid form fields clear of the sticky header (+ banner). */
+  html {
+    scroll-padding-top: 9rem;
+  }
+  input,
+  select,
+  textarea {
+    scroll-margin-top: 9rem;
+  }
 }
 
 /* ---------- Dusk & Daylight motion ---------- */
