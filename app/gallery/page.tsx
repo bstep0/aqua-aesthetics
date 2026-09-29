@@ -1,34 +1,34 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { FillLink } from "@/components/site/ui"
 
 const rawProjects = [
   // New Construction
-  { category: "New Construction", image: "/images/pool6.jpg", aspect: "aspect-[4/5]" },
-  { category: "New Construction", image: "/images/pool3.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool7.jpg", aspect: "aspect-[4/3]" },
-  { category: "New Construction", image: "/images/pool8.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool9.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool10.jpg", aspect: "aspect-[4/3]" },
-  { category: "New Construction", image: "/images/pool11.jpeg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool12.jpg", aspect: "aspect-[5/4]" },
-  { category: "New Construction", image: "/images/pool13.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool14.jpg", aspect: "aspect-[4/5]" },
-  { category: "New Construction", image: "/images/pool15.jpg", aspect: "aspect-[4/5]" },
-  { category: "New Construction", image: "/images/pool16.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool17.jpg", aspect: "aspect-[5/4]" },
-  { category: "New Construction", image: "/images/pool18.jpg", aspect: "aspect-[4/3]" },
-  { category: "New Construction", image: "/images/pool19.jpg", aspect: "aspect-[4/5]" },
-  { category: "New Construction", image: "/images/pool20.jpg", aspect: "aspect-[5/4]" },
-  { category: "New Construction", image: "/images/pool21.jpg", aspect: "aspect-[4/3]" },
-  { category: "New Construction", image: "/images/pool22.jpg", aspect: "aspect-[5/4]" },
-  { category: "New Construction", image: "/images/pool23.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool24.jpg", aspect: "aspect-square" },
-  { category: "New Construction", image: "/images/pool25.jpg", aspect: "aspect-[5/4]" },
-  { category: "New Construction", image: "/images/pool26.jpg", aspect: "aspect-[4/5]" },
+  { category: "New construction", image: "/images/pool6.jpg", aspect: "aspect-[4/5]" },
+  { category: "New construction", image: "/images/pool3.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool7.jpg", aspect: "aspect-[4/3]" },
+  { category: "New construction", image: "/images/pool8.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool9.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool10.jpg", aspect: "aspect-[4/3]" },
+  { category: "New construction", image: "/images/pool11.jpeg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool12.jpg", aspect: "aspect-[5/4]" },
+  { category: "New construction", image: "/images/pool13.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool14.jpg", aspect: "aspect-[4/5]" },
+  { category: "New construction", image: "/images/pool15.jpg", aspect: "aspect-[4/5]" },
+  { category: "New construction", image: "/images/pool16.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool17.jpg", aspect: "aspect-[5/4]" },
+  { category: "New construction", image: "/images/pool18.jpg", aspect: "aspect-[4/3]" },
+  { category: "New construction", image: "/images/pool19.jpg", aspect: "aspect-[4/5]" },
+  { category: "New construction", image: "/images/pool20.jpg", aspect: "aspect-[5/4]" },
+  { category: "New construction", image: "/images/pool21.jpg", aspect: "aspect-[4/3]" },
+  { category: "New construction", image: "/images/pool22.jpg", aspect: "aspect-[5/4]" },
+  { category: "New construction", image: "/images/pool23.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool24.jpg", aspect: "aspect-square" },
+  { category: "New construction", image: "/images/pool25.jpg", aspect: "aspect-[5/4]" },
+  { category: "New construction", image: "/images/pool26.jpg", aspect: "aspect-[4/5]" },
   // Remodels
   { category: "Remodels", image: "/images/remodel1.jpg", aspect: "aspect-[4/3]" },
   { category: "Remodels", image: "/images/remodel2.jpg", aspect: "aspect-square" },
@@ -37,22 +37,22 @@ const rawProjects = [
   { category: "Remodels", image: "/images/remodel5.jpg", aspect: "aspect-[4/5]" },
   { category: "Remodels", image: "/images/remodel6.jpg", aspect: "aspect-[5/4]" },
   // Outdoor Living
-  { category: "Outdoor Living", image: "/images/outdoor1.jpg", aspect: "aspect-square" },
-  { category: "Outdoor Living", image: "/images/outdoor2.jpg", aspect: "aspect-[4/3]" },
-  { category: "Outdoor Living", image: "/images/outdoor3.jpg", aspect: "aspect-[4/3]" },
-  { category: "Outdoor Living", image: "/images/pool17.jpg", aspect: "aspect-[5/4]" },
-  { category: "Outdoor Living", image: "/images/outdoor4.jpg", aspect: "aspect-square" },
-  { category: "Outdoor Living", image: "/images/outdoor5.jpg", aspect: "aspect-[4/5]" },
-  { category: "Outdoor Living", image: "/images/outdoor6.jpg", aspect: "aspect-[4/3]" },
-  { category: "Outdoor Living", image: "/images/outdoor7.jpg", aspect: "aspect-[4/5]" },
-  { category: "Outdoor Living", image: "/images/outdoor8.jpg", aspect: "aspect-square" },
-  { category: "Outdoor Living", image: "/images/outdoor9.jpg", aspect: "aspect-[5/4]" },
-  { category: "Outdoor Living", image: "/images/outdoor10.jpg", aspect: "aspect-square" },
+  { category: "Outdoor living", image: "/images/outdoor1.jpg", aspect: "aspect-square" },
+  { category: "Outdoor living", image: "/images/outdoor2.jpg", aspect: "aspect-[4/3]" },
+  { category: "Outdoor living", image: "/images/outdoor3.jpg", aspect: "aspect-[4/3]" },
+  { category: "Outdoor living", image: "/images/pool17.jpg", aspect: "aspect-[5/4]" },
+  { category: "Outdoor living", image: "/images/outdoor4.jpg", aspect: "aspect-square" },
+  { category: "Outdoor living", image: "/images/outdoor5.jpg", aspect: "aspect-[4/5]" },
+  { category: "Outdoor living", image: "/images/outdoor6.jpg", aspect: "aspect-[4/3]" },
+  { category: "Outdoor living", image: "/images/outdoor7.jpg", aspect: "aspect-[4/5]" },
+  { category: "Outdoor living", image: "/images/outdoor8.jpg", aspect: "aspect-square" },
+  { category: "Outdoor living", image: "/images/outdoor9.jpg", aspect: "aspect-[5/4]" },
+  { category: "Outdoor living", image: "/images/outdoor10.jpg", aspect: "aspect-square" },
 ]
 
 const projects = rawProjects.map((project, index) => ({ id: index, ...project }))
 
-const filters = ["All", "New Construction", "Remodels", "Outdoor Living"]
+const filters = ["All", "New construction", "Remodels", "Outdoor living"]
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("All")
@@ -150,7 +150,7 @@ export default function GalleryPage() {
               <div className={`relative w-full ${project.aspect} overflow-hidden`}>
                 <Image
                   src={project.image || "/placeholder.svg"}
-                  alt={`${project.category} project by Aqua Aesthetics Pools in DFW`}
+                  alt={`${project.category} project by aqua aesthetics pools in DFW`}
                   fill
                   sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -210,7 +210,7 @@ export default function GalleryPage() {
             </button>
           )}
           <div className="relative h-[85vh] w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
-            <Image src={activePhoto.image || "/placeholder.svg"} alt={`${activePhoto.category} project by Aqua Aesthetics Pools`} fill className="object-contain" sizes="100vw" />
+            <Image src={activePhoto.image || "/placeholder.svg"} alt={`${activePhoto.category} project by aqua aesthetics pools`} fill className="object-contain" sizes="100vw" />
             <span className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-sun px-4 py-1.5 text-sm font-bold text-navy">{activePhoto.category}</span>
           </div>
         </div>

@@ -2,7 +2,7 @@ import type { ServiceContent } from "@/components/site/service-page"
 
 export const NEW_POOL: ServiceContent = {
   slug: "new-pool-construction",
-  name: "New Pool Construction",
+  name: "New pool construction",
   h1: (
     <>
       Custom pool construction <em className="text-sun">in the DFW Metroplex</em>
@@ -15,24 +15,24 @@ export const NEW_POOL: ServiceContent = {
     { big: "Permits handled", small: "plans, inspections and sign-off" },
     { big: "Built for clay soil", small: "gunite, engineered for North Texas" },
   ],
-  introTitle: "Build the Pool You've Always Dreamed Of",
+  introTitle: "Build the pool you've always dreamed of",
   paragraphs: [
-    "When you choose Aqua Aesthetics Pools for new pool construction in DFW, you're partnering with a team that has spent over 30 years perfecting the art of custom pool design and installation. From sleek modern lap pools in Plano to resort-style pools with waterfalls and fire features in Southlake, we handle every detail from the first design sketch to the day you take your first swim.",
+    "When you choose aqua aesthetics pools for new pool construction in DFW, you're partnering with a team that has spent over 30 years perfecting the art of custom pool design and installation. From sleek modern lap pools in Plano to resort-style pools with waterfalls and fire features in Southlake, we handle every detail from the first design sketch to the day you take your first swim.",
     "Every pool we build in the Dallas-Fort Worth area starts with a thorough site evaluation and a personalized design consultation. We account for your yard's soil composition, drainage, and sun exposure—factors that are especially important in North Texas, where clay-heavy soils and hot summers require specific engineering approaches. Our team manages all permits and inspections required by local municipalities so you never have to navigate that process alone.",
-    "We use premium materials and proven construction methods to ensure your pool stands up to the Texas heat for decades. Whether you envision a classic gunite pool, a tiled Roman-style design, or a zero-entry lagoon pool, Aqua Aesthetics delivers the craftsmanship and the durability you deserve.",
+    "We use premium materials and proven construction methods to ensure your pool stands up to the Texas heat for decades. Whether you envision a classic gunite pool, a tiled Roman-style design, or a zero-entry lagoon pool, aqua aesthetics delivers the craftsmanship and the durability you deserve.",
   ],
-  includedTitle: "What's Included",
+  includedTitle: "What's included",
   included: [
-    "Personalized Design Consultation",
-    "3D Renderings & Visualizations",
-    "Permit Acquisition and Processing",
-    "Excavation and Pool Shell Construction",
-    "Plumbing and Electrical Installation",
-    "Coping, Tiling, and Plastering",
-    "Deck Construction and Landscaping",
-    "Equipment Setup (Pump, Filter, Heater)",
-    "Optional Water Features & Lighting",
-    "Final Inspection and Pool Startup",
+    "Personalized design consultation",
+    "3D renderings & visualizations",
+    "Permit acquisition and processing",
+    "Excavation and pool shell construction",
+    "Plumbing and electrical installation",
+    "Coping, tiling, and plastering",
+    "Deck construction and landscaping",
+    "Equipment setup (Pump, filter, heater)",
+    "Optional water features & lighting",
+    "Final inspection and pool startup",
   ],
   faqs: [
     {
@@ -41,7 +41,7 @@ export const NEW_POOL: ServiceContent = {
     },
     {
       q: "Do I need a permit to build a pool in Dallas or Fort Worth?",
-      a: "Yes. All municipalities in DFW require permits for new pool construction. Aqua Aesthetics handles the entire permitting process on your behalf, including plan submission, inspections, and final sign-off—saving you time and hassle.",
+      a: "Yes. All municipalities in DFW require permits for new pool construction. aqua aesthetics handles the entire permitting process on your behalf, including plan submission, inspections, and final sign-off—saving you time and hassle.",
     },
     {
       q: "What type of pool is best for North Texas soil and climate?",
@@ -58,7 +58,7 @@ export const NEW_POOL: ServiceContent = {
 
 export const REMODELING: ServiceContent = {
   slug: "pool-remodeling",
-  name: "Pool Remodeling",
+  name: "Pool remodeling",
   h1: (
     <>
       Pool remodeling <em className="text-sun">&amp; renovation in DFW</em>
@@ -66,24 +66,24 @@ export const REMODELING: ServiceContent = {
   ),
   sub: "Give your existing pool a fresh look and modern upgrades—serving Dallas, Plano, Southlake, and surrounding communities.",
   hero: { src: "/images/remodel1.jpg", alt: "Pool remodeling and resurfacing project completed in Plano Texas" },
-  introTitle: "Breathe New Life Into Your Existing Pool",
+  introTitle: "Breathe new life into your existing pool",
   paragraphs: [
-    "Pools age—surfaces crack, tiles fade, decks chip, and equipment becomes inefficient. If your DFW-area pool is looking tired or underperforming, a professional remodel from Aqua Aesthetics Pools can transform it into a stunning, like-new backyard centerpiece without the cost of building from scratch. We've completed hundreds of pool renovations across Plano, Colleyville, Flower Mound, and throughout the greater Dallas-Fort Worth area.",
+    "Pools age—surfaces crack, tiles fade, decks chip, and equipment becomes inefficient. If your DFW-area pool is looking tired or underperforming, a professional remodel from aqua aesthetics pools can transform it into a stunning, like-new backyard centerpiece without the cost of building from scratch. We've completed hundreds of pool renovations across Plano, Colleyville, Flower Mound, and throughout the greater Dallas-Fort Worth area.",
     "Our pool remodeling process begins with a thorough assessment of your pool's current condition. We evaluate the surface, tile, coping, deck, plumbing, and equipment to identify what needs to be replaced or upgraded. From there, we work with you to develop a renovation plan that fits your vision and budget—whether you want a simple resurfacing or a complete transformation with new water features, LED lighting, and a redesigned deck.",
     "We're also specialists in energy-efficient equipment upgrades—a smart investment for Texas homeowners who run their pools nine or more months out of the year. Variable-speed pumps, LED systems, and modern automation controls can significantly reduce your monthly operating costs while improving comfort and convenience.",
   ],
-  includedTitle: "What's Included",
+  includedTitle: "What's included",
   included: [
-    "Pool Resurfacing (Pebble, Plaster, Quartz)",
-    "Tile Replacement and Upgrades",
-    "Coping and Deck Renovation",
-    "Equipment Upgrades",
-    "Energy-Efficient Variable-Speed Pumps",
-    "Water Feature Additions",
-    "LED Lighting Enhancements",
-    "Safety Feature Installation",
-    "Automation & Smart Controls",
-    "Cosmetic Redesign Consultation",
+    "Pool resurfacing (Pebble, plaster, quartz)",
+    "Tile replacement and upgrades",
+    "Coping and deck renovation",
+    "Equipment upgrades",
+    "Energy-Efficient variable-Speed pumps",
+    "Water feature additions",
+    "LED lighting enhancements",
+    "Safety feature installation",
+    "Automation & smart controls",
+    "Cosmetic redesign consultation",
   ],
   faqs: [
     {
@@ -109,7 +109,7 @@ export const REMODELING: ServiceContent = {
 
 export const OUTDOOR_LIVING: ServiceContent = {
   slug: "outdoor-living",
-  name: "Outdoor Living",
+  name: "Outdoor living",
   h1: (
     <>
       Custom outdoor living <em className="text-sun">spaces in DFW</em>
@@ -117,24 +117,24 @@ export const OUTDOOR_LIVING: ServiceContent = {
   ),
   sub: "From covered patios to full outdoor kitchens and fire features—designed for Texas life in Southlake, Colleyville, Dallas, and beyond.",
   hero: { src: "/images/outdoor6.jpg", alt: "Custom outdoor living space with covered patio and pool in Southlake Texas" },
-  introTitle: "Extend Your Living Space Into the Texas Outdoors",
+  introTitle: "Extend your living space into the Texas outdoors",
   paragraphs: [
-    "In the DFW Metroplex, the outdoor living season stretches well beyond summer—and a thoughtfully designed outdoor space makes your backyard usable from early spring through late fall. Aqua Aesthetics Pools specializes in creating complete outdoor living environments that complement your pool and elevate the way you spend time at home. Whether you're in Southlake, Colleyville, Flower Mound, or the heart of Dallas, we build spaces designed to match how you actually live.",
+    "In the DFW Metroplex, the outdoor living season stretches well beyond summer—and a thoughtfully designed outdoor space makes your backyard usable from early spring through late fall. aqua aesthetics pools specializes in creating complete outdoor living environments that complement your pool and elevate the way you spend time at home. Whether you're in Southlake, Colleyville, Flower Mound, or the heart of Dallas, we build spaces designed to match how you actually live.",
     "Our outdoor living projects range from simple covered patio additions to full outdoor entertainment centers complete with custom kitchens, built-in grills, refrigeration, stone fireplaces, and pergolas. We design every space to flow naturally with your existing pool and landscaping, creating a cohesive backyard retreat rather than a patchwork of disconnected features. Every project is managed in-house by our experienced team, so you deal with one company from design through completion.",
     "We also handle landscape design, irrigation, and outdoor lighting—the finishing touches that make a backyard look professionally polished. Good lighting transforms an outdoor space after dark and adds security, while a smart irrigation system protects your landscaping investment through the brutal North Texas summers without wasting water.",
   ],
-  includedTitle: "What's Included",
+  includedTitle: "What's included",
   included: [
-    "Covered Patio Design & Installation",
-    "Outdoor Kitchens & Built-In Grills",
-    "Fire Pits and Stone Fireplaces",
-    "Pergolas and Shade Structures",
-    "Landscape Design and Installation",
-    "Outdoor Lighting Design",
-    "Smart Irrigation Systems",
-    "Decorative Concrete & Stonework",
-    "Privacy Screens and Walls",
-    "Seating Areas and Hardscaping",
+    "Covered patio design & installation",
+    "Outdoor kitchens & built-In grills",
+    "Fire pits and stone fireplaces",
+    "Pergolas and shade structures",
+    "Landscape design and installation",
+    "Outdoor lighting design",
+    "Smart irrigation systems",
+    "Decorative concrete & stonework",
+    "Privacy screens and walls",
+    "Seating areas and hardscaping",
   ],
   faqs: [
     {
@@ -143,7 +143,7 @@ export const OUTDOOR_LIVING: ServiceContent = {
     },
     {
       q: "Do outdoor living projects in Texas require permits?",
-      a: "Most structural additions like covered patios, pergolas, and outdoor kitchens with gas and electrical components require building permits in DFW municipalities. Aqua Aesthetics manages all permitting on your behalf, ensuring your project is up to code and properly inspected.",
+      a: "Most structural additions like covered patios, pergolas, and outdoor kitchens with gas and electrical components require building permits in DFW municipalities. aqua aesthetics manages all permitting on your behalf, ensuring your project is up to code and properly inspected.",
     },
     {
       q: "What outdoor living features are most popular among DFW homeowners?",
@@ -160,7 +160,7 @@ export const OUTDOOR_LIVING: ServiceContent = {
 
 export const MAINTENANCE: ServiceContent = {
   slug: "pool-maintenance",
-  name: "Pool Maintenance",
+  name: "Pool maintenance",
   h1: (
     <>
       Professional pool <em className="text-sun">maintenance in DFW</em>
@@ -168,23 +168,23 @@ export const MAINTENANCE: ServiceContent = {
   ),
   sub: "Reliable weekly and bi-weekly service plans keeping pools pristine across Dallas, Frisco, Flower Mound, and the entire Metroplex.",
   hero: { src: "/images/pool12.jpg", alt: "Sparkling clean pool maintained by professionals in Dallas Texas" },
-  introTitle: "Pool Care You Can Count On, All Year Long",
+  introTitle: "Pool care you can count on, all year long",
   paragraphs: [
-    "With over nine months of swimming season in North Texas, a properly maintained pool isn't a luxury—it's a necessity. Aqua Aesthetics Pools offers professional maintenance programs designed specifically for DFW homeowners who want crystal-clear water without the hassle of doing it themselves. Our trained technicians visit on a regular schedule—weekly or bi-weekly—to keep your pool safe, clean, and chemically balanced.",
+    "With over nine months of swimming season in North Texas, a properly maintained pool isn't a luxury—it's a necessity. aqua aesthetics pools offers professional maintenance programs designed specifically for DFW homeowners who want crystal-clear water without the hassle of doing it themselves. Our trained technicians visit on a regular schedule—weekly or bi-weekly—to keep your pool safe, clean, and chemically balanced.",
     "Texas summers push pools hard. High temperatures accelerate algae growth, UV rays deplete chlorine levels, and heavy rain can disrupt water chemistry overnight. Our maintenance technicians are trained to anticipate these seasonal shifts and adjust your pool's chemistry proactively, not reactively. You get a detailed service report after every visit so you always know exactly what was done and what your water levels look like.",
     "Beyond chemistry, our maintenance service includes equipment inspections that can catch small problems before they turn into expensive repairs. A loose O-ring, a clogged impeller, or a worn pump seal caught early saves you money—and keeps your pool running when it matters most. We serve homeowners across Frisco, Colleyville, Flower Mound, and throughout the greater Dallas-Fort Worth area.",
   ],
-  includedTitle: "What's Included",
+  includedTitle: "What's included",
   included: [
-    "Weekly or Bi-Weekly Service Plans",
-    "Chemical Testing & Balancing",
-    "Chlorine & Shock Treatment",
-    "Algae Prevention and Treatment",
-    "Filter Cleaning & Backwashing",
-    "Skimmer & Basket Emptying",
-    "Brushing Walls and Floor",
-    "Equipment Inspection",
-    "Preventative Maintenance Checks",
+    "Weekly or bi-Weekly service plans",
+    "Chemical testing & balancing",
+    "Chlorine & shock treatment",
+    "Algae prevention and treatment",
+    "Filter cleaning & backwashing",
+    "Skimmer & basket emptying",
+    "Brushing walls and floor",
+    "Equipment inspection",
+    "Preventative maintenance checks",
   ],
   faqs: [
     {
@@ -205,7 +205,7 @@ export const MAINTENANCE: ServiceContent = {
 
 export const REPAIRS: ServiceContent = {
   slug: "pool-repairs",
-  name: "Pool Repairs",
+  name: "Pool repairs",
   h1: (
     <>
       Pool repair services <em className="text-sun">in the DFW Metroplex</em>
@@ -213,24 +213,24 @@ export const REPAIRS: ServiceContent = {
   ),
   sub: "Fast, expert diagnosis and repair for pools across Dallas, Fort Worth, Frisco, and surrounding communities.",
   hero: { src: "/images/repair1.jpg", alt: "Pool equipment repair and replacement in Fort Worth Texas" },
-  introTitle: "Get Your Pool Back Up and Running Fast",
+  introTitle: "Get your pool back up and running fast",
   paragraphs: [
-    "A pool that isn't working isn't a retreat—it's a headache. Whether you're dealing with a mysterious leak, a pump that won't prime, a heater that trips the breaker, or a filter running at half capacity, Aqua Aesthetics Pools provides fast, professional pool repair services throughout the DFW Metroplex. Our technicians are experienced with all major equipment brands and pool configurations, and we carry common replacement parts to minimize downtime.",
+    "A pool that isn't working isn't a retreat—it's a headache. Whether you're dealing with a mysterious leak, a pump that won't prime, a heater that trips the breaker, or a filter running at half capacity, aqua aesthetics pools provides fast, professional pool repair services throughout the DFW Metroplex. Our technicians are experienced with all major equipment brands and pool configurations, and we carry common replacement parts to minimize downtime.",
     "Pool leaks are one of the most common and costly issues for DFW homeowners—especially given the region's clay-heavy soils, which shift seasonally and can stress underground plumbing. Our team uses pressure testing and electronic detection equipment to precisely locate leaks in the structure, plumbing, and equipment pad, so we're fixing the actual source of the problem rather than guessing.",
     "We service pools throughout Dallas, Fort Worth, Frisco, Southlake, and surrounding areas, and we prioritize getting your repair scheduled quickly so you're not stuck waiting. We provide a clear diagnosis and cost estimate before any work begins—no surprises, no hidden fees.",
   ],
-  includedTitle: "What We Repair",
+  includedTitle: "What we repair",
   included: [
-    "Leak Detection and Structural Repair",
-    "Pump Repair and Replacement",
-    "Heater Repair and Replacement",
-    "Filter Repair and Replacement",
-    "Underground Plumbing Repairs",
-    "Electrical System Diagnosis",
-    "Automation System Repairs",
-    "Salt System Service & Repair",
-    "Valve and Return Jet Repairs",
-    "Pool Light Replacement",
+    "Leak detection and structural repair",
+    "Pump repair and replacement",
+    "Heater repair and replacement",
+    "Filter repair and replacement",
+    "Underground plumbing repairs",
+    "Electrical system diagnosis",
+    "Automation system repairs",
+    "Salt system service & repair",
+    "Valve and return jet repairs",
+    "Pool light replacement",
   ],
   faqs: [
     {

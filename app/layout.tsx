@@ -15,19 +15,19 @@ const sans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aquaaestheticspools.com"),
   title: {
-    default: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
-    template: "%s | Aqua Aesthetics Pools",
+    default: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
+    template: "%s | aqua aesthetics pools",
   },
   description:
     "Family-owned pool builder serving the Dallas–Fort Worth Metroplex from McKinney, TX since 1995. Custom pool construction, remodeling, outdoor living, maintenance and repairs.",
-  applicationName: "Aqua Aesthetics Pools",
+  applicationName: "aqua aesthetics pools",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Aqua Aesthetics Pools",
+    siteName: "aqua aesthetics pools",
     locale: "en_US",
     url: "/",
-    title: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
+    title: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
     description:
       "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth — McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and more.",
     images: [
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
         url: "/images/pool18.jpg",
         width: 1200,
         height: 630,
-        alt: "Custom pool and spa built by Aqua Aesthetics Pools in DFW",
+        alt: "Custom pool and spa built by aqua aesthetics pools in DFW",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
+    title: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
     description:
       "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth.",
     images: ["/images/pool18.jpg"],

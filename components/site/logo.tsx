@@ -11,7 +11,7 @@ export function Droplet({ className = "", stroke = "currentColor" }: { className
 
 export default function Logo({ tone = "dark", onClick }: { tone?: "dark" | "light"; onClick?: () => void }) {
   return (
-    <Link href="/" onClick={onClick} className="flex items-center gap-3" aria-label="Aqua Aesthetics Pools home">
+    <Link href="/" onClick={onClick} className="flex items-center gap-3" aria-label="aqua aesthetics pools home">
       <span className="relative flex h-10 w-10 items-center justify-center">
         <span
           className={`absolute inset-1 rounded-full border-[1.5px] ${tone === "light" ? "border-aqua" : "border-teal"}`}

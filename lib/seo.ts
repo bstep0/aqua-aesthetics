@@ -54,7 +54,7 @@ export const localBusinessJsonLd = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Pool Services",
+    name: "Pool services",
     itemListElement: SERVICES.map((s) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: s.name, url: `${SITE.url}${s.href}` },

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Check, Plus } from "lucide-react"
@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const a = areaBySlug(city)
   if (!a) return {}
   return pageMeta({
-    title: `Pool Builder in ${a.city}, TX — Custom Pools, Remodels & Repairs`,
-    description: `Aqua Aesthetics Pools builds, remodels, repairs and maintains pools in ${a.city}, TX. Family-owned, owner-led and serving ${a.county} and all of DFW since 1995. Free quote: ${SITE.phone}.`,
+    title: `Pool builder in ${a.city}, TX — custom pools, remodels & repairs`,
+    description: `aqua aesthetics pools builds, remodels, repairs and maintains pools in ${a.city}, TX. Family-owned, owner-led and serving ${a.county} and all of DFW since 1995. Free quote: ${SITE.phone}.`,
     path: `/service-areas/${a.slug}`,
     image: a.image,
   })
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
 const faqsFor = (city: string) => [
   {
     q: `Do you build pools in ${city}, TX?`,
-    a: `Yes. Aqua Aesthetics Pools designs and builds custom in-ground pools in ${city} and across the Dallas–Fort Worth Metroplex, along with pool remodeling, outdoor living, weekly maintenance and repairs.`,
+    a: `Yes. aqua aesthetics pools designs and builds custom in-ground pools in ${city} and across the Dallas–Fort Worth Metroplex, along with pool remodeling, outdoor living, weekly maintenance and repairs.`,
   },
   {
     q: `Do you handle pool permits in ${city}?`,
@@ -52,7 +52,7 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
     "@graph": [
       breadcrumbJsonLd([
         { name: "Home", path: "/" },
-        { name: "Service Areas", path: "/service-areas" },
+        { name: "Service areas", path: "/service-areas" },
         { name: `${a.city}, TX`, path },
       ]),
       {

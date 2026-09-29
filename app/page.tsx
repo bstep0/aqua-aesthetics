@@ -1,6 +1,6 @@
 import { pageMeta, localBusinessJsonLd, BUSINESS_ID } from "@/lib/seo"
 import { AREAS } from "@/lib/areas"
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import Link from "next/link"
 import { Phone, PencilLine, ShieldCheck, Wrench } from "lucide-react"
 import { SITE, SERVICES, WHY_US, ALL_CITIES } from "@/lib/site"
@@ -10,7 +10,7 @@ import HeroQuoteForm from "@/components/site/hero-quote-form"
 import DesignerFrame from "@/components/designer/designer-frame"
 
 export const metadata = pageMeta({
-  title: "DFW Pool Builder — Custom Pools, Remodels & Repairs | Aqua Aesthetics Pools",
+  title: "DFW pool builder — custom pools, remodels & repairs | aqua aesthetics pools",
   description:
     "Family-owned DFW pool builder based in McKinney, TX. Custom pool construction, remodeling, outdoor living, maintenance and repairs in McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and across the Metroplex. Free quote.",
   path: "/",
@@ -19,7 +19,7 @@ export const metadata = pageMeta({
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Aqua Aesthetics Pools",
+  name: "aqua aesthetics pools",
   url: "https://www.aquaaestheticspools.com",
   publisher: { "@id": BUSINESS_ID },
 }
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-8 lg:col-span-5 lg:col-start-8">
           <div className="flex flex-col gap-5">
-            <Eyebrow icon={<ShieldCheck className="h-6 w-6" />}>Why Aqua Aesthetics</Eyebrow>
+            <Eyebrow icon={<ShieldCheck className="h-6 w-6" />}>Why aqua aesthetics</Eyebrow>
             <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] text-navy md:text-[58px]">
               We build pools <em>we&apos;d swim in.</em>
             </h2>
@@ -213,7 +213,6 @@ function ServiceCard({ s, big = false }: { s: (typeof SERVICES)[number]; big?: b
       <Image src={s.image} alt={s.alt} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,20,33,0.9)_0%,rgba(8,20,33,0)_60%)]" />
       <div className={`relative flex flex-col gap-2 ${big ? "p-9" : "p-7"}`}>
-        {big && <span className="self-start rounded-full bg-sun px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-navy">Most requested</span>}
         <h3 className={`font-display font-normal ${big ? "text-4xl" : "text-[28px]"}`}>{s.name}</h3>
         <p className={`text-ivory/85 ${big ? "text-[17px] leading-relaxed" : "text-[15px]"}`}>{s.blurb}</p>
       </div>

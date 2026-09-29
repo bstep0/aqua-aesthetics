@@ -1,31 +1,31 @@
 import { pageMeta } from "@/lib/seo"
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import { Check } from "lucide-react"
 import { SERVICES } from "@/lib/site"
 import { Breadcrumbs, CtaBand, FillLink } from "@/components/site/ui"
 
 export const metadata = pageMeta({
-  title: "Pool Services in DFW — Construction, Remodeling & Maintenance",
+  title: "Pool services in DFW — construction, remodeling & maintenance",
   description:
-    "Explore all pool services from Aqua Aesthetics Pools: new construction, remodeling, outdoor living, maintenance, and repairs throughout Dallas, Frisco, Plano, Southlake, and the DFW Metroplex.",
+    "Explore all pool services from aqua aesthetics pools: new construction, remodeling, outdoor living, maintenance, and repairs throughout Dallas, Frisco, Plano, Southlake, and the DFW Metroplex.",
   path: "/services",
 })
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Pool Services by Aqua Aesthetics Pools",
+  name: "Pool services by aqua aesthetics pools",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       item: {
         "@type": "Service",
-        name: "New Pool Construction",
+        name: "New pool construction",
         description: "Custom-designed pools built to your specifications with quality materials and craftsmanship throughout the DFW Metroplex.",
         url: "https://www.aquaaestheticspools.com/services/new-pool-construction",
-        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
-        areaServed: ["Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound"],
+        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
     {
@@ -33,11 +33,11 @@ const servicesJsonLd = {
       position: 2,
       item: {
         "@type": "Service",
-        name: "Pool Remodeling",
+        name: "Pool remodeling",
         description: "Expert pool renovation services including resurfacing, tile replacement, deck renovation, and equipment upgrades in DFW.",
         url: "https://www.aquaaestheticspools.com/services/pool-remodeling",
-        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
-        areaServed: ["Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound"],
+        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
     {
@@ -45,11 +45,11 @@ const servicesJsonLd = {
       position: 3,
       item: {
         "@type": "Service",
-        name: "Outdoor Living",
+        name: "Outdoor living",
         description: "Custom outdoor living solutions including patios, outdoor kitchens, fire pits, and pergolas in the DFW area.",
         url: "https://www.aquaaestheticspools.com/services/outdoor-living",
-        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
-        areaServed: ["Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound"],
+        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
     {
@@ -57,11 +57,11 @@ const servicesJsonLd = {
       position: 4,
       item: {
         "@type": "Service",
-        name: "Pool Maintenance",
+        name: "Pool maintenance",
         description: "Weekly and bi-weekly pool maintenance programs to keep your pool pristine year-round across DFW.",
         url: "https://www.aquaaestheticspools.com/services/pool-maintenance",
-        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
-        areaServed: ["Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound"],
+        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
     {
@@ -69,11 +69,11 @@ const servicesJsonLd = {
       position: 5,
       item: {
         "@type": "Service",
-        name: "Pool Repairs",
+        name: "Pool repairs",
         description: "Expert diagnosis and repair of leaks, pumps, heaters, filters, and plumbing throughout the DFW Metroplex.",
         url: "https://www.aquaaestheticspools.com/services/pool-repairs",
-        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
-        areaServed: ["Dallas", "Frisco", "Plano", "Southlake", "Colleyville", "Fort Worth", "Flower Mound"],
+        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
   ],
@@ -81,11 +81,11 @@ const servicesJsonLd = {
 
 
 const FEATURES: Record<string, string[]> = {
-  "new-pool-construction": ["Personalized Design Consultation", "3D Renderings", "Permit Acquisition and Processing", "Excavation and Pool Shell Construction", "Plumbing and Electrical Installation", "Coping, Tiling, and Plastering", "Deck Construction and Landscaping", "Final Inspection and Pool Startup"],
-  "pool-remodeling": ["Pool Resurfacing", "Tile Replacement and Upgrades", "Coping and Deck Renovation", "Equipment Upgrades", "Energy-Efficient Equipment Installation", "Water Feature Additions", "Lighting Enhancements", "Safety Feature Installation"],
-  "outdoor-living": ["Patio Design and Installation", "Outdoor Kitchens", "Fire Pits and Fireplaces", "Pergolas and Shade Structures", "Landscape Design and Installation", "Lighting Design", "Irrigation Systems"],
-  "pool-maintenance": ["Weekly or Bi-Weekly Service Options", "Chemical Balancing", "Equipment Inspection", "Algae Prevention and Treatment", "Filter Cleaning", "Preventative Maintenance"],
-  "pool-repairs": ["Leak Detection and Repair", "Pump Repair and Replacement", "Heater Repair and Replacement", "Filter Repair and Replacement", "Plumbing Repairs", "Electrical System Diagnosis", "Automation System Repairs"],
+  "new-pool-construction": ["Personalized design consultation", "3D Renderings", "Permit acquisition and processing", "Excavation and pool shell construction", "Plumbing and electrical installation", "Coping, tiling, and plastering", "Deck construction and landscaping", "Final inspection and pool startup"],
+  "pool-remodeling": ["Pool resurfacing", "Tile replacement and upgrades", "Coping and deck renovation", "Equipment upgrades", "Energy-Efficient equipment installation", "Water feature additions", "Lighting enhancements", "Safety feature installation"],
+  "outdoor-living": ["Patio design and installation", "Outdoor kitchens", "Fire pits and fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Lighting design", "Irrigation systems"],
+  "pool-maintenance": ["Weekly or bi-Weekly service options", "Chemical balancing", "Equipment inspection", "Algae prevention and treatment", "Filter cleaning", "Preventative maintenance"],
+  "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Plumbing repairs", "Electrical system diagnosis", "Automation system repairs"],
 }
 
 export default function ServicesPage() {
@@ -119,7 +119,6 @@ export default function ServicesPage() {
           <article key={s.slug} id={s.slug} className="grid scroll-mt-28 items-center gap-10 lg:grid-cols-12">
             <div className={`aa-card relative h-[320px] overflow-hidden rounded-[28px] md:h-[440px] lg:col-span-7 ${i % 2 ? "lg:order-2 lg:col-start-6" : ""}`}>
               <Image src={s.image} alt={s.alt} fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
-              {i === 0 && <span className="absolute left-6 top-6 rounded-full bg-sun px-3.5 py-2 text-xs font-bold uppercase tracking-[0.12em] text-navy">Most requested</span>}
             </div>
             <div className={`flex flex-col gap-5 lg:col-span-4 ${i % 2 ? "lg:order-1 lg:col-start-1" : "lg:col-start-9"}`}>
               <span className="font-display text-[22px] text-sun-dark">0{i + 1}</span>

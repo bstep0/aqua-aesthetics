@@ -36,10 +36,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="mb-2 font-bold text-ivory">Company</h3>
             <ul>
-              <li><Link href="/gallery" className="hover:text-sun">Our Work</Link></li>
+              <li><Link href="/gallery" className="hover:text-sun">Our work</Link></li>
               <li><Link href="/design" className="hover:text-sun">Design your pool</Link></li>
-              <li><Link href="/service-areas" className="hover:text-sun">Service Areas</Link></li>
-              <li><Link href="/about" className="hover:text-sun">About Us</Link></li>
+              <li><Link href="/service-areas" className="hover:text-sun">Service areas</Link></li>
+              <li><Link href="/about" className="hover:text-sun">About us</Link></li>
               <li><Link href="/contact" className="hover:text-sun">Contact</Link></li>
             </ul>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-ivory/15 pt-6 text-sm text-ivory/60 md:flex-row md:justify-between">
-          <span>© {new Date().getFullYear()} Aqua Aesthetics Pools. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} aqua aesthetics pools. All rights reserved.</span>
           <nav aria-label="Service areas" className="flex flex-wrap gap-x-3 gap-y-1">
             {AREAS.slice(0, 12).map((a) => (
               <Link key={a.slug} href={`/service-areas/${a.slug}`} className="hover:text-sun">
