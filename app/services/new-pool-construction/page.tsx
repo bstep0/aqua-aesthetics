@@ -6,7 +6,7 @@ import BuildAnimation from "@/components/site/build-animation"
 export const metadata = pageMeta({
   title: "New pool construction in DFW — custom pools built to last",
   description:
-    "aqua aesthetics pools builds custom in-ground pools for homeowners throughout Dallas, Frisco, Plano, Southlake, and the DFW Metroplex. Get your free design consultation today.",
+    "Custom in-ground pools designed with you and built from permit to first swim in McKinney, Frisco, Plano and across DFW. Free consultation.",
   path: "/services/new-pool-construction",
   image: NEW_POOL.hero.src,
 })

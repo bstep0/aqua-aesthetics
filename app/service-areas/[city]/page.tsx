@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   if (!a) return {}
   return pageMeta({
     title: `Pool builder in ${a.city}, TX — custom pools, remodels & repairs`,
-    description: `aqua aesthetics pools builds, remodels, repairs and maintains pools in ${a.city}, TX. Family-owned, owner-led and serving ${a.county} and all of DFW since 1995. Free quote: ${SITE.phone}.`,
+    description: `Custom pools, remodels, repairs and maintenance in ${a.city}, TX from a family-owned DFW pool builder since 1995. Free quote: ${SITE.phone}.`,
     path: `/service-areas/${a.slug}`,
     image: a.image,
   })

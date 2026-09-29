@@ -1,6 +1,6 @@
 export const SITE = {
   name: "aqua aesthetics pools",
-  url: "https://www.aquaaestheticspools.com",
+  url: "https://aquaaestheticspools.com",
   phone: "(214) 971-5996",
   phoneHref: "tel:+12149715996",
   email: "contact@aquaaestheticspools.com",

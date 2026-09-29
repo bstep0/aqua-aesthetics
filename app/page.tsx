@@ -12,7 +12,7 @@ import DesignerFrame from "@/components/designer/designer-frame"
 export const metadata = pageMeta({
   title: "DFW pool builder — custom pools, remodels & repairs | aqua aesthetics pools",
   description:
-    "Family-owned DFW pool builder based in McKinney, TX. Custom pool construction, remodeling, outdoor living, maintenance and repairs in McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and across the Metroplex. Free quote.",
+    "Family-owned DFW pool builder in McKinney, TX. Custom pools, remodels, outdoor living, maintenance and repairs across the Metroplex. Free quote.",
   path: "/",
 })
 
@@ -20,7 +20,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "aqua aesthetics pools",
-  url: "https://www.aquaaestheticspools.com",
+  url: "https://aquaaestheticspools.com",
   publisher: { "@id": BUSINESS_ID },
 }
 

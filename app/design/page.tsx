@@ -5,7 +5,7 @@ import DesignerFrame from "@/components/designer/designer-frame"
 export const metadata = pageMeta({
   title: "Design your backyard — free 3D pool designer",
   description:
-    "Sketch your dream pool, add a spa, fire pit, pergola or outdoor kitchen, and see it in 3D. Send your design to aqua aesthetics pools for a free consultation anywhere in DFW.",
+    "Sketch your pool, add a spa, fire pit or pergola, and see it in 3D. Send your design to aqua aesthetics pools for a free DFW consultation.",
   path: "/design",
 })
 

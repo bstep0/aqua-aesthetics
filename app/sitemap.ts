@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { SERVICES } from "@/lib/site"
 import { AREAS } from "@/lib/areas"
 
-const BASE = "https://www.aquaaestheticspools.com"
+const BASE = "https://aquaaestheticspools.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -22,5 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/gallery", 0.7, "weekly"),
     page("/about", 0.6),
     page("/contact", 0.7),
+    page("/privacy", 0.2),
+    page("/terms", 0.2),
   ]
 }

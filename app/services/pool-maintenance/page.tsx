@@ -5,7 +5,7 @@ import { MAINTENANCE } from "@/lib/services-content"
 export const metadata = pageMeta({
   title: "Pool maintenance service in DFW — weekly & bi-weekly plans",
   description:
-    "Keep your pool crystal clear year-round with aqua aesthetics pools' professional maintenance plans. Serving homeowners in Dallas, Frisco, Flower Mound, Colleyville, and the DFW Metroplex.",
+    "Weekly and bi-weekly pool maintenance plans from aqua aesthetics pools. Clear, balanced water year-round in McKinney, Frisco and across DFW.",
   path: "/services/pool-maintenance",
   image: MAINTENANCE.hero.src,
 })

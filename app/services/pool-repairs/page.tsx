@@ -5,7 +5,7 @@ import { REPAIRS } from "@/lib/services-content"
 export const metadata = pageMeta({
   title: "Pool repairs in DFW — leak detection, pump & equipment repair",
   description:
-    "Fast, reliable pool repairs in Dallas, Fort Worth, Frisco, and throughout the DFW Metroplex. aqua aesthetics pools fixes leaks, pumps, heaters, filters, plumbing, and more.",
+    "Fast pool repairs across DFW. Leaks, pumps, heaters, filters and plumbing, diagnosed and fixed by aqua aesthetics pools. Call (214) 971-5996.",
   path: "/services/pool-repairs",
   image: REPAIRS.hero.src,
 })

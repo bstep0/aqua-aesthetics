@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/seo"
 export const metadata = pageMeta({
   title: "Contact us — free pool quote in DFW",
   description:
-    "Contact aqua aesthetics pools for a free consultation or quote. We serve homeowners throughout Dallas, Frisco, Plano, Southlake, Fort Worth, and the DFW Metroplex. Call (214) 971-5996 or send a message.",
+    "Get a free pool quote from aqua aesthetics pools. Call (214) 971-5996 or send a message. Based in McKinney, serving all of Dallas–Fort Worth.",
   path: "/contact",
 })
 

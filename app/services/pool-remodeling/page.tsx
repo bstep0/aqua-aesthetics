@@ -5,7 +5,7 @@ import { REMODELING } from "@/lib/services-content"
 export const metadata = pageMeta({
   title: "Pool remodeling in DFW — renovation & resurfacing experts",
   description:
-    "Upgrade your existing pool with aqua aesthetics pools. We offer pool resurfacing, tile replacement, deck renovation, and equipment upgrades throughout Dallas, Plano, Southlake, and the DFW area.",
+    "Pool resurfacing, tile, coping, decks and equipment upgrades from aqua aesthetics pools in McKinney, Plano, Southlake and across DFW.",
   path: "/services/pool-remodeling",
   image: REMODELING.hero.src,
 })

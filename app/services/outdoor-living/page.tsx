@@ -5,7 +5,7 @@ import { OUTDOOR_LIVING } from "@/lib/services-content"
 export const metadata = pageMeta({
   title: "Outdoor living spaces in DFW — patios, kitchens & fire pits",
   description:
-    "Transform your backyard with custom outdoor living spaces by aqua aesthetics pools. We design and build patios, outdoor kitchens, fire pits, and pergolas across Southlake, Colleyville, Dallas, and the DFW Metroplex.",
+    "Covered patios, outdoor kitchens, fire pits and pergolas designed and built by aqua aesthetics pools in McKinney, Southlake and across DFW.",
   path: "/services/outdoor-living",
   image: OUTDOOR_LIVING.hero.src,
 })
