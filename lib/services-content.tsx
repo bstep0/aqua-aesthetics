@@ -176,7 +176,7 @@ export const MAINTENANCE: ServiceContent = {
   ],
   includedTitle: "What's included",
   included: [
-    "Weekly or bi-Weekly service plans",
+    "Weekly or bi-weekly service plans",
     "Chemical testing & balancing",
     "Chlorine & shock treatment",
     "Algae prevention and treatment",

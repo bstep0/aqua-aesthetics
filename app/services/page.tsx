@@ -84,7 +84,7 @@ const FEATURES: Record<string, string[]> = {
   "new-pool-construction": ["Personalized design consultation", "3D Renderings", "Permit acquisition and processing", "Excavation and pool shell construction", "Plumbing and electrical installation", "Coping, tiling, and plastering", "Deck construction and landscaping", "Final inspection and pool startup"],
   "pool-remodeling": ["Pool resurfacing", "Tile replacement and upgrades", "Coping and deck renovation", "Equipment upgrades", "Energy-Efficient equipment installation", "Water feature additions", "Lighting enhancements", "Safety feature installation"],
   "outdoor-living": ["Patio design and installation", "Outdoor kitchens", "Fire pits and fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Lighting design", "Irrigation systems"],
-  "pool-maintenance": ["Weekly or bi-Weekly service options", "Chemical balancing", "Equipment inspection", "Algae prevention and treatment", "Filter cleaning", "Preventative maintenance"],
+  "pool-maintenance": ["Weekly or bi-weekly service options", "Chemical balancing", "Equipment inspection", "Algae prevention and treatment", "Filter cleaning", "Preventative maintenance"],
   "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Plumbing repairs", "Electrical system diagnosis", "Automation system repairs"],
 }
 

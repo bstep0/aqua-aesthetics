@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/site/ui"
 import CountUp from "@/components/site/count-up"
 
 export const metadata = pageMeta({
-  title: "About Us — 30+ Years of Pool Excellence in DFW",
+  title: "About us — 30+ years of pool excellence in DFW",
   description:
     "Learn about aqua aesthetics pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across the entire DFW metroplex, including Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
   path: "/about",
