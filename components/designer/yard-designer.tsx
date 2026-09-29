@@ -168,11 +168,27 @@ if (this.pending) { this.setState(this.pending); this.pending = null; }
 }
 queue(patch) {
 this.pending = Object.assign(this.pending || {}, patch);
-if (!this.raf) this.raf = requestAnimationFrame(() => this.flush());
+if (this.raf) return;
+// Apply at the next frame, with a timer fallback for when frames are throttled.
+const run = () => {
+if (!this.raf) return;
+cancelAnimationFrame(this.raf);
+clearTimeout(this.rafTimer);
+this.flush();
+};
+this.raf = requestAnimationFrame(run);
+this.rafTimer = setTimeout(run, 50);
 }
 add(type) {
 const id = ++this.nextId;
-const items = this.state.items.concat([{ id, type, x: 450 + Math.round((Math.random() - 0.5) * 120), y: 470 + Math.round((Math.random() - 0.5) * 40), r: 0, s: 1 }]);
+let item = { id, type, x: 450 + Math.round((Math.random() - 0.5) * 120), y: 470 + Math.round((Math.random() - 0.5) * 40), r: 0, s: 1 };
+if (this.catalog[type].snap === 'in') {
+// In-pool items start inside the pool (near its middle) so they're visible and grabbable.
+const poly = this.outline(this.state.pts, this.state.smooth);
+const cx = poly.reduce((a, p) => a + p[0], 0) / poly.length, cy = poly.reduce((a, p) => a + p[1], 0) / poly.length;
+item = this.conform(item, [cx + Math.round((Math.random() - 0.5) * 60), cy], poly);
+}
+const items = this.state.items.concat([item]);
 this.setState({ items, sel: id, view: 'top', auto: false, mode: this.state.mode === 'draw' ? 'draw' : 'move' });
 }
 patchSel(fn) {
@@ -745,9 +761,12 @@ conform(it, q, poly, force) {
 const c = this.catalog[it.type];
 if (!c.snap || poly.length < 3) return { ...it, x: q[0], y: q[1], snap: false };
 const w = this.wall(q, poly);
-const near = c.snap === 'in' ? (w.isIn || w.dist < 50) : w.dist < 70;
-if (!near && !force && c.snap !== 'in') return { ...it, x: q[0], y: q[1], snap: false };
 const sc = it.s || 1;
+// Steps and ledges float freely inside the pool and only lock to a wall when brought near one
+// (or when dragged outside the pool, so they can never be lost).
+if (c.snap === 'in' && !force && w.isIn && w.dist > (c.h * sc) / 2 + 24) return { ...it, x: q[0], y: q[1], snap: false };
+const near = c.snap === 'in' ? true : w.dist < 70;
+if (!near && !force) return { ...it, x: q[0], y: q[1], snap: false };
 const off = c.snap === 'in' ? (c.h * sc) / 2 + 2 : c.snap === 'edge' ? 5 : -((c.h * sc) / 2 - 12);
 const r = Math.round(Math.atan2(-w.nx, w.ny) * 180 / Math.PI);
 return { ...it, x: w.x + w.nx * off, y: w.y + w.ny * off, r, snap: true, wx: w.x, wy: w.y };

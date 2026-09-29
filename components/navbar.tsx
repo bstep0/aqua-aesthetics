@@ -9,9 +9,11 @@ import { SITE } from "@/lib/site"
 import Logo from "@/components/site/logo"
 
 const ROUTES = [
+  { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
   { name: "Gallery", path: "/gallery" },
-  { name: "Service areas", path: "/service-areas" },
+  { name: "Design", path: "/design" },
+  { name: "Service Areas", path: "/service-areas" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ]
@@ -47,7 +49,7 @@ export default function Navbar({ banner }: { banner?: ReactNode }) {
         <div className={`container flex h-20 items-center justify-between ${overlay ? "text-ivory" : "text-navy"}`}>
           <Logo tone={overlay ? "light" : "dark"} />
 
-          <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Main" className="hidden items-center gap-5 lg:flex xl:gap-7">
             {ROUTES.map((route) => (
               <Link
                 key={route.path}
@@ -61,7 +63,7 @@ export default function Navbar({ banner }: { banner?: ReactNode }) {
             ))}
             <a
               href={SITE.phoneHref}
-              className={`flex items-center gap-2 border-l pl-7 text-[15px] font-semibold ${overlay ? "border-ivory/25" : "border-navy/15"}`}
+              className={`hidden items-center gap-2 border-l pl-6 text-[15px] font-semibold xl:flex ${overlay ? "border-ivory/25" : "border-navy/15"}`}
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               {SITE.phone}
@@ -90,9 +92,6 @@ export default function Navbar({ banner }: { banner?: ReactNode }) {
                 </button>
               </div>
               <nav aria-label="Mobile" className="mt-10 flex flex-col">
-                <Link href="/" onClick={() => setIsOpen(false)} className="border-b border-ivory/15 py-3 font-display text-3xl font-light">
-                  Home
-                </Link>
                 {ROUTES.map((route) => (
                   <Link
                     key={route.path}
@@ -103,10 +102,7 @@ export default function Navbar({ banner }: { banner?: ReactNode }) {
                     {route.name}
                   </Link>
                 ))}
-                <Link href="/design" onClick={() => setIsOpen(false)} className="mt-6 text-lg font-semibold text-aqua">
-                  Design your pool in 3D →
-                </Link>
-                <a href={SITE.phoneHref} className="mt-6 text-xl font-bold text-sun">
+                <a href={SITE.phoneHref} className="mt-8 text-xl font-bold text-sun">
                   {SITE.phone}
                 </a>
                 <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-4 rounded-full bg-sun py-3.5 text-center font-bold text-navy">
