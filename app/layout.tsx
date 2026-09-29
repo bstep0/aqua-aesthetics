@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Fraunces, Figtree } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -9,37 +9,44 @@ import Footer from "@/components/footer"
 import WipBanner from "@/components/wip-banner"
 import Analytics from "./analytics"
 
-const inter = Inter({ subsets: ["latin"] })
+const display = Fraunces({ subsets: ["latin"], axes: ["opsz"], style: ["normal", "italic"], variable: "--font-display" })
+const sans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.aquaaestheticspools.com"),
   title: {
-    default: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    default: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
     template: "%s | Aqua Aesthetics Pools",
   },
   description:
-    "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
+    "Family-owned pool builder serving the Dallas–Fort Worth Metroplex from McKinney, TX since 1995. Custom pool construction, remodeling, outdoor living, maintenance and repairs.",
+  applicationName: "Aqua Aesthetics Pools",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Aqua Aesthetics Pools",
-    title: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    locale: "en_US",
+    url: "/",
+    title: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
     description:
-      "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
+      "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth — McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and more.",
     images: [
       {
-        url: "https://www.aquaaestheticspools.com/images/pool18.jpg",
+        url: "/images/pool18.jpg",
         width: 1200,
         height: 630,
-        alt: "Custom pool with fire feature built by Aqua Aesthetics Pools in DFW",
+        alt: "Custom pool and spa built by Aqua Aesthetics Pools in DFW",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. | Aqua Aesthetics Pools",
+    title: "Aqua Aesthetics Pools | Dallas–Fort Worth Pool Builder",
     description:
-      "Pool Builders serving Dallas, Fort Worth, Frisco, Plano, Southlake, Colleyville, and Flower Mound. Custom pool construction, remodeling, service and repairs.",
-    images: ["https://www.aquaaestheticspools.com/images/pool18.jpg"],
+      "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth.",
+    images: ["/images/pool18.jpg"],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
 }
 
 export default function RootLayout({
@@ -65,12 +72,11 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={inter.className}>
+      <body className={`${display.variable} ${sans.variable} font-sans`}>
         <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
-            <WipBanner />
-            <Navbar />
+            <Navbar banner={<WipBanner />} />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

@@ -1,28 +1,54 @@
 "use client"
 
-import type { Metadata } from "next"
-import { useState } from "react"
-import { Phone, Mail, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { Check, Phone } from "lucide-react"
+import { SITE, CORE_CITIES } from "@/lib/site"
 
 type FormState = "idle" | "submitting" | "success"
 
+const SERVICES = [
+  { id: "new-construction", label: "New pool" },
+  { id: "remodeling", label: "Remodel" },
+  { id: "outdoor-living", label: "Outdoor living" },
+  { id: "maintenance", label: "Maintenance" },
+  { id: "repairs", label: "Repair" },
+  { id: "other", label: "Not sure" },
+]
+const TIMING = [
+  { id: "asap", label: "As soon as possible" },
+  { id: "soon", label: "In 1–3 months" },
+  { id: "exploring", label: "Just exploring" },
+]
+const EMPTY = { name: "", phone: "", email: "", service: "new-construction", city: "", timing: "soon", message: "", design: "" }
+
+const input = "h-[52px] w-full rounded-2xl border border-[#C9D2D4] bg-white px-4 text-base text-navy placeholder:text-slate/60 focus:border-teal focus:outline-none focus:ring-4 focus:ring-teal/15"
+
 export default function ContactPage() {
   const [formState, setFormState] = useState<FormState>("idle")
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    message: "",
-  })
+  const [error, setError] = useState("")
+  const [form, setForm] = useState(EMPTY)
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-  }
+  // Pre-fill from links like /contact?service=repairs&design=...
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search)
+    const service = q.get("service")
+    const design = q.get("design")
+    setForm((f) => ({
+      ...f,
+      ...(service && SERVICES.some((s) => s.id === service) ? { service } : {}),
+      ...(design ? { design: design.slice(0, 600) } : {}),
+    }))
+  }, [])
+
+  const set = (k: keyof typeof EMPTY, v: string) => setForm((f) => ({ ...f, [k]: v }))
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (!form.phone && !form.email) {
+      setError("Please add a phone number or email so we can reach you.")
+      return
+    }
+    setError("")
     setFormState("submitting")
     try {
       const res = await fetch("/api/contact", {
@@ -34,188 +60,180 @@ export default function ContactPage() {
       setFormState("success")
     } catch {
       setFormState("idle")
-      alert("Something went wrong — please call or email us directly.")
+      setError(`Something went wrong — please call ${SITE.phone} or email ${SITE.email}.`)
     }
   }
 
   return (
-    <div className="container mx-auto py-16 px-4 md:px-8">
-      {/* Header */}
-      <div className="mb-16 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold text-gray-900 sm:text-5xl">
-          Contact Aqua Aesthetics
-        </h1>
-        <p className="mx-auto max-w-3xl text-lg text-gray-600 leading-relaxed">
-          Ready to make a splash? Whether you're building a new pool, remodeling an existing one, or need regular
-          maintenance, we're here to help. Reach out below and we'll get back to you within one business day.
-        </p>
-      </div>
-
-      <div className="grid gap-12 lg:grid-cols-[1fr,1.4fr]">
-        {/* Left column — contact cards + why choose us */}
-        <div className="space-y-6">
-          {/* Call */}
-          <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-8 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
-            <Phone className="mb-4 h-10 w-10 text-cyan-600" />
-            <h2 className="mb-2 text-2xl font-semibold text-gray-900">Give Us a Call</h2>
-            <p className="mb-4 text-gray-600 max-w-sm">
-              Our team is ready to answer your questions and get you scheduled quickly.
-            </p>
-            <a href="tel:+12149715996" className="text-lg font-medium text-gray-900 hover:text-cyan-600">
-              (214) 971-5996
-            </a>
-          </div>
-
-          {/* Email */}
-          <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-8 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-300">
-            <Mail className="mb-4 h-10 w-10 text-cyan-600" />
-            <h2 className="mb-2 text-2xl font-semibold text-gray-900">Email Us</h2>
-            <p className="mb-4 text-gray-600 max-w-sm">
-              Prefer to write? We'll get back to you as soon as possible.
-            </p>
-            <a href="mailto:pools@aquaaesthetics.com" className="text-lg font-medium text-gray-900 hover:text-cyan-600">
-              contact@AquaAestheticsPools.com
-            </a>
-          </div>
-
-          {/* Why Choose Us */}
-          <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-5">Why Choose Aqua Aesthetics?</h3>
-            <ul className="space-y-3">
-              {[
-                "30+ years of experience in DFW",
-                "Custom solutions tailored to your style and budget",
-                "Reliable, friendly service for maintenance and repairs",
-                "Free consultations and transparent pricing",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-gray-700">
-                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-cyan-600 mt-0.5" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+    <div className="container grid gap-6 py-12 md:py-16 lg:grid-cols-12">
+      <aside className="aa-caustic-bg flex flex-col gap-10 rounded-[32px] p-8 text-ivory md:p-12 lg:col-span-5">
+        <div className="aa-rise flex flex-col gap-5">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-aqua">Contact</p>
+          <h1 className="font-display text-5xl font-light leading-[0.98] tracking-[-0.025em] md:text-7xl">
+            Let&apos;s talk about your <em className="text-sun">backyard.</em>
+          </h1>
+          <p className="text-lg leading-relaxed text-ivory/80">
+            Building new, remodeling, or need regular maintenance? Reach out below and we&apos;ll get back to you within one business day.
+          </p>
         </div>
+        <a href={SITE.phoneHref} className="aa-rise flex items-center gap-5" style={{ animationDelay: "0.15s" }}>
+          <span className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-sun">
+            <span className="absolute inset-0 rounded-full border-2 border-sun" style={{ animation: "aa-ring 2.4s ease-out infinite" }} aria-hidden="true" />
+            <Phone className="h-6 w-6 text-navy" aria-hidden="true" />
+          </span>
+          <span className="flex flex-col">
+            <span className="text-sm text-ivory/70">Call the owner directly</span>
+            <span className="font-display text-4xl">{SITE.phone}</span>
+          </span>
+        </a>
+        <dl className="grid grid-cols-2 gap-6 text-[15px] leading-relaxed text-ivory/80">
+          <div>
+            <dt className="font-bold text-ivory">Email</dt>
+            <dd className="break-all">
+              <a href={`mailto:${SITE.email}`} className="hover:text-sun">
+                {SITE.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-bold text-ivory">Hours</dt>
+            <dd>{SITE.hours}</dd>
+          </div>
+          <div>
+            <dt className="font-bold text-ivory">Based in</dt>
+            <dd>{SITE.base}</dd>
+          </div>
+          <div>
+            <dt className="font-bold text-ivory">Serving</dt>
+            <dd>The entire DFW Metroplex</dd>
+          </div>
+        </dl>
+        <ul className="mt-auto flex flex-col gap-3.5 border-t border-ivory/20 pt-8">
+          {["30+ years of experience in DFW", "Custom solutions tailored to your style and budget", "Reliable, friendly service for maintenance and repairs", "Free consultations and transparent pricing"].map((t) => (
+            <li key={t} className="flex items-center gap-3">
+              <Check className="h-5 w-5 shrink-0 text-aqua" strokeWidth={2.6} aria-hidden="true" />
+              {t}
+            </li>
+          ))}
+        </ul>
+      </aside>
 
-        {/* Right column — form */}
-        <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-8">
-          {formState === "success" ? (
-            <div className="flex h-full flex-col items-center justify-center text-center py-12">
-              <CheckCircle2 className="mb-4 h-16 w-16 text-cyan-600" />
-              <h2 className="mb-3 text-2xl font-bold text-gray-900">Message Sent!</h2>
-              <p className="max-w-sm text-gray-600">
-                Thanks for reaching out. We'll be in touch soon!
-              </p>
-              <Button
-                className="mt-8 bg-cyan-600 hover:bg-cyan-700"
-                onClick={() => { setFormState("idle"); setForm({ name: "", phone: "", email: "", service: "", message: "" }) }}
-              >
-                Send Another Message
-              </Button>
+      <div className="rounded-[32px] bg-white p-8 shadow-[0_24px_60px_rgba(11,27,43,0.08)] md:p-12 lg:col-span-7">
+        {formState === "success" ? (
+          <div className="flex min-h-[640px] flex-col items-center justify-center gap-6 text-center" style={{ animation: "aa-rise .7s cubic-bezier(.2,.8,.2,1) both" }}>
+            <svg width="120" height="120" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+              <circle cx="36" cy="36" r="33" stroke="#0B7285" strokeWidth="2.5" strokeDasharray="208" strokeDashoffset="208" style={{ animation: "aa-draw .8s ease-out forwards" }} />
+              <path d="M22 37l10 10 19-21" stroke="#0B7285" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="48" strokeDashoffset="48" style={{ animation: "aa-draw .5s ease-out .6s forwards" }} />
+            </svg>
+            <h2 className="font-display text-5xl font-light text-navy">Request received.</h2>
+            <p className="max-w-md text-lg text-slate">Thanks for reaching out. We&apos;ll be in touch {SITE.hours}.</p>
+            <button type="button" onClick={() => { setFormState("idle"); setForm(EMPTY) }} className="rounded-full border border-[#C9D2D4] px-6 py-3 font-semibold text-navy">
+              Send another message
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col gap-7">
+            <div>
+              <h2 className="font-display text-4xl text-navy">Get a free quote</h2>
+              <p className="mt-1 text-slate">Tell us a little, and the owner will reach out personally.</p>
             </div>
-          ) : (
-            <>
-              <h2 className="mb-6 text-2xl font-bold text-gray-900">Get a Free Quote</h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-gray-700">
-                      Full Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="Jane Smith"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-gray-700">
-                      Phone Number
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="(214) 555-0100"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                    />
-                  </div>
-                </div>
 
-                <div>
-                  <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-gray-700">
-                    Email Address <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="jane@example.com"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="mb-1.5 block text-sm font-medium text-gray-700">
-                    Service Interested In
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 bg-white"
+            <fieldset>
+              <legend className="mb-3 font-bold text-navy">What are you planning?</legend>
+              <div className="flex flex-wrap gap-2">
+                {SERVICES.map((s) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    aria-pressed={form.service === s.id}
+                    onClick={() => set("service", s.id)}
+                    className={`h-12 rounded-full border-[1.5px] px-5 text-[15px] font-semibold transition-colors ${
+                      form.service === s.id ? "border-navy bg-navy text-ivory" : "border-[#C9D2D4] bg-white text-navy hover:border-navy"
+                    }`}
                   >
-                    <option value="">Select a service…</option>
-                    <option value="new-construction">New Pool Construction</option>
-                    <option value="remodeling">Pool Remodeling</option>
-                    <option value="maintenance">Pool Maintenance</option>
-                    <option value="repairs">Pool Repairs</option>
-                    <option value="outdoor-living">Outdoor Living</option>
-                    <option value="other">Other / Not Sure</option>
-                  </select>
-                </div>
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
 
-                <div>
-                  <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project or what you're looking for…"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-gray-900 placeholder-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 resize-none"
-                  />
-                </div>
+            {form.design && (
+              <div className="rounded-2xl border border-teal/30 bg-teal/5 p-4 text-[15px] text-navy">
+                <p className="mb-1 font-bold text-teal">Your backyard design is attached</p>
+                <p className="text-slate-2">{form.design}</p>
+              </div>
+            )}
 
-                <Button
-                  type="submit"
-                  disabled={formState === "submitting"}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 disabled:opacity-70"
-                >
-                  {formState === "submitting" ? "Sending…" : "Send Message"}
-                </Button>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <label className="flex flex-col gap-2 font-bold text-navy">
+                <span>
+                  Full name <span className="text-red-700" aria-hidden="true">*</span>
+                </span>
+                <input required name="name" autoComplete="name" value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="Jane Smith" className={input} />
+              </label>
+              <label className="flex flex-col gap-2 font-bold text-navy">
+                Phone
+                <input type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => set("phone", e.target.value)} placeholder="(214) 555-0100" className={input} />
+              </label>
+              <label className="flex flex-col gap-2 font-bold text-navy">
+                Email
+                <input type="email" name="email" autoComplete="email" value={form.email} onChange={(e) => set("email", e.target.value)} placeholder="jane@example.com" className={input} />
+              </label>
+              <label className="flex flex-col gap-2 font-bold text-navy">
+                City
+                <select name="city" value={form.city} onChange={(e) => set("city", e.target.value)} className={input}>
+                  <option value="">Select your city…</option>
+                  {CORE_CITIES.map((c) => (
+                    <option key={c}>{c}</option>
+                  ))}
+                  <option>Other DFW city</option>
+                </select>
+              </label>
+            </div>
 
-                <p className="text-center text-xs text-gray-500">
-                  We typically respond within one business day.
-                </p>
-              </form>
-            </>
-          )}
-        </div>
+            <fieldset>
+              <legend className="mb-3 font-bold text-navy">When would you like to start?</legend>
+              <div className="grid gap-2 sm:grid-cols-3">
+                {TIMING.map((t) => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    aria-pressed={form.timing === t.id}
+                    onClick={() => set("timing", t.id)}
+                    className={`h-12 rounded-2xl border-[1.5px] text-[15px] font-semibold transition-colors ${
+                      form.timing === t.id ? "border-navy bg-navy text-ivory" : "border-[#C9D2D4] bg-white text-navy hover:border-navy"
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <label className="flex flex-col gap-2 font-bold text-navy">
+              Tell us about your project
+              <textarea
+                name="message"
+                rows={5}
+                value={form.message}
+                onChange={(e) => set("message", e.target.value)}
+                placeholder="Tell us about your project or what you're looking for…"
+                className="w-full resize-none rounded-2xl border border-[#C9D2D4] bg-white px-4 py-3.5 text-base font-normal text-navy placeholder:text-slate/60 focus:border-teal focus:outline-none focus:ring-4 focus:ring-teal/15"
+              />
+            </label>
+
+            {error && (
+              <p role="alert" className="font-semibold text-red-700">
+                {error}
+              </p>
+            )}
+
+            <button type="submit" disabled={formState === "submitting"} className="h-[60px] rounded-full bg-sun text-lg font-bold text-navy transition-transform hover:-translate-y-0.5 disabled:opacity-70">
+              {formState === "submitting" ? "Sending…" : "Send my request"}
+            </button>
+            <p className="text-center text-sm text-slate">We typically respond within one business day.</p>
+          </form>
+        )}
       </div>
     </div>
   )

@@ -1,14 +1,15 @@
-import type { Metadata } from "next"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2, ArrowRight } from "lucide-react"
+import { pageMeta } from "@/lib/seo"
 import Image from "next/image"
-import Link from "next/link"
+import { Check } from "lucide-react"
+import { SERVICES } from "@/lib/site"
+import { Breadcrumbs, CtaBand, FillLink } from "@/components/site/ui"
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Pool Services in DFW — Construction, Remodeling & Maintenance",
   description:
     "Explore all pool services from Aqua Aesthetics Pools: new construction, remodeling, outdoor living, maintenance, and repairs throughout Dallas, Frisco, Plano, Southlake, and the DFW Metroplex.",
-}
+  path: "/services",
+})
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
@@ -78,166 +79,69 @@ const servicesJsonLd = {
   ],
 }
 
+
+const FEATURES: Record<string, string[]> = {
+  "new-pool-construction": ["Personalized Design Consultation", "3D Renderings", "Permit Acquisition and Processing", "Excavation and Pool Shell Construction", "Plumbing and Electrical Installation", "Coping, Tiling, and Plastering", "Deck Construction and Landscaping", "Final Inspection and Pool Startup"],
+  "pool-remodeling": ["Pool Resurfacing", "Tile Replacement and Upgrades", "Coping and Deck Renovation", "Equipment Upgrades", "Energy-Efficient Equipment Installation", "Water Feature Additions", "Lighting Enhancements", "Safety Feature Installation"],
+  "outdoor-living": ["Patio Design and Installation", "Outdoor Kitchens", "Fire Pits and Fireplaces", "Pergolas and Shade Structures", "Landscape Design and Installation", "Lighting Design", "Irrigation Systems"],
+  "pool-maintenance": ["Weekly or Bi-Weekly Service Options", "Chemical Balancing", "Equipment Inspection", "Algae Prevention and Treatment", "Filter Cleaning", "Preventative Maintenance"],
+  "pool-repairs": ["Leak Detection and Repair", "Pump Repair and Replacement", "Heater Repair and Replacement", "Filter Repair and Replacement", "Plumbing Repairs", "Electrical System Diagnosis", "Automation System Repairs"],
+}
+
 export default function ServicesPage() {
-  const services = [
-    {
-      id: "new-construction",
-      title: "New Pool Construction",
-      href: "/services/new-pool-construction",
-      description: "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
-      features: [
-        "Personalized Design Consultation",
-        "3D Renderings",
-        "Permit Acquisition and Processing",
-        "Excavation and Pool Shell Construction",
-        "Plumbing and Electrical Installation",
-        "Coping, Tiling, and Plastering",
-        "Deck Construction and Landscaping",
-        "Final Inspection and Pool Startup",
-      ],
-      image: "/images/pool15.jpg",
-      imageAlt: "Custom new pool construction with spa in Frisco Texas",
-    },
-    {
-      id: "remodels",
-      title: "Pool Remodeling",
-      href: "/services/pool-remodeling",
-      description: "Breathe new life into your existing pool with our expert renovation services.",
-      features: [
-        "Pool Resurfacing",
-        "Tile Replacement and Upgrades",
-        "Coping and Deck Renovation",
-        "Equipment Upgrades",
-        "Energy-Efficient Equipment Installation",
-        "Water Feature Additions",
-        "Lighting Enhancements",
-        "Safety Feature Installation",
-      ],
-      image: "/images/remodel1.jpg",
-      imageAlt: "Pool remodeling and resurfacing project in Plano Texas",
-    },
-    {
-      id: "outdoor-living",
-      title: "Outdoor Living",
-      href: "/services/outdoor-living",
-      description: "Enhance your backyard with custom outdoor living solutions.",
-      features: [
-        "Patio Design and Installation",
-        "Outdoor Kitchens",
-        "Fire Pits and Fireplaces",
-        "Pergolas and Shade Structures",
-        "Landscape Design and Installation",
-        "Lighting Design",
-        "Irrigation Systems",
-      ],
-      image: "/images/outdoor3.jpg",
-      imageAlt: "Custom outdoor living space with pergola and fire pit in Southlake Texas",
-    },
-    {
-      id: "maintenance",
-      title: "Regular Maintenance",
-      href: "/services/pool-maintenance",
-      description: "Regular maintenance programs to ensure your pool remains in pristine condition year-round.",
-      features: [
-        "Weekly or Bi-Weekly Service Options",
-        "Chemical Balancing",
-        //"Detailed Service Reports",
-        "Equipment Inspection",
-        "Algae Prevention and Treatment",
-        "Filter Cleaning",
-        "Preventative Maintenance",
-      ],
-      image: "/images/pool16.jpg",
-      imageAlt: "Pool maintenance and chemical balancing service in Dallas Texas",
-    },
-    {
-      id: "repairs",
-      title: "Pool Repairs",
-      href: "/services/pool-repairs",
-      description: "Expert diagnosis and repair of all pool-related issues to minimize downtime.",
-      features: [
-        "Leak Detection and Repair",
-        "Pump Repair and Replacement",
-        "Heater Repair and Replacement",
-        "Filter Repair and Replacement",
-        "Plumbing Repairs",
-        "Electrical System Diagnosis",
-        "Automation System Repairs",
-      ],
-      image: "/images/repair1.jpg",
-      imageAlt: "Pool equipment repair and leak detection in Fort Worth Texas",
-    },
-  ]
-
   return (
-    <div className="container py-12 md:py-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
-      />
+    <div className="flex flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }} />
 
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Pool Services in the DFW Metroplex
-        </h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
-          From concept to completion and beyond, we provide comprehensive pool solutions for homeowners throughout
-          Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
-        </p>
-      </div>
-
-      <div className="space-y-16">
-        {services.map((service, index) => (
-          <section key={service.id} id={service.id} className="scroll-mt-20">
-            <div
-              className={`grid gap-8 ${index % 2 === 0 ? "lg:grid-cols-[1fr,1.5fr]" : "lg:grid-cols-[1.5fr,1fr] lg:grid-flow-dense"}`}
-            >
-              <div className={`flex flex-col justify-center ${index % 2 !== 0 && "lg:order-2"}`}>
-                <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">{service.title}</h2>
-                <p className="mb-6 text-lg text-gray-600">{service.description}</p>
-                <div className="mb-8 grid gap-y-6 gap-x-6 sm:grid-cols-2">
-                  {service.features.map((feature, i) => (
-                    <div key={i} className="flex items-start">
-                      <CheckCircle2 className="mr-2 h-5 w-5 flex-shrink-0 text-cyan-600" />
-                      <span className="text-gray-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button asChild className="bg-cyan-600 hover:bg-cyan-700">
-                    <Link href="/contact">Request a Quote</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-cyan-600 text-cyan-600 hover:bg-cyan-50">
-                    <Link href={service.href} className="flex items-center gap-2">
-                      Learn More <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <div
-                className={`relative h-[300px] overflow-hidden rounded-lg sm:h-[400px] lg:h-auto ${index % 2 !== 0 && "lg:order-1"}`}
-              >
-                <Image src={service.image || "/placeholder.svg"} alt={service.imageAlt} fill className="object-cover" />
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
-
-      <section className="mt-20 rounded-2xl bg-cyan-50/50 p-8 md:p-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">
-            Not Sure What You Need?
-          </h2>
-          <p className="mb-6 text-lg leading-relaxed text-gray-700">
-            Our experts can help you determine the best services for your pool based on its condition, your goals, and
-            your budget. Contact us for a free consultation and personalized recommendation.
+      <section className="aa-caustic-bg relative overflow-hidden pb-24 pt-44 text-ivory">
+        <div className="container flex max-w-5xl flex-col gap-7">
+          <div className="aa-rise">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
+          </div>
+          <h1 className="aa-rise font-display text-5xl font-light leading-[0.98] tracking-[-0.025em] md:text-[88px]" style={{ animationDelay: "0.15s" }}>
+            Pool services in the <em className="aa-glint">DFW Metroplex</em>
+          </h1>
+          <p className="aa-rise max-w-2xl text-lg leading-relaxed text-ivory/85 md:text-xl" style={{ animationDelay: "0.3s" }}>
+            From concept to completion and beyond, we provide comprehensive pool solutions for homeowners throughout Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
           </p>
-          <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-            <Link href="/contact">Schedule a Consultation</Link>
-          </Button>
+          <div className="aa-rise flex flex-wrap gap-2.5" style={{ animationDelay: "0.45s" }}>
+            {SERVICES.map((s) => (
+              <a key={s.slug} href={`#${s.slug}`} className="rounded-full border border-ivory/40 px-5 py-3 text-[15px] font-semibold transition-colors hover:bg-ivory hover:text-navy">
+                {s.name}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
+
+      <section className="container flex flex-col gap-24 py-24">
+        {SERVICES.map((s, i) => (
+          <article key={s.slug} id={s.slug} className="grid scroll-mt-28 items-center gap-10 lg:grid-cols-12">
+            <div className={`aa-card relative h-[320px] overflow-hidden rounded-[28px] md:h-[440px] lg:col-span-7 ${i % 2 ? "lg:order-2 lg:col-start-6" : ""}`}>
+              <Image src={s.image} alt={s.alt} fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
+              {i === 0 && <span className="absolute left-6 top-6 rounded-full bg-sun px-3.5 py-2 text-xs font-bold uppercase tracking-[0.12em] text-navy">Most requested</span>}
+            </div>
+            <div className={`flex flex-col gap-5 lg:col-span-4 ${i % 2 ? "lg:order-1 lg:col-start-1" : "lg:col-start-9"}`}>
+              <span className="font-display text-[22px] text-sun-dark">0{i + 1}</span>
+              <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] text-navy md:text-5xl">{s.name}</h2>
+              <p className="text-[17px] leading-relaxed text-slate">{s.blurb}</p>
+              <ul className="flex flex-col gap-2.5">
+                {FEATURES[s.slug].map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 font-medium text-navy">
+                    <Check className="h-[18px] w-[18px] text-teal" strokeWidth={2.6} aria-hidden="true" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <FillLink href={s.href} variant="navy" arrow className="mt-2 self-start">
+                Learn more
+              </FillLink>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <CtaBand title="Not sure where to start?" accent="Just ask." />
     </div>
   )
 }

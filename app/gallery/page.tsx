@@ -1,11 +1,9 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import Link from "next/link"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { ca } from "date-fns/locale"
+import { FillLink } from "@/components/site/ui"
 
 const rawProjects = [
   // New Construction
@@ -60,7 +58,7 @@ export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("All")
   // Index into the *filtered* array of whichever photo is open in the lightbox.
   // null means the lightbox is closed.
-  const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   const filtered =
     activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter)
@@ -79,7 +77,7 @@ export default function GalleryPage() {
   useEffect(() => {
     if (lightboxIndex === null) return
 
-    function handleKeyDown(e) {
+    function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") closeLightbox()
       if (e.key === "ArrowLeft") showPrev()
       if (e.key === "ArrowRight") showNext()
@@ -108,58 +106,58 @@ export default function GalleryPage() {
   const activePhoto = lightboxIndex !== null ? filtered[lightboxIndex] : null
 
   return (
-    <div className="container py-12 md:py-16">
-      {/* Header */}
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Our Portfolio</h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
-          Browse stunning pool projects completed across the DFW Metroplex — from new construction to full remodels
-          and outdoor living spaces.
+    <div className="flex flex-col">
+      <section className="container grid items-end gap-8 pb-10 pt-16 md:pt-20 lg:grid-cols-12">
+        <h1 className="aa-rise font-display text-6xl font-light leading-[0.95] tracking-[-0.03em] text-navy md:text-[112px] lg:col-span-7">
+          Our <em className="text-sun-dark">work.</em>
+        </h1>
+        <p className="aa-rise text-lg leading-relaxed text-slate lg:col-span-4 lg:col-start-9 lg:pb-3" style={{ animationDelay: "0.2s" }}>
+          Browse pool projects completed across the DFW Metroplex — from new construction to full remodels and outdoor living spaces.
         </p>
+      </section>
+
+      <div className="container mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div role="group" aria-label="Filter projects" className="flex flex-wrap gap-1.5 rounded-3xl bg-white p-1.5 shadow-[0_8px_24px_rgba(11,27,43,0.06)] md:rounded-full">
+          {filters.map((filter) => {
+            const count = filter === "All" ? projects.length : projects.filter((p) => p.category === filter).length
+            const on = activeFilter === filter
+            return (
+              <button
+                key={filter}
+                type="button"
+                aria-pressed={on}
+                onClick={() => setActiveFilter(filter)}
+                className={`flex h-12 items-center gap-2.5 rounded-full px-5 text-[15px] font-bold transition-colors ${on ? "bg-navy text-ivory" : "text-navy hover:bg-ivory"}`}
+              >
+                {filter}
+                <span className={`rounded-full px-2 py-0.5 text-xs ${on ? "bg-sun text-navy" : "bg-sand"}`}>{count}</span>
+              </button>
+            )
+          })}
+        </div>
+        <span className="font-semibold text-slate">Showing {filtered.length} projects · tap any photo to enlarge</span>
       </div>
 
-      {/* Filter Pills */}
-      <div className="mb-10 flex flex-wrap justify-center gap-2">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
-              activeFilter === filter
-                ? "bg-cyan-600 text-white shadow-sm"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
-
-      {/* Masonry Grid */}
-      <div className="gap-4 [column-count:2] md:[column-count:3]">
+      <div className="container gap-5 [column-count:1] sm:[column-count:2] lg:[column-count:3] xl:[column-count:4]">
         {filtered.map((project, index) => (
-          <div
-            key={project.id}
-            className="group mb-4 break-inside-avoid overflow-hidden rounded-xl"
-          >
+          <div key={project.id} className="group mb-5 break-inside-avoid overflow-hidden rounded-2xl" style={{ animation: `aa-rise .8s cubic-bezier(.2,.8,.2,1) ${Math.min(index, 12) * 0.04}s both` }}>
             <button
               type="button"
               onClick={() => setLightboxIndex(index)}
-              className="relative block w-full cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600"
+              className="relative block w-full cursor-zoom-in focus:outline-none focus-visible:ring-4 focus-visible:ring-teal/40"
               aria-label={`View full image of ${project.category} project`}
             >
               <div className={`relative w-full ${project.aspect} overflow-hidden`}>
                 <Image
                   src={project.image || "/placeholder.svg"}
-                  alt={`${project.category} project`}
+                  alt={`${project.category} project by Aqua Aesthetics Pools in DFW`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/10 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="mb-1.5 w-fit rounded-full bg-cyan-600 px-2.5 py-0.5 text-xs font-semibold text-white">
-                    {project.category}
-                  </span>
+                <div className="absolute inset-x-3 bottom-3 flex translate-y-3 items-center justify-between rounded-xl bg-navy/90 px-4 py-3 text-ivory opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <span className="font-display text-lg">{project.category}</span>
+                  <span className="text-xs font-bold tracking-[0.1em] text-sun">{String(index + 1).padStart(2, "0")}</span>
                 </div>
               </div>
             </button>
@@ -167,44 +165,24 @@ export default function GalleryPage() {
         ))}
       </div>
 
-      {/* Empty state */}
-      {filtered.length === 0 && (
-        <p className="py-20 text-center text-gray-500">No projects found for this category.</p>
-      )}
+      {filtered.length === 0 && <p className="py-20 text-center text-slate">No projects found for this category.</p>}
 
-      {/* CTA */}
-      <section className="mt-20 rounded-2xl bg-cyan-50/50 p-8 md:p-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900">
-            Ready to Start Your Project?
+      <section className="container py-24">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-[32px] bg-navy px-8 py-14 text-ivory md:flex-row md:items-center md:px-16">
+          <h2 className="max-w-2xl font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] md:text-[52px]">
+            See something you love? <em className="text-sun">Let&apos;s build yours.</em>
           </h2>
-          <p className="mb-6 text-lg leading-relaxed text-gray-700">
-            Every project in our portfolio started with a conversation. Reach out today and let's talk about
-            bringing your backyard vision to life.
-          </p>
-          <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-            <Link href="/contact">Get a Free Quote</Link>
-          </Button>
+          <FillLink href="/contact" className="shrink-0">
+            Get a free quote
+          </FillLink>
         </div>
       </section>
 
-      {/* Lightbox */}
       {activePhoto && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={closeLightbox}
-        >
-          {/* Close button */}
-          <button
-            type="button"
-            onClick={closeLightbox}
-            aria-label="Close"
-            className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-          >
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-navy/95 p-4" onClick={closeLightbox} role="dialog" aria-modal="true" aria-label={`${activePhoto.category} project photo`}>
+          <button type="button" onClick={closeLightbox} aria-label="Close" className="absolute right-4 top-4 rounded-full bg-ivory/10 p-3 text-ivory transition-colors hover:bg-ivory/20">
             <X className="h-6 w-6" />
           </button>
-
-          {/* Prev arrow */}
           {filtered.length > 1 && (
             <button
               type="button"
@@ -213,13 +191,11 @@ export default function GalleryPage() {
                 showPrev()
               }}
               aria-label="Previous image"
-              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:left-4"
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-ivory/10 p-3 text-ivory transition-colors hover:bg-ivory/20 md:left-6"
             >
               <ChevronLeft className="h-7 w-7" />
             </button>
           )}
-
-          {/* Next arrow */}
           {filtered.length > 1 && (
             <button
               type="button"
@@ -228,27 +204,14 @@ export default function GalleryPage() {
                 showNext()
               }}
               aria-label="Next image"
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:right-4"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-ivory/10 p-3 text-ivory transition-colors hover:bg-ivory/20 md:right-6"
             >
               <ChevronRight className="h-7 w-7" />
             </button>
           )}
-
-          {/* Full image — stop propagation so clicking the photo itself doesn't close it */}
-          <div
-            className="relative h-[85vh] w-full max-w-5xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={activePhoto.image || "/placeholder.svg"}
-              alt={`${activePhoto.category} project`}
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-            <span className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-cyan-600 px-3 py-1 text-sm font-semibold text-white">
-              {activePhoto.category}
-            </span>
+          <div className="relative h-[85vh] w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+            <Image src={activePhoto.image || "/placeholder.svg"} alt={`${activePhoto.category} project by Aqua Aesthetics Pools`} fill className="object-contain" sizes="100vw" />
+            <span className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-sun px-4 py-1.5 text-sm font-bold text-navy">{activePhoto.category}</span>
           </div>
         </div>
       )}

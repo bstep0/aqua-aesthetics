@@ -1,11 +1,12 @@
-import type { Metadata } from "next"
+import { pageMeta } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Contact Us — Free Pool Quote in DFW",
   description:
     "Contact Aqua Aesthetics Pools for a free consultation or quote. We serve homeowners throughout Dallas, Frisco, Plano, Southlake, Fort Worth, and the DFW Metroplex. Call (214) 971-5996 or send a message.",
-}
+  path: "/contact",
+})
 
-export default function ContactLayout({ children }: { children: React.ReactNode }) {
+export default function ContactLayout({ children }: { children: import("react").ReactNode }) {
   return <>{children}</>
 }
