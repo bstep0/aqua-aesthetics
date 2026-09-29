@@ -81,11 +81,11 @@ const servicesJsonLd = {
 
 
 const FEATURES: Record<string, string[]> = {
-  "new-pool-construction": ["Personalized design consultation", "3D Renderings", "Permit acquisition and processing", "Excavation and pool shell construction", "Plumbing and electrical installation", "Coping, tiling, and plastering", "Deck construction and landscaping", "Final inspection and pool startup"],
-  "pool-remodeling": ["Pool resurfacing", "Tile replacement and upgrades", "Coping and deck renovation", "Equipment upgrades", "Energy-Efficient equipment installation", "Water feature additions", "Lighting enhancements", "Safety feature installation"],
-  "outdoor-living": ["Patio design and installation", "Outdoor kitchens", "Fire pits and fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Lighting design", "Irrigation systems"],
-  "pool-maintenance": ["Weekly or bi-weekly service options", "Chemical balancing", "Equipment inspection", "Algae prevention and treatment", "Filter cleaning", "Preventative maintenance"],
-  "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Plumbing repairs", "Electrical system diagnosis", "Automation system repairs"],
+  "new-pool-construction": ["Design consultation at your home", "3D design renderings", "Permits and city inspections", "Excavation and gunite shell", "Waterline tile, coping and plaster", "Decking and landscaping", "Final inspection and startup"],
+  "pool-remodeling": ["Resurfacing in plaster, pebble or quartz", "Waterline tile replacement", "New coping and deck resurfacing", "Variable-speed pumps and efficient equipment", "LED lighting", "New water features and spas", "Safety upgrades"],
+  "outdoor-living": ["Covered patios", "Outdoor kitchens and built-in grills", "Fire pits and stone fireplaces", "Pergolas and shade structures", "Landscape design and installation", "Outdoor lighting", "Smart irrigation"],
+  "pool-maintenance": ["Weekly or bi-weekly visits", "Water testing and chemical balancing", "Algae prevention and treatment", "Filter cleaning and backwashing", "Brushing and basket cleaning", "Equipment check every visit"],
+  "pool-repairs": ["Leak detection and repair", "Pump repair and replacement", "Heater repair and replacement", "Filter repair and replacement", "Underground plumbing repair", "Electrical diagnosis", "Automation and salt system repair"],
 }
 
 export default function ServicesPage() {
