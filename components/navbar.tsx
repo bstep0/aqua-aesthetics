@@ -11,7 +11,7 @@ import Logo from "@/components/site/logo"
 const ROUTES = [
   { name: "Services", path: "/services" },
   { name: "Gallery", path: "/gallery" },
-  { name: "Design your pool", path: "/design" },
+  { name: "Service areas", path: "/service-areas" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ]
@@ -103,7 +103,10 @@ export default function Navbar({ banner }: { banner?: ReactNode }) {
                     {route.name}
                   </Link>
                 ))}
-                <a href={SITE.phoneHref} className="mt-8 text-xl font-bold text-sun">
+                <Link href="/design" onClick={() => setIsOpen(false)} className="mt-6 text-lg font-semibold text-aqua">
+                  Design your pool in 3D →
+                </Link>
+                <a href={SITE.phoneHref} className="mt-6 text-xl font-bold text-sun">
                   {SITE.phone}
                 </a>
                 <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-4 rounded-full bg-sun py-3.5 text-center font-bold text-navy">

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { Check, Phone, Plus } from "lucide-react"

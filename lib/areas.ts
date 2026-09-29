@@ -145,7 +145,7 @@ export const AREAS: Area[] = [
     city: "Denton",
     county: "Denton County",
     image: "/images/pool17.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Denton TX",
+    alt: "Pool project by aqua aesthetics pools serving Denton TX",
     intro:
       "From established neighborhoods near the square to new builds on the edges of town, we design, build and service pools for Denton families who want more from their backyard.",
     nearby: ["lewisville", "highland-village", "flower-mound"],
@@ -155,7 +155,7 @@ export const AREAS: Area[] = [
     city: "Lewisville",
     county: "Denton County",
     image: "/images/pool19.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Lewisville TX",
+    alt: "Pool project by aqua aesthetics pools serving Lewisville TX",
     intro:
       "Lewisville homeowners call us for everything from resurfacing a tired pool to building a brand-new one with a spa and outdoor kitchen — one team handles it all.",
     nearby: ["flower-mound", "highland-village", "carrollton"],
@@ -165,7 +165,7 @@ export const AREAS: Area[] = [
     city: "Highland Village",
     county: "Denton County",
     image: "/images/outdoor8.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Highland Village TX",
+    alt: "Pool project by aqua aesthetics pools serving Highland Village TX",
     intro:
       "Highland Village backyards are made for entertaining. We pair custom pools with pergolas, fire features and outdoor kitchens designed as a single space.",
     nearby: ["flower-mound", "lewisville", "denton"],
@@ -175,7 +175,7 @@ export const AREAS: Area[] = [
     city: "Carrollton",
     county: "Dallas, Denton and Collin Counties",
     image: "/images/remodel2.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Carrollton TX",
+    alt: "Pool project by aqua aesthetics pools serving Carrollton TX",
     intro:
       "Many Carrollton pools are ready for an update. We handle resurfacing, tile, coping, decks and equipment upgrades — plus new construction for homeowners starting fresh.",
     nearby: ["coppell", "lewisville", "plano"],
@@ -185,7 +185,7 @@ export const AREAS: Area[] = [
     city: "Coppell",
     county: "Dallas County",
     image: "/images/remodel3.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Coppell TX",
+    alt: "Pool project by aqua aesthetics pools serving Coppell TX",
     intro:
       "Coppell homeowners get owner-led pool construction, remodeling and repair, with permitting and inspections handled for you from start to finish.",
     nearby: ["carrollton", "irving", "grapevine"],
@@ -195,7 +195,7 @@ export const AREAS: Area[] = [
     city: "Irving",
     county: "Dallas County",
     image: "/images/pool16.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Irving TX",
+    alt: "Pool project by aqua aesthetics pools serving Irving TX",
     intro:
       "From Las Colinas to established neighborhoods across Irving, we keep pools running with weekly service, fast repairs and remodels that make older pools feel new.",
     nearby: ["coppell", "dallas", "grapevine"],
@@ -205,7 +205,7 @@ export const AREAS: Area[] = [
     city: "Richardson",
     county: "Dallas and Collin Counties",
     image: "/images/remodel6.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Richardson TX",
+    alt: "Pool project by aqua aesthetics pools serving Richardson TX",
     intro:
       "Richardson's mature neighborhoods are full of pools that deserve a second life. We specialize in remodels, equipment upgrades and leak repair — and we build new, too.",
     nearby: ["plano", "garland", "dallas"],
@@ -215,7 +215,7 @@ export const AREAS: Area[] = [
     city: "Garland",
     county: "Dallas County",
     image: "/images/pool10.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Garland TX",
+    alt: "Pool project by aqua aesthetics pools serving Garland TX",
     intro:
       "Garland homeowners count on us for dependable weekly maintenance, pump and heater repair, and remodels that update the look and efficiency of an older pool.",
     nearby: ["richardson", "rockwall", "wylie"],
@@ -225,7 +225,7 @@ export const AREAS: Area[] = [
     city: "Wylie",
     county: "Collin County",
     image: "/images/pool8.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Wylie TX",
+    alt: "Pool project by aqua aesthetics pools serving Wylie TX",
     intro:
       "Just down the road from our McKinney base, Wylie families get custom pool construction and service from a team that knows Collin County's soil and permitting.",
     nearby: ["mckinney", "lucas", "rockwall"],
@@ -235,7 +235,7 @@ export const AREAS: Area[] = [
     city: "Lucas",
     county: "Collin County",
     image: "/images/pool17.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Lucas TX",
+    alt: "Pool project by aqua aesthetics pools serving Lucas TX",
     intro:
       "Lucas acreage leaves room for the full backyard vision — freeform pools, spas, outdoor living and landscaping, planned together and built by one team.",
     nearby: ["fairview", "allen", "wylie"],
@@ -245,7 +245,7 @@ export const AREAS: Area[] = [
     city: "Fairview",
     county: "Collin County",
     image: "/images/outdoor9.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Fairview TX",
+    alt: "Pool project by aqua aesthetics pools serving Fairview TX",
     intro:
       "Minutes from our McKinney base, Fairview homeowners get custom pools, remodels and outdoor living spaces with the owner involved from the first sketch.",
     nearby: ["lucas", "allen", "mckinney"],
@@ -255,7 +255,7 @@ export const AREAS: Area[] = [
     city: "Rockwall",
     county: "Rockwall County",
     image: "/images/pool19.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Rockwall TX",
+    alt: "Pool project by aqua aesthetics pools serving Rockwall TX",
     intro:
       "Rockwall homeowners near Lake Ray Hubbard want backyards built for long summers. We design and build custom pools, spas and outdoor living spaces to match.",
     nearby: ["wylie", "garland"],
@@ -265,7 +265,7 @@ export const AREAS: Area[] = [
     city: "Grapevine",
     county: "Tarrant County",
     image: "/images/outdoor6.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Grapevine TX",
+    alt: "Pool project by aqua aesthetics pools serving Grapevine TX",
     intro:
       "Grapevine homeowners come to us for pools that pair with covered patios, fire features and outdoor kitchens — designed together and built in-house.",
     nearby: ["southlake", "colleyville", "coppell"],
@@ -275,7 +275,7 @@ export const AREAS: Area[] = [
     city: "Keller",
     county: "Tarrant County",
     image: "/images/pool9.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Keller TX",
+    alt: "Pool project by aqua aesthetics pools serving Keller TX",
     intro:
       "Keller's larger lots are perfect for resort-style pools. We handle the design, permits and construction, then keep your water clear with weekly service.",
     nearby: ["southlake", "colleyville", "fort-worth"],
@@ -285,7 +285,7 @@ export const AREAS: Area[] = [
     city: "Hurst",
     county: "Tarrant County",
     image: "/images/remodel2.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Hurst TX",
+    alt: "Pool project by aqua aesthetics pools serving Hurst TX",
     intro:
       "Hurst homeowners rely on us for pool remodels, equipment upgrades and fast repairs, with a clear estimate before any work begins.",
     nearby: ["euless", "bedford", "colleyville"],
@@ -295,7 +295,7 @@ export const AREAS: Area[] = [
     city: "Euless",
     county: "Tarrant County",
     image: "/images/pool7.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Euless TX",
+    alt: "Pool project by aqua aesthetics pools serving Euless TX",
     intro:
       "In Euless we build new pools, remodel established ones and keep equipment running — one team and one point of contact for everything your pool needs.",
     nearby: ["hurst", "bedford", "grapevine"],
@@ -305,7 +305,7 @@ export const AREAS: Area[] = [
     city: "Bedford",
     county: "Tarrant County",
     image: "/images/pool12.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Bedford TX",
+    alt: "Pool project by aqua aesthetics pools serving Bedford TX",
     intro:
       "Bedford homeowners get dependable weekly maintenance, leak detection and equipment repair, plus remodels that bring older pools up to date.",
     nearby: ["hurst", "euless", "colleyville"],
@@ -315,7 +315,7 @@ export const AREAS: Area[] = [
     city: "Arlington",
     county: "Tarrant County",
     image: "/images/pool5.jpg",
-    alt: "Pool project by Aqua Aesthetics Pools serving Arlington TX",
+    alt: "Pool project by aqua aesthetics pools serving Arlington TX",
     intro:
       "Arlington families call us for custom pool construction, full remodels and repairs across the city, with permitting and inspections handled for you.",
     nearby: ["fort-worth", "grapevine", "dallas"],

@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Aqua Aesthetics Pools",
+  name: "aqua aesthetics pools",
   url: "https://www.aquaaestheticspools.com",
   phone: "(214) 971-5996",
   phoneHref: "tel:+12149715996",
@@ -31,8 +31,8 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "new-pool-construction",
     href: "/services/new-pool-construction",
-    name: "New Pool Construction",
-    short: "New Construction",
+    name: "New pool construction",
+    short: "New construction",
     blurb: "Custom-designed pools built to your specifications with quality materials and craftsmanship.",
     image: "/images/pool18.jpg",
     alt: "Custom new pool construction with spa in Frisco Texas",
@@ -40,7 +40,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-remodeling",
     href: "/services/pool-remodeling",
-    name: "Pool Remodeling",
+    name: "Pool remodeling",
     short: "Remodels",
     blurb: "Resurfacing, tile, coping, decks and energy-efficient equipment upgrades.",
     image: "/images/remodel1.jpg",
@@ -49,8 +49,8 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "outdoor-living",
     href: "/services/outdoor-living",
-    name: "Outdoor Living",
-    short: "Outdoor Living",
+    name: "Outdoor living",
+    short: "Outdoor living",
     blurb: "Covered patios, outdoor kitchens, fire features and pergolas.",
     image: "/images/outdoor1.jpg",
     alt: "Cedar pergola with string lights beside a custom pool",
@@ -58,7 +58,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-maintenance",
     href: "/services/pool-maintenance",
-    name: "Pool Maintenance",
+    name: "Pool maintenance",
     short: "Maintenance",
     blurb: "Weekly and bi-weekly service plans that keep water pristine year-round.",
     image: "/images/pool16.jpg",
@@ -67,7 +67,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-repairs",
     href: "/services/pool-repairs",
-    name: "Pool Repairs",
+    name: "Pool repairs",
     short: "Repairs",
     blurb: "Leak detection, pumps, heaters, filters and plumbing, fixed fast.",
     image: "/images/repair1.jpg",

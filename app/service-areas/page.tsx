@@ -1,19 +1,19 @@
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import Link from "next/link"
 import { AREAS } from "@/lib/areas"
 import { pageMeta, breadcrumbJsonLd } from "@/lib/seo"
 import { Breadcrumbs, CtaBand } from "@/components/site/ui"
 
 export const metadata = pageMeta({
-  title: "Service Areas — Pool Builder Across Dallas–Fort Worth",
+  title: "Service areas — pool builder across Dallas–Fort Worth",
   description:
-    "Aqua Aesthetics Pools builds, remodels, repairs and maintains pools across the Dallas–Fort Worth Metroplex — McKinney, Frisco, Allen, Plano, Prosper, Dallas, Fort Worth, Southlake and more.",
+    "aqua aesthetics pools builds, remodels, repairs and maintains pools across the Dallas–Fort Worth Metroplex — McKinney, Frisco, Allen, Plano, Prosper, Dallas, Fort Worth, Southlake and more.",
   path: "/service-areas",
 })
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Service Areas", path: "/service-areas" }])],
+  "@graph": [breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Service areas", path: "/service-areas" }])],
 }
 
 export default function ServiceAreasPage() {

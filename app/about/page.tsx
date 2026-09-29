@@ -1,5 +1,5 @@
 import { pageMeta } from "@/lib/seo"
-import Image from "next/image"
+import Image from "@/components/site/smart-image"
 import { ALL_CITIES } from "@/lib/site"
 import { CtaBand } from "@/components/site/ui"
 import CountUp from "@/components/site/count-up"
@@ -7,7 +7,7 @@ import CountUp from "@/components/site/count-up"
 export const metadata = pageMeta({
   title: "About Us — 30+ Years of Pool Excellence in DFW",
   description:
-    "Learn about Aqua Aesthetics Pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across the entire DFW metroplex, including Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
+    "Learn about aqua aesthetics pools — a family-owned DFW pool company with over 30 years of experience building, remodeling, and maintaining pools across the entire DFW metroplex, including Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
   path: "/about",
 })
 
@@ -15,11 +15,11 @@ const TEAM = [
   {
     name: "Larry Wieland",
     role: "Owner",
-    bio: "With over 30 years in the pool industry, Larry founded Aqua Aesthetics with a vision to create extraordinary outdoor living spaces. His hands-on approach and commitment to quality have made Aqua Aesthetics one of the most trusted pool companies in the DFW Metroplex.",
+    bio: "With over 30 years in the pool industry, Larry founded aqua aesthetics with a vision to create extraordinary outdoor living spaces. His hands-on approach and commitment to quality have made aqua aesthetics one of the most trusted pool companies in the DFW Metroplex.",
   },
   {
     name: "Brendon Stepanek",
-    role: "Project Manager",
+    role: "Project manager",
     bio: "Brendon brings a wealth of experience in pool construction and pool service, ensuring every project runs smoothly from start to finish. His attention to detail and dedication to client satisfaction make him an invaluable part of our team.",
   },
 ]
@@ -35,7 +35,7 @@ export default function AboutPage() {
     <div className="flex flex-col">
       <section className="container grid items-center gap-14 pb-24 pt-16 md:pt-20 lg:grid-cols-12">
         <div className="flex flex-col gap-7 lg:col-span-6">
-          <p className="aa-rise text-sm font-bold uppercase tracking-[0.2em] text-teal">About Aqua Aesthetics</p>
+          <p className="aa-rise text-sm font-bold uppercase tracking-[0.2em] text-teal">About aqua aesthetics</p>
           <h1 className="aa-rise font-display text-5xl font-light leading-[0.98] tracking-[-0.03em] text-navy md:text-[92px]" style={{ animationDelay: "0.15s" }}>
             Family-owned. <em className="text-sun-dark">Owner-built.</em>
           </h1>
@@ -45,7 +45,7 @@ export default function AboutPage() {
         </div>
         <div className="relative lg:col-span-5 lg:col-start-8">
           <div className="relative h-[420px] overflow-hidden rounded-[28px] md:h-[560px]">
-            <Image src="/images/outdoor6.jpg" alt="Outdoor living space and pool built by Aqua Aesthetics Pools" fill priority sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
+            <Image src="/images/outdoor6.jpg" alt="Outdoor living space and pool built by aqua aesthetics pools" fill priority sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
           </div>
           <div className="absolute -bottom-10 left-4 flex h-[160px] w-[160px] items-center justify-center rounded-full bg-navy shadow-[0_20px_50px_rgba(11,27,43,0.3)] md:-left-16 md:h-[180px] md:w-[180px]">
             <svg viewBox="0 0 180 180" className="absolute inset-0 h-full w-full" style={{ animation: "aa-spin 26s linear infinite" }} aria-hidden="true">
@@ -94,7 +94,7 @@ export default function AboutPage() {
         </h2>
         <div className="flex flex-col gap-6 text-lg leading-[1.75] text-slate-2 lg:col-span-7 lg:col-start-6">
           <p>
-            Aqua Aesthetics was founded by Larry Wieland, with a passion for craftsmanship and a belief that every backyard has the potential to become something extraordinary. What started as a small pool service operation has grown into a full-service pool construction, remodeling, and maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
+            aqua aesthetics was founded by Larry Wieland, with a passion for craftsmanship and a belief that every backyard has the potential to become something extraordinary. What started as a small pool service operation has grown into a full-service pool construction, remodeling, and maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
           </p>
           <p>
             Over three decades in the pool industry has given us a deep understanding of what North Texas homeowners need from their pools — designs that handle the summer heat, construction methods that account for the region&apos;s clay-heavy soils, and maintenance programs that keep water pristine through long swimming seasons. We&apos;ve built our reputation one project at a time, and most of our new clients come through referrals from neighbors and friends who&apos;ve experienced our work firsthand.
