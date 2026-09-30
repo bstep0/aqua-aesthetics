@@ -15,19 +15,19 @@ const sans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 export const metadata: Metadata = {
   metadataBase: new URL("https://aquaaestheticspools.com"),
   title: {
-    default: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
-    template: "%s | aqua aesthetics pools",
+    default: "Aqua Aesthetics | Dallas–Fort Worth Pool Builder",
+    template: "%s | Aqua Aesthetics",
   },
   description:
-    "Family-owned DFW pool builder based in McKinney, TX since 1995. Custom pools, remodels, outdoor living, maintenance and repairs.",
-  applicationName: "aqua aesthetics pools",
+    "Family-owned DFW pool builder based in McKinney, TX. Custom pools, remodels, outdoor living, maintenance and repairs.",
+  applicationName: "Aqua Aesthetics Pools",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "aqua aesthetics pools",
+    siteName: "Aqua Aesthetics Pools",
     locale: "en_US",
     url: "/",
-    title: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
+    title: "Aqua Aesthetics | Dallas–Fort Worth Pool Builder",
     description:
       "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth — McKinney, Frisco, Allen, Plano, Dallas, Fort Worth, Southlake and more.",
     images: [
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
         url: "/images/pool18.jpg",
         width: 1200,
         height: 630,
-        alt: "Custom pool and spa built by aqua aesthetics pools in DFW",
+        alt: "Custom pool and spa built by Aqua Aesthetics Pools in DFW",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "aqua aesthetics pools | Dallas–Fort Worth pool builder",
+    title: "Aqua Aesthetics | Dallas–Fort Worth Pool Builder",
     description:
       "Custom pools, remodels, outdoor living, maintenance and repairs across Dallas–Fort Worth.",
     images: ["/images/pool18.jpg"],
