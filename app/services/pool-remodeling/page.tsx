@@ -3,9 +3,9 @@ import ServicePage, { serviceJsonLd } from "@/components/site/service-page"
 import { REMODELING } from "@/lib/services-content"
 
 export const metadata = pageMeta({
-  title: "Pool remodeling in DFW — renovation & resurfacing experts",
+  title: "Pool Remodeling in DFW — Renovation & Resurfacing Experts",
   description:
-    "Pool resurfacing, tile, coping, decks and equipment upgrades from aqua aesthetics pools in McKinney, Plano, Southlake and across DFW.",
+    "Pool resurfacing, tile, coping, decks and equipment upgrades from Aqua Aesthetics in McKinney, Plano, Southlake and across DFW.",
   path: "/services/pool-remodeling",
   image: REMODELING.hero.src,
 })

@@ -36,10 +36,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="mb-2 font-bold text-ivory">Company</h3>
             <ul>
-              <li><Link href="/gallery" className="hover:text-sun">Our work</Link></li>
-              <li><Link href="/design" className="hover:text-sun">Design your pool</Link></li>
-              <li><Link href="/service-areas" className="hover:text-sun">Service areas</Link></li>
-              <li><Link href="/about" className="hover:text-sun">About us</Link></li>
+              <li><Link href="/gallery" className="hover:text-sun">Our Work</Link></li>
+              <li><Link href="/design" className="hover:text-sun">Design Your Pool</Link></li>
+              <li><Link href="/service-areas" className="hover:text-sun">Service Areas</Link></li>
+              <li><Link href="/about" className="hover:text-sun">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-sun">Contact</Link></li>
             </ul>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-ivory/15 pt-6 text-sm text-ivory/60 md:flex-row md:justify-between">
           <span className="flex flex-wrap gap-x-4 gap-y-1">
-            <span>© {new Date().getFullYear()} aqua aesthetics pools. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Aqua Aesthetics Pools. All rights reserved.</span>
             <Link href="/privacy" className="hover:text-sun">Privacy</Link>
             <Link href="/terms" className="hover:text-sun">Terms</Link>
           </span>
@@ -66,7 +66,7 @@ export default function Footer() {
               </Link>
             ))}
             <Link href="/service-areas" className="font-semibold text-ivory hover:text-sun">
-              All areas →
+              All Services Areas →
             </Link>
           </nav>
         </div>

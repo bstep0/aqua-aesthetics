@@ -4,7 +4,7 @@ import { NEW_POOL } from "@/lib/services-content"
 import BuildAnimation from "@/components/site/build-animation"
 
 export const metadata = pageMeta({
-  title: "New pool construction in DFW — custom pools built to last",
+  title: "New Pool Construction in DFW — custom pools built to last",
   description:
     "Custom in-ground pools designed with you and built from permit to first swim in McKinney, Frisco, Plano and across DFW. Free consultation.",
   path: "/services/new-pool-construction",

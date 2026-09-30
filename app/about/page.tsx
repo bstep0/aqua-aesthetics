@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/site/ui"
 import CountUp from "@/components/site/count-up"
 
 export const metadata = pageMeta({
-  title: "About us — 30+ years of pool excellence in DFW",
+  title: "About Us — 30+ years of pool excellence in DFW",
   description:
     "Meet Aqua Aesthetics, a family-owned, owner-led DFW pool builder with 30+ years building, remodeling and servicing pools.",
   path: "/about",

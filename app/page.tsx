@@ -10,7 +10,7 @@ import HeroQuoteForm from "@/components/site/hero-quote-form"
 import DesignerFrame from "@/components/designer/designer-frame"
 
 export const metadata = pageMeta({
-  title: "DFW Pool Builder — Custom Pools, Remodels & Repairs | Aqua Aesthetics Pools",
+  title: "DFW Pool Builder — Custom Pools, Remodels & Repairs | Aqua Aesthetics",
   description:
     "Family-owned DFW pool builder in McKinney, TX. Custom pools, remodels, outdoor living, maintenance and repairs across the Metroplex. Free quote.",
   path: "/",
@@ -19,7 +19,7 @@ export const metadata = pageMeta({
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Aqua Aesthetics Pools",
+  name: "Aqua Aesthetics",
   url: "https://aquaaestheticspools.com",
   publisher: { "@id": BUSINESS_ID },
 }

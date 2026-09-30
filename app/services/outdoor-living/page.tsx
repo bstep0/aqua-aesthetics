@@ -3,9 +3,9 @@ import ServicePage, { serviceJsonLd } from "@/components/site/service-page"
 import { OUTDOOR_LIVING } from "@/lib/services-content"
 
 export const metadata = pageMeta({
-  title: "Outdoor living spaces in DFW — patios, kitchens & fire pits",
+  title: "Outdoor Living Spaces in DFW — patios, kitchens & fire pits",
   description:
-    "Covered patios, outdoor kitchens, fire pits and pergolas designed and built by aqua aesthetics pools in McKinney, Southlake and across DFW.",
+    "Covered patios, outdoor kitchens, fire pits and pergolas designed and built by Aqua Aesthetics in McKinney, Southlake and across DFW.",
   path: "/services/outdoor-living",
   image: OUTDOOR_LIVING.hero.src,
 })

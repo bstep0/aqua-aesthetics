@@ -2,11 +2,11 @@ import { Resend } from "resend"
 import { NextResponse } from "next/server"
 
 const SERVICE_LABELS: Record<string, string> = {
-  "new-construction": "New pool construction",
-  remodeling: "Pool remodeling",
-  maintenance: "Pool maintenance",
-  repairs: "Pool repairs",
-  "outdoor-living": "Outdoor living",
+  "new-construction": "New Pool Construction",
+  remodeling: "Pool Remodeling",
+  maintenance: "Pool Maintenance",
+  repairs: "Pool Repairs",
+  "outdoor-living": "Outdoor Living",
   other: "Other / Not Sure",
 }
 
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
         ${rows.map(([k, v]) => `<tr><td><strong>${k}</strong></td><td style="white-space:pre-wrap">${v}</td></tr>`).join("")}
       </table>
       <p style="margin-top:24px;color:#666;font-size:13px">
-        Sent from the aqua aesthetics pools ${source === "hero" ? "homepage quote form" : "contact form"}.
+        Sent from the Aqua Aesthetics Pools ${source === "hero" ? "homepage quote form" : "contact form"}.
       </p>
     `,
   })

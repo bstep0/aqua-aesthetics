@@ -3,9 +3,9 @@ import ServicePage, { serviceJsonLd } from "@/components/site/service-page"
 import { MAINTENANCE } from "@/lib/services-content"
 
 export const metadata = pageMeta({
-  title: "Pool maintenance service in DFW — weekly & bi-weekly plans",
+  title: "Pool Maintenance Service in DFW — Weekly & Bi-Weekly Plans",
   description:
-    "Weekly and bi-weekly pool maintenance plans from aqua aesthetics pools. Clear, balanced water year-round in McKinney, Frisco and across DFW.",
+    "Weekly and bi-weekly pool maintenance plans from Aqua Aesthetics. Clear, balanced water year-round in McKinney, Frisco and across DFW.",
   path: "/services/pool-maintenance",
   image: MAINTENANCE.hero.src,
 })

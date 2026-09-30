@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   },
   description:
     "Family-owned DFW pool builder based in McKinney, TX. Custom pools, remodels, outdoor living, maintenance and repairs.",
-  applicationName: "Aqua Aesthetics Pools",
+  applicationName: "Aqua Aesthetics",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Aqua Aesthetics Pools",
+    siteName: "Aqua Aesthetics",
     locale: "en_US",
     url: "/",
     title: "Aqua Aesthetics | Dallas–Fort Worth Pool Builder",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: "/images/pool18.jpg",
         width: 1200,
         height: 630,
-        alt: "Custom pool and spa built by Aqua Aesthetics Pools in DFW",
+        alt: "Custom pool and spa built by Aqua Aesthetics in DFW",
       },
     ],
   },

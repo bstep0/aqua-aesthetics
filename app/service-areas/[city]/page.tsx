@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
 const faqsFor = (city: string) => [
   {
     q: `Do you build pools in ${city}, TX?`,
-    a: `Yes. aqua aesthetics pools designs and builds custom in-ground pools in ${city} and across the Dallas–Fort Worth Metroplex, along with pool remodeling, outdoor living, weekly maintenance and repairs.`,
+    a: `Yes. Aqua Aesthetics designs and builds custom in-ground pools in ${city} and across the Dallas–Fort Worth Metroplex, along with pool remodeling, outdoor living, weekly maintenance and repairs.`,
   },
   {
     q: `Do you handle pool permits in ${city}?`,

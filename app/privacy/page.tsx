@@ -4,8 +4,8 @@ import { SITE } from "@/lib/site"
 import LegalPage from "@/components/site/legal-page"
 
 export const metadata = pageMeta({
-  title: "Privacy policy",
-  description: "How aqua aesthetics pools collects, uses and protects the information you share through our website and quote forms.",
+  title: "Privacy Policy",
+  description: "How Aqua Aesthetics collects, uses and protects the information you share through our website and quote forms.",
   path: "/privacy",
 })
 

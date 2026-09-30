@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site"
 import LegalPage from "@/components/site/legal-page"
 
 export const metadata = pageMeta({
-  title: "Terms of use",
+  title: "Terms Of Use",
   description: "The terms that apply when you use the aqua aesthetics pools website, pool designer and quote forms.",
   path: "/terms",
 })

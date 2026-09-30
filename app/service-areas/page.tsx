@@ -7,7 +7,7 @@ import { Breadcrumbs, CtaBand } from "@/components/site/ui"
 export const metadata = pageMeta({
   title: "Service Areas — Pool Builder across Dallas–Fort Worth",
   description:
-    "Aqua Aesthetics Pools builds, remodels, repairs and maintains pools across DFW, including McKinney, Frisco, Allen, Plano, Dallas and Fort Worth.",
+    "Aqua Aesthetics builds, remodels, repairs and maintains pools across DFW, including McKinney, Frisco, Allen, Plano, Dallas and Fort Worth.",
   path: "/service-areas",
 })
 
