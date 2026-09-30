@@ -4,11 +4,12 @@ import { useState } from "react"
 import { SITE } from "@/lib/site"
 
 const PROJECTS = [
-  { id: "new-construction", label: "New pool" },
+  { id: "new-construction", label: "New Construction" },
   { id: "remodeling", label: "Remodel" },
-  { id: "outdoor-living", label: "Outdoor living" },
-  { id: "maintenance", label: "Service" },
-  { id: "repairs", label: "Repair" },
+  { id: "outdoor-living", label: "Outdoor Living" },
+  { id: "maintenance", label: "Maintenance" },
+  { id: "repairs", label: "Repairs" },
+  { id: "other", label: "I'm not sure" },
 ]
 
 type Status = "idle" | "sending" | "sent" | "error"
@@ -52,7 +53,6 @@ export default function HeroQuoteForm() {
     <form onSubmit={submit} className="flex flex-col gap-4 rounded-3xl bg-ivory/95 p-7 text-navy shadow-[0_40px_80px_rgba(0,0,0,0.35)] md:p-8">
       <div>
         <p className="font-display text-[30px] leading-tight">Get a free quote</p>
-        <p className="text-[15px] text-slate">The owner calls you back, not a salesperson.</p>
       </div>
       <fieldset>
         <legend className="mb-2.5 text-sm font-bold">What are you planning?</legend>
