@@ -10,7 +10,7 @@ import HeroQuoteForm from "@/components/site/hero-quote-form"
 import DesignerFrame from "@/components/designer/designer-frame"
 
 export const metadata = pageMeta({
-  title: "DFW pool builder — custom pools, remodels & repairs | aqua aesthetics pools",
+  title: "DFW Pool Builder — Custom Pools, Remodels & Repairs | Aqua Aesthetics Pools",
   description:
     "Family-owned DFW pool builder in McKinney, TX. Custom pools, remodels, outdoor living, maintenance and repairs across the Metroplex. Free quote.",
   path: "/",
@@ -19,7 +19,7 @@ export const metadata = pageMeta({
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "aqua aesthetics pools",
+  name: "Aqua Aesthetics Pools",
   url: "https://aquaaestheticspools.com",
   publisher: { "@id": BUSINESS_ID },
 }
@@ -58,7 +58,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="aa-rise mb-10 max-w-[580px] text-lg leading-relaxed text-ivory/85 md:text-[21px]" style={{ animationDelay: "0.8s" }}>
-              Custom pools, remodels, repairs and outdoor living, built by the owner who quotes it. One team, one point of contact, start to finish.
+              Custom pools, remodels, repairs and outdoor living. One team, one point of contact, start to finish.
             </p>
             <div className="aa-rise flex flex-wrap items-center gap-4" style={{ animationDelay: "0.95s" }}>
               <FillLink href="/gallery" variant="outline-light" arrow>
@@ -91,7 +91,7 @@ export default function Home() {
             </h2>
           </div>
           <Link href="/services" className="aa-link-u self-start pb-1 text-[17px] font-bold text-teal md:self-auto">
-            All services →
+            All Services →
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-3 md:grid-rows-[350px_350px]">
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-8 lg:col-span-5 lg:col-start-8">
           <div className="flex flex-col gap-5">
-            <Eyebrow icon={<ShieldCheck className="h-6 w-6" />}>Why aqua aesthetics</Eyebrow>
+            <Eyebrow icon={<ShieldCheck className="h-6 w-6" />}>Why Aqua Aesthetics</Eyebrow>
             <h2 className="font-display text-4xl font-light leading-[1.02] tracking-[-0.02em] text-navy md:text-[58px]">
               We build pools <em>we&apos;d swim in.</em>
             </h2>
@@ -181,7 +181,7 @@ export default function Home() {
               Building pools <em>across Dallas–Fort Worth.</em>
             </h2>
             <Link href="/service-areas" className="aa-link-u self-start pb-1 font-bold text-teal md:self-auto">
-              All service areas →
+              All Service Areas →
             </Link>
           </div>
           <p className="max-w-3xl text-lg text-slate">
