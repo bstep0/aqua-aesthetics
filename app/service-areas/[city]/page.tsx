@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const a = areaBySlug(city)
   if (!a) return {}
   return pageMeta({
-    title: `Pool builder in ${a.city}, TX — custom pools, remodels & repairs`,
+    title: `Pool Builder in ${a.city}, TX — Custom Pools, Remodels & Repairs`,
     description: `Custom pools, remodels, repairs and maintenance in ${a.city}, TX from a family-owned DFW pool builder since 1995. Free quote: ${SITE.phone}.`,
     path: `/service-areas/${a.slug}`,
     image: a.image,
@@ -52,13 +52,13 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
     "@graph": [
       breadcrumbJsonLd([
         { name: "Home", path: "/" },
-        { name: "Service areas", path: "/service-areas" },
+        { name: "Service Areas", path: "/service-areas" },
         { name: `${a.city}, TX`, path },
       ]),
       {
         "@type": "Service",
         name: `Pool construction, remodeling and repair in ${a.city}, TX`,
-        serviceType: "Pool builder",
+        serviceType: "Pool Builder",
         provider: { "@id": BUSINESS_ID },
         areaServed: { "@type": "City", name: `${a.city}, TX` },
         url: `${SITE.url}${path}`,
@@ -77,10 +77,10 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,20,33,0.92)_0%,rgba(8,20,33,0.62)_55%,rgba(8,20,33,0.25)_100%)]" />
         <div className="container relative flex flex-col gap-6">
           <div className="aa-rise">
-            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service areas", href: "/service-areas" }, { label: a.city }]} />
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Areas", href: "/service-areas" }, { label: a.city }]} />
           </div>
           <h1 className="aa-rise max-w-4xl font-display text-5xl font-light leading-[0.98] tracking-[-0.025em] md:text-[84px]" style={{ animationDelay: "0.15s" }}>
-            Pool builder in <em className="text-sun">{a.city}, TX</em>
+            Pool Builder in <em className="text-sun">{a.city}, TX</em>
           </h1>
           <p className="aa-rise max-w-2xl text-lg leading-relaxed text-ivory/85 md:text-xl" style={{ animationDelay: "0.3s" }}>
             Custom pools, remodels, outdoor living, maintenance and repairs for {a.city} homeowners — family-owned and owner-led since 1995.
@@ -97,7 +97,7 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
       <section className="container grid gap-14 py-24 lg:grid-cols-12">
         <div className="flex flex-col gap-6 lg:col-span-7">
           <h2 className="font-display text-4xl font-light leading-[1.05] tracking-[-0.02em] text-navy md:text-[52px]">
-            Your {a.city} backyard, <em>built by the owner.</em>
+            Your {a.city} backyard, designed and built for you.
           </h2>
           <p className="text-lg leading-[1.75] text-slate-2">{a.intro}</p>
           <p className="text-lg leading-[1.75] text-slate-2">
@@ -156,11 +156,11 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
           <div className="flex flex-wrap gap-2.5">
             {nearby.map((n) => (
               <Link key={n.slug} href={`/service-areas/${n.slug}`} className="rounded-full border border-navy/10 bg-white px-5 py-3 font-semibold text-navy transition-colors hover:bg-navy hover:text-ivory">
-                Pool builder in {n.city}
+                Pool Builder in {n.city}
               </Link>
             ))}
             <Link href="/service-areas" className="rounded-full px-5 py-3 font-bold text-teal">
-              All service areas →
+              All Service Areas →
             </Link>
           </div>
         </section>

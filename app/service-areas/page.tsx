@@ -5,15 +5,15 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo"
 import { Breadcrumbs, CtaBand } from "@/components/site/ui"
 
 export const metadata = pageMeta({
-  title: "Service areas — pool builder across Dallas–Fort Worth",
+  title: "Service Areas — Pool Builder across Dallas–Fort Worth",
   description:
-    "aqua aesthetics pools builds, remodels, repairs and maintains pools across DFW, including McKinney, Frisco, Allen, Plano, Dallas and Fort Worth.",
+    "Aqua Aesthetics Pools builds, remodels, repairs and maintains pools across DFW, including McKinney, Frisco, Allen, Plano, Dallas and Fort Worth.",
   path: "/service-areas",
 })
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Service areas", path: "/service-areas" }])],
+  "@graph": [breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Service Areas", path: "/service-areas" }])],
 }
 
 export default function ServiceAreasPage() {
@@ -49,7 +49,7 @@ export default function ServiceAreasPage() {
                     <Image src={a.image} alt={a.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                     <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,20,33,0.9)_0%,rgba(8,20,33,0)_65%)]" />
                     <div className="relative p-6">
-                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-sun">Pool builder in</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.14em] text-sun">Pool Builder in</p>
                       <p className="font-display text-3xl">{a.city}</p>
                     </div>
                   </Link>

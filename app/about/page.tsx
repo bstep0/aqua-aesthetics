@@ -7,7 +7,7 @@ import CountUp from "@/components/site/count-up"
 export const metadata = pageMeta({
   title: "About us — 30+ years of pool excellence in DFW",
   description:
-    "Meet aqua aesthetics pools, a family-owned, owner-led DFW pool builder with 30+ years building, remodeling and servicing pools.",
+    "Meet Aqua Aesthetics, a family-owned, owner-led DFW pool builder with 30+ years building, remodeling and servicing pools.",
   path: "/about",
 })
 
@@ -15,7 +15,7 @@ const TEAM = [
   {
     name: "Larry Wieland",
     role: "Owner",
-    bio: "With over 30 years in the pool industry, Larry founded aqua aesthetics with a vision to create extraordinary outdoor living spaces. His hands-on approach and commitment to quality have made aqua aesthetics one of the most trusted pool companies in the DFW Metroplex.",
+    bio: "With over 30 years in the pool industry, Larry founded Aqua Aesthetics with a vision to create extraordinary outdoor living spaces. His hands-on approach and commitment to quality have made Aqua Aesthetics one of the most trusted pool companies in the DFW Metroplex.",
   },
   {
     name: "Brendon Stepanek",
@@ -35,7 +35,7 @@ export default function AboutPage() {
     <div className="flex flex-col">
       <section className="container grid items-center gap-14 pb-24 pt-16 md:pt-20 lg:grid-cols-12">
         <div className="flex flex-col gap-7 lg:col-span-6">
-          <p className="aa-rise text-sm font-bold uppercase tracking-[0.2em] text-teal">About aqua aesthetics</p>
+          <p className="aa-rise text-sm font-bold uppercase tracking-[0.2em] text-teal">About Aqua Aesthetics</p>
           <h1 className="aa-rise font-display text-5xl font-light leading-[0.98] tracking-[-0.03em] text-navy md:text-[92px]" style={{ animationDelay: "0.15s" }}>
             Family-owned. <em className="text-sun-dark">Owner-built.</em>
           </h1>
@@ -94,7 +94,7 @@ export default function AboutPage() {
         </h2>
         <div className="flex flex-col gap-6 text-lg leading-[1.75] text-slate-2 lg:col-span-7 lg:col-start-6">
           <p>
-            aqua aesthetics was founded by Larry Wieland, with a passion for craftsmanship and a belief that every backyard has the potential to become something extraordinary. What started as a small pool service operation has grown into a full-service pool construction, remodeling, and maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
+            Aqua Aesthetics was founded by Larry Wieland, with a passion for craftsmanship and a belief that every backyard has the potential to become something extraordinary. What started as a small pool service operation has grown into a full-service pool construction, remodeling, and maintenance company trusted by homeowners across Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.
           </p>
           <p>
             Over three decades in the pool industry has given us a deep understanding of what North Texas homeowners need from their pools — designs that handle the summer heat, construction methods that account for the region&apos;s clay-heavy soils, and maintenance programs that keep water pristine through long swimming seasons. We&apos;ve built our reputation one project at a time, and most of our new clients come through referrals from neighbors and friends who&apos;ve experienced our work firsthand.

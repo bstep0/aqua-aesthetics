@@ -8,12 +8,12 @@ import { SITE, CORE_CITIES } from "@/lib/site"
 type FormState = "idle" | "submitting" | "success"
 
 const SERVICES = [
-  { id: "new-construction", label: "New pool" },
+  { id: "new-construction", label: "New Construction" },
   { id: "remodeling", label: "Remodel" },
-  { id: "outdoor-living", label: "Outdoor living" },
+  { id: "outdoor-living", label: "Outdoor Living" },
   { id: "maintenance", label: "Maintenance" },
   { id: "repairs", label: "Repair" },
-  { id: "other", label: "Not sure" },
+  { id: "other", label: "I'm not sure" },
 ]
 const TIMING = [
   { id: "asap", label: "As soon as possible" },
@@ -79,7 +79,7 @@ export default function ContactPage() {
             <Phone className="h-6 w-6 text-navy" aria-hidden="true" />
           </span>
           <span className="flex flex-col">
-            <span className="text-sm text-ivory/70">Call the owner directly</span>
+            <span className="text-sm text-ivory/70">Call us directly!</span>
             <span className="font-display text-4xl">{SITE.phone}</span>
           </span>
         </a>
@@ -132,7 +132,7 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-7">
             <div>
               <h2 className="font-display text-4xl text-navy">Get a free quote</h2>
-              <p className="mt-1 text-slate">Tell us a little, and the owner will reach out personally.</p>
+              <p className="mt-1 text-slate">Tell us a little about your project, and we will reach out!</p>
             </div>
 
             <fieldset>

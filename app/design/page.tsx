@@ -12,7 +12,7 @@ export const metadata = pageMeta({
 const TIPS = [
   { n: "01", t: "Shape the pool", d: "Start from a classic shape, or press and drag to sketch your own. Use Edit points to fine-tune it." },
   { n: "02", t: "Place the extras", d: "Add a spa, fire pit, pergola, kitchen or plants, then drag, rotate, resize and copy them into place." },
-  { n: "03", t: "Send it to the owner", d: "We review your sketch before your consultation and come ready with ideas and a firm price." },
+  { n: "03", t: "Send it to us", d: "We review your sketch before your consultation and come ready with ideas and a firm price." },
 ]
 
 export default function DesignPage() {
