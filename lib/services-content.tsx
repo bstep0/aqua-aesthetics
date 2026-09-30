@@ -2,7 +2,7 @@ import type { ServiceContent } from "@/components/site/service-page"
 
 export const NEW_POOL: ServiceContent = {
   slug: "new-pool-construction",
-  name: "New pool construction",
+  name: "New Pool Construction",
   h1: (
     <>
       Custom pool construction <em className="text-sun">in the DFW Metroplex</em>
@@ -58,7 +58,7 @@ export const NEW_POOL: ServiceContent = {
 
 export const REMODELING: ServiceContent = {
   slug: "pool-remodeling",
-  name: "Pool remodeling",
+  name: "Pool Remodeling",
   h1: (
     <>
       Pool remodeling <em className="text-sun">&amp; renovation in DFW</em>
@@ -109,7 +109,7 @@ export const REMODELING: ServiceContent = {
 
 export const OUTDOOR_LIVING: ServiceContent = {
   slug: "outdoor-living",
-  name: "Outdoor living",
+  name: "Outdoor Living",
   h1: (
     <>
       Custom outdoor living <em className="text-sun">spaces in DFW</em>
@@ -160,7 +160,7 @@ export const OUTDOOR_LIVING: ServiceContent = {
 
 export const MAINTENANCE: ServiceContent = {
   slug: "pool-maintenance",
-  name: "Pool maintenance",
+  name: "Pool Maintenance",
   h1: (
     <>
       Professional pool <em className="text-sun">maintenance in DFW</em>
@@ -205,7 +205,7 @@ export const MAINTENANCE: ServiceContent = {
 
 export const REPAIRS: ServiceContent = {
   slug: "pool-repairs",
-  name: "Pool repairs",
+  name: "Pool Repairs",
   h1: (
     <>
       Pool repair services <em className="text-sun">in the DFW Metroplex</em>
