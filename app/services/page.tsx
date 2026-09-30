@@ -5,26 +5,26 @@ import { SERVICES } from "@/lib/site"
 import { Breadcrumbs, CtaBand, FillLink } from "@/components/site/ui"
 
 export const metadata = pageMeta({
-  title: "Pool services in DFW — construction, remodeling & maintenance",
+  title: "Pool Services in DFW — Construction, Remodeling & Maintenance",
   description:
-    "New pool construction, remodeling, outdoor living, maintenance and repairs from aqua aesthetics pools, serving McKinney and all of DFW.",
+    "New pool construction, remodeling, outdoor living, maintenance and repairs from Aqua Aesthetics Pools, serving McKinney and all of DFW.",
   path: "/services",
 })
 
 const servicesJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Pool services by aqua aesthetics pools",
+  name: "Pool services by Aqua Aesthetics Pools",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       item: {
         "@type": "Service",
-        name: "New pool construction",
+        name: "New Pool Construction",
         description: "Custom-designed pools built to your specifications with quality materials and craftsmanship throughout the DFW Metroplex.",
         url: "https://aquaaestheticspools.com/services/new-pool-construction",
-        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
@@ -33,10 +33,10 @@ const servicesJsonLd = {
       position: 2,
       item: {
         "@type": "Service",
-        name: "Pool remodeling",
+        name: "Pool Remodeling",
         description: "Expert pool renovation services including resurfacing, tile replacement, deck renovation, and equipment upgrades in DFW.",
         url: "https://aquaaestheticspools.com/services/pool-remodeling",
-        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
@@ -45,10 +45,10 @@ const servicesJsonLd = {
       position: 3,
       item: {
         "@type": "Service",
-        name: "Outdoor living",
+        name: "Outdoor Living",
         description: "Custom outdoor living solutions including patios, outdoor kitchens, fire pits, and pergolas in the DFW area.",
         url: "https://aquaaestheticspools.com/services/outdoor-living",
-        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
@@ -57,10 +57,10 @@ const servicesJsonLd = {
       position: 4,
       item: {
         "@type": "Service",
-        name: "Pool maintenance",
+        name: "Pool Maintenance",
         description: "Weekly and bi-weekly pool maintenance programs to keep your pool pristine year-round across DFW.",
         url: "https://aquaaestheticspools.com/services/pool-maintenance",
-        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },
@@ -69,10 +69,10 @@ const servicesJsonLd = {
       position: 5,
       item: {
         "@type": "Service",
-        name: "Pool repairs",
+        name: "Pool Repairs",
         description: "Expert diagnosis and repair of leaks, pumps, heaters, filters, and plumbing throughout the DFW Metroplex.",
         url: "https://aquaaestheticspools.com/services/pool-repairs",
-        provider: { "@type": "LocalBusiness", name: "aqua aesthetics pools" },
+        provider: { "@type": "LocalBusiness", name: "Aqua Aesthetics Pools" },
         areaServed: ["McKinney", "Frisco", "Allen", "Plano", "Dallas", "Fort Worth", "Southlake", "Colleyville", "Flower Mound"],
       },
     },

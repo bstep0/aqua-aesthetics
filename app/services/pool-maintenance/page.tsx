@@ -12,7 +12,7 @@ export const metadata = pageMeta({
 
 const jsonLd = serviceJsonLd(
   "pool-maintenance",
-  "Pool maintenance",
+  "Pool Maintenance",
   "Professional weekly and bi-weekly pool maintenance plans including chemical balancing, filter cleaning, and equipment inspection for DFW homeowners.",
   MAINTENANCE.faqs,
 )

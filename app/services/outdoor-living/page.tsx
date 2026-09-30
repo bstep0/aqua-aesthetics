@@ -12,7 +12,7 @@ export const metadata = pageMeta({
 
 const jsonLd = serviceJsonLd(
   "outdoor-living",
-  "Outdoor living",
+  "Outdoor Living",
   "Custom outdoor living design and construction including patios, outdoor kitchens, fire pits, pergolas, and landscape lighting for DFW homeowners.",
   OUTDOOR_LIVING.faqs,
 )

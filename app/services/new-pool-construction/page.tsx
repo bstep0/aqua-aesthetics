@@ -13,7 +13,7 @@ export const metadata = pageMeta({
 
 const jsonLd = serviceJsonLd(
   "new-pool-construction",
-  "New pool construction",
+  "New Pool Construction",
   "Custom in-ground pool design and construction for homeowners in Dallas, Frisco, Plano, Southlake, Colleyville, Fort Worth, and Flower Mound.",
   NEW_POOL.faqs,
 )

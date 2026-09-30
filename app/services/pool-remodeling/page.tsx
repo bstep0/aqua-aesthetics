@@ -12,7 +12,7 @@ export const metadata = pageMeta({
 
 const jsonLd = serviceJsonLd(
   "pool-remodeling",
-  "Pool remodeling",
+  "Pool Remodeling",
   "Expert pool renovation including resurfacing, tile replacement, deck renovation, and energy-efficient equipment upgrades for DFW homeowners.",
   REMODELING.faqs,
 )

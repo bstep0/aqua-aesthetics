@@ -12,7 +12,7 @@ export const metadata = pageMeta({
 
 const jsonLd = serviceJsonLd(
   "pool-repairs",
-  "Pool repairs",
+  "Pool Repairs",
   "Expert pool repair services including leak detection, pump and heater repair, plumbing, and electrical diagnosis for DFW homeowners.",
   REPAIRS.faqs,
 )
