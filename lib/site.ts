@@ -31,8 +31,8 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "new-pool-construction",
     href: "/services/new-pool-construction",
-    name: "New pool construction",
-    short: "New construction",
+    name: "New Pool Construction",
+    short: "New Construction",
     blurb: "Custom gunite pools, designed with you and built from permit to first swim.",
     image: "/images/pool18.jpg",
     alt: "Custom new pool construction with spa in Frisco Texas",
@@ -40,7 +40,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-remodeling",
     href: "/services/pool-remodeling",
-    name: "Pool remodeling",
+    name: "Pool Remodeling",
     short: "Remodels",
     blurb: "Resurfacing, tile, coping, decks and energy-efficient equipment upgrades.",
     image: "/images/remodel1.jpg",
@@ -49,8 +49,8 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "outdoor-living",
     href: "/services/outdoor-living",
-    name: "Outdoor living",
-    short: "Outdoor living",
+    name: "Outdoor Living",
+    short: "Outdoor Living",
     blurb: "Covered patios, outdoor kitchens, fire features and pergolas.",
     image: "/images/outdoor1.jpg",
     alt: "Cedar pergola with string lights beside a custom pool",
@@ -58,7 +58,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-maintenance",
     href: "/services/pool-maintenance",
-    name: "Pool maintenance",
+    name: "Pool Maintenance",
     short: "Maintenance",
     blurb: "Weekly and bi-weekly service plans that keep your water clear year-round.",
     image: "/images/pool16.jpg",
@@ -67,7 +67,7 @@ export const SERVICES: ServiceSummary[] = [
   {
     slug: "pool-repairs",
     href: "/services/pool-repairs",
-    name: "Pool repairs",
+    name: "Pool Repairs",
     short: "Repairs",
     blurb: "Leaks, pumps, heaters, filters and plumbing, diagnosed and fixed fast.",
     image: "/images/repair1.jpg",
